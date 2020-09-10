@@ -7,6 +7,7 @@ title: Fundamentos Desarrollo Web
 subtitle: ''
 description: ''
 keywords:
+  - ''
 author: Edison Peñuela
 language: es
 timezone: 'America/Bogota'
@@ -15,7 +16,7 @@ timezone: 'America/Bogota'
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: https://EdisonPeM.github.io/fundamentos-desarrollo-web
 root: /fundamentos-desarrollo-web/
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/ # :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -24,12 +25,13 @@ pretty_urls:
 # Directory
 source_dir: source
 public_dir: public
-tag_dir: tag
-archive_dir: archivo
-category_dir: categoria
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - source/404
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -57,6 +59,12 @@ prismjs:
   line_number: true
   tab_replace: ''
 
+# https://hexo.io/docs/asset-folders.html
+marked:
+  prependRoot: true
+  postAsset: true
+  lazyload: true
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -64,7 +72,7 @@ prismjs:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -date
+  order_by: name
 
 # Category & Tag
 default_category: ''
@@ -98,7 +106,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme:
+theme: landscape # my-theme
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
