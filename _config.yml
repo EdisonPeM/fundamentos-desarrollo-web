@@ -5,18 +5,27 @@
 # Site
 title: Fundamentos Desarrollo Web
 subtitle: ''
-description: ''
+description: Documentaciones sobre Fundamentos de Desarro Web
 keywords:
-  - ''
+  - desarrollo web
+  - web development
+  - curso
+  - tutorial
+  - referencia
+  - HTML y CSS
+  - html
+  - css
+  - bootstrap
+  - javascript
 author: Edison Peñuela
-language: es
-timezone: 'America/Bogota'
+language: es # en
+timezone: America/Bogota
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://EdisonPeM.github.io/fundamentos-desarrollo-web
+url: https://EdisonPeM.github.io/fundamentos-desarrollo-web/
 root: /fundamentos-desarrollo-web/
-permalink: :category/:title/ # :year/:month/:day/:title/
+permalink: :title/ # :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -24,14 +33,13 @@ pretty_urls:
 
 # Directory
 source_dir: source
-public_dir: public
+public_dir: fundamentos-desarrollo-web
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - source/404
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -41,11 +49,11 @@ external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
-filename_case: 0
+filename_case: 1
 render_drafts: false
 post_asset_folder: true
 relative_link: false
-future: true
+future: false
 highlight:
   enable: true
   line_number: true
@@ -72,10 +80,11 @@ marked:
 index_generator:
   path: ''
   per_page: 10
-  order_by: name
+  order_by: -date
+  # pagination_dir: page
 
 # Category & Tag
-default_category: ''
+default_category: 'otros'
 category_map:
 tag_map:
 
