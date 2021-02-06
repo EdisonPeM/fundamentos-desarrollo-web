@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Git        Book Manual de Git git - la guía sencilla La guía básica de Git y Github para principiantes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Control de Versiones">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Git        Book Manual de Git git - la guía sencilla La guía básica de Git y Github para principiantes">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/Untitled.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/Untitled1.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/Untitled2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/bash2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/Captura2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/screen.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/screen_2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/panel.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/status.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/addt.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/add.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/adda.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/committe.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/commitvsc.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/log.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/restore.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/restore2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/restorecomm.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/restorecomm2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/Untitled3.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/crear_nuevo_repo.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/repon.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/url.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/remote.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/push3.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/ok.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/pull.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/pull2.png">
+<meta property="article:published_time" content="2020-09-08T21:22:57.143Z">
+<meta property="article:modified_time" content="2020-09-08T23:14:21.468Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/Untitled.png"><title>Control de Versiones | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Control de Versiones</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><h1 id="Git">
+          <a href="#Git" class="heading-link"><i class="fas fa-link"></i></a>Git</h1>
+      <p><img src="/fundamentos-desarrollo-web/Control-Versiones/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2">Book</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://desarrolloweb.com/manuales/manual-de-git.html">Manual de Git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://rogerdudler.github.io/git-guide/index.es.html">git - la guía sencilla</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://medium.com/@sthefany/primeros-pasos-con-github-7d5e0769158c">La guía básica de Git y Github para principiantes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+
+        <h2 id="Descarga">
+          <a href="#Descarga" class="heading-link"><i class="fas fa-link"></i></a>Descarga</h2>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/download/win">Downloading Git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Configuracion">
+          <a href="#Configuracion" class="heading-link"><i class="fas fa-link"></i></a>Configuración</h2>
+      <p>La configuración inicial de git es necesaria hacerla desde <strong>git bash</strong> o alguna <strong>terminal.</strong></p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"John Doe"</span></span><br><span class="line">$ git config --global user.email johndoe@example.com</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez">Git - Configurando Git por primera vez</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Configurar-VSCode-Windows">
+          <a href="#Configurar-VSCode-Windows" class="heading-link"><i class="fas fa-link"></i></a>Configurar VSCode (Windows)</h3>
+      <p>Para ejecutar la terminal de git (<em>git bash)</em> desde Visual Studio Code, se debe configurar de la siguiente forma:</p>
+<ol>
+<li><p>Abrir la barra de comandos con las teclas <strong>ctrl + shift + p</strong></p>
+<p> <img src="/fundamentos-desarrollo-web/Control-Versiones/Untitled1.png" alt="Untitled1.png" loading="lazy"></p>
+</li>
+<li><p>Allí escribir <strong>Select Default Shell</strong></p>
+<p> <img src="/fundamentos-desarrollo-web/Control-Versiones/Untitled2.png" alt="Untitled2.png" loading="lazy"></p>
+</li>
+<li><p>Se selecciona <strong>git bash</strong></p>
+<p> <img src="/fundamentos-desarrollo-web/Control-Versiones/bash2.png" alt="bash2.png" loading="lazy"></p>
+</li>
+<li><p>Se abre una nueva terminal </p>
+<p> <img src="/fundamentos-desarrollo-web/Control-Versiones/Captura2.png" alt="Captura2.png" loading="lazy"></p>
+</li>
+<li><p>La terminal debería tener este aspecto</p>
+<p> <img src="/fundamentos-desarrollo-web/Control-Versiones/screen.png" alt="screen.png" loading="lazy"></p>
+</li>
+</ol>
+
+        <h2 id="Crear-un-Repositorio">
+          <a href="#Crear-un-Repositorio" class="heading-link"><i class="fas fa-link"></i></a>Crear un Repositorio</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/screen_2.png" alt="screen_2.png" loading="lazy"></p>
+<p><strong><code>git init</code></strong> en consola</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/panel.png" alt="panel.png" loading="lazy"></p>
+<p><strong><code>git init</code></strong> en panel de vscode</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Fundamentos-de-Git-Obteniendo-un-repositorio-Git">Git - Obteniendo un repositorio Git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Cambios">
+          <a href="#Cambios" class="heading-link"><i class="fas fa-link"></i></a>Cambios</h2>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio">Git - Guardando cambios en el Repositorio</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Ver-Cambios">
+          <a href="#Ver-Cambios" class="heading-link"><i class="fas fa-link"></i></a>Ver Cambios</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/status.png" alt="status.png" loading="lazy"></p>
+<p><code>**git status**</code> en terminal y en panel de vscode</p>
+
+        <h3 id="Guardar-Cambios">
+          <a href="#Guardar-Cambios" class="heading-link"><i class="fas fa-link"></i></a>Guardar Cambios</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add [*Nombre del archivo*]</span><br><span class="line">$ git add -A</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/addt.png" alt="addt.png" loading="lazy"></p>
+<p><code>**git add -A**</code> en terminal</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/add.png" alt="add.png" loading="lazy"></p>
+<p><code>**git add index.html</code>** en panel de vscode</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/adda.png" alt="adda.png" loading="lazy"></p>
+<p><code>**git add -A</code>** en panel de vscode</p>
+
+        <h3 id="Confirmar-Cambios">
+          <a href="#Confirmar-Cambios" class="heading-link"><i class="fas fa-link"></i></a>Confirmar Cambios</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">'Mensaje'</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/committe.png" alt="committe.png" loading="lazy"></p>
+<p>commit en consola</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/commitvsc.png" alt="commitvsc.png" loading="lazy"></p>
+<p>commit en vscode</p>
+
+        <h2 id="Ver-historial-de-Cambios">
+          <a href="#Ver-historial-de-Cambios" class="heading-link"><i class="fas fa-link"></i></a>Ver historial de Cambios</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">$ git <span class="built_in">log</span> --name-only</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/log.png" alt="log.png" loading="lazy"></p>
+<p>El código amarillo también se llama <strong>código SHA</strong>, es el identificador único de los cambios registrados en cada commit.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones">Git - Ver el Historial de Confirmaciones</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Deshacer-Cambios">
+          <a href="#Deshacer-Cambios" class="heading-link"><i class="fas fa-link"></i></a>Deshacer Cambios</h2>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Fundamentos-de-Git-Deshacer-Cosas">Git - Deshacer Cosas</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Sin-Preparar-Working-Directory">
+          <a href="#Sin-Preparar-Working-Directory" class="heading-link"><i class="fas fa-link"></i></a>Sin Preparar (Working Directory)</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- [*Nombre del archivo*]</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/restore.png" alt="restore.png" loading="lazy"></p>
+<p>Deshacer cambios en terminal</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/restore2.png" alt="restore2.png" loading="lazy"></p>
+<p>Deshacer cambos en vscode</p>
+
+        <h3 id="Preparado-Stage">
+          <a href="#Preparado-Stage" class="heading-link"><i class="fas fa-link"></i></a>Preparado (Stage)</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD [*Nombre del archivo*]</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/restorecomm.png" alt="restorecomm.png" loading="lazy"></p>
+<p>Deshacer index en terminal</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/restorecomm2.png" alt="restorecomm2.png" loading="lazy"></p>
+<p>Deshacer index en vscode</p>
+
+        <h3 id="Confirmados-Repository">
+          <a href="#Confirmados-Repository" class="heading-link"><i class="fas fa-link"></i></a>!Confirmados (Repository)</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --soft [*SHA*]</span><br><span class="line">$ git reset --hard [*SHA*]</span><br></pre></td></tr></tbody></table></div></figure>
+<p><em><code>reset —hard</code></em> elimina el commit y los cambios del código que se hicieron.</p>
+<p>Se considera mala práctica eliminar los commits, es preferible arreglar el código y agregar un nuevo commit con el arreglo, ya que se pueden generar inconsistencias con los repositorios remotos.</p>
+
+        <h2 id="Resumen">
+          <a href="#Resumen" class="heading-link"><i class="fas fa-link"></i></a>Resumen</h2>
+      <p><img src="/fundamentos-desarrollo-web/Control-Versiones/Untitled3.png" alt="Untitled3.png" loading="lazy"></p>
+
+        <h1 id="Repositorios-en-la-Nube">
+          <a href="#Repositorios-en-la-Nube" class="heading-link"><i class="fas fa-link"></i></a>Repositorios en la Nube</h1>
+      
+        <h2 id="Github">
+          <a href="#Github" class="heading-link"><i class="fas fa-link"></i></a>Github</h2>
+      <p>Crear un nuevo repositorio vacío.</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/crear_nuevo_repo.png" alt="crear_nuevo_repo.png" loading="lazy"></p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/repon.png" alt="repon.png" loading="lazy"></p>
+
+        <h2 id="Agregar-un-Repositorio">
+          <a href="#Agregar-un-Repositorio" class="heading-link"><i class="fas fa-link"></i></a>Agregar un Repositorio</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://github.com/userName/repoName.git</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/url.png" alt="url.png" loading="lazy"></p>
+<p>Copiar el link para agregar el repo remoto</p>
+
+        <h2 id="Subir-Cambios-Locales-a-Remotos-Nube">
+          <a href="#Subir-Cambios-Locales-a-Remotos-Nube" class="heading-link"><i class="fas fa-link"></i></a>Subir Cambios Locales a Remotos (Nube)</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br><span class="line">$ git push origin master</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/remote.png" alt="remote.png" loading="lazy"></p>
+<p><code>**git push**</code> en terminal</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/push3.png" alt="push3.png" loading="lazy"></p>
+<p>git push en vscode</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/ok.png" alt="ok.png" loading="lazy"></p>
+
+        <h2 id="Bajar-Cambios-de-Remoto-Nube-a-Local">
+          <a href="#Bajar-Cambios-de-Remoto-Nube-a-Local" class="heading-link"><i class="fas fa-link"></i></a>Bajar Cambios de Remoto (Nube) a Local</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/pull.png" alt="pull.png" loading="lazy"></p>
+<p><strong>git pull</strong> en terminal</p>
+<p><img src="/fundamentos-desarrollo-web/Control-Versiones/pull2.png" alt="pull2.png" loading="lazy"></p>
+<p>git pull en vscode-</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Fundamentos-de-Git-Trabajar-con-Remotos">Git - Trabajar con Remotos</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/">https://edisonpem.github.io/fundamentos-desarrollo-web/Control-Versiones/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/GIT-Avanzado/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">GIT Avanzado</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Dise%C3%B1o-Web/"><span class="paginator-prev__text">Diseño Web</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git"><span class="toc-number">1.</span> <span class="toc-text">
+          Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Descarga"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Descarga</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuracion"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Configuración</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configurar-VSCode-Windows"><span class="toc-number">1.2.1.</span> <span class="toc-text">
+          Configurar VSCode (Windows)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Crear-un-Repositorio"><span class="toc-number">1.3.</span> <span class="toc-text">
+          Crear un Repositorio</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cambios"><span class="toc-number">1.4.</span> <span class="toc-text">
+          Cambios</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ver-Cambios"><span class="toc-number">1.4.1.</span> <span class="toc-text">
+          Ver Cambios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Guardar-Cambios"><span class="toc-number">1.4.2.</span> <span class="toc-text">
+          Guardar Cambios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Confirmar-Cambios"><span class="toc-number">1.4.3.</span> <span class="toc-text">
+          Confirmar Cambios</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ver-historial-de-Cambios"><span class="toc-number">1.5.</span> <span class="toc-text">
+          Ver historial de Cambios</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Deshacer-Cambios"><span class="toc-number">1.6.</span> <span class="toc-text">
+          Deshacer Cambios</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sin-Preparar-Working-Directory"><span class="toc-number">1.6.1.</span> <span class="toc-text">
+          Sin Preparar (Working Directory)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparado-Stage"><span class="toc-number">1.6.2.</span> <span class="toc-text">
+          Preparado (Stage)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Confirmados-Repository"><span class="toc-number">1.6.3.</span> <span class="toc-text">
+          !Confirmados (Repository)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resumen"><span class="toc-number">1.7.</span> <span class="toc-text">
+          Resumen</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Repositorios-en-la-Nube"><span class="toc-number">2.</span> <span class="toc-text">
+          Repositorios en la Nube</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Github"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Agregar-un-Repositorio"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Agregar un Repositorio</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Subir-Cambios-Locales-a-Remotos-Nube"><span class="toc-number">2.3.</span> <span class="toc-text">
+          Subir Cambios Locales a Remotos (Nube)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bajar-Cambios-de-Remoto-Nube-a-Local"><span class="toc-number">2.4.</span> <span class="toc-text">
+          Bajar Cambios de Remoto (Nube) a Local</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Todos los elementos de HTML son representados como “cajas“ regulares en un navegador web, estas cajas permiten modelar y configurar la estructura de nuestra página ya que encapsulan el  defino dentreo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Box Model">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Box-Model/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Todos los elementos de HTML son representados como “cajas“ regulares en un navegador web, estas cajas permiten modelar y configurar la estructura de nuestra página ya que encapsulan el  defino dentreo">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Box-Model/Modelo_de_caja.svg">
+<meta property="article:published_time" content="2020-09-08T21:22:57.166Z">
+<meta property="article:modified_time" content="2020-09-08T23:19:55.199Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Box-Model/Modelo_de_caja.svg"><title>Box Model | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Box-Model/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Box Model</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><p>Todos los elementos de HTML son representados como “<strong>cajas</strong>“ regulares en un navegador web, estas cajas permiten modelar y configurar la estructura de nuestra página ya que encapsulan el  defino dentreo de cada etiqueta.</p>
+<p><img src="/fundamentos-desarrollo-web/Box-Model/Modelo_de_caja.svg" alt="Modelo_de_caja.svg" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">Introduction to the CSS basic box model</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/the-css-">The CSS Box Model | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+
+        <h1 id="Unidades-de-Medida">
+          <a href="#Unidades-de-Medida" class="heading-link"><i class="fas fa-link"></i></a>Unidades de Medida</h1>
+      <p>Css posee diferentes sistemas de medida que se utilizan para ajustar tamaños o grosores.</p>
+
+        <h2 id="Unidades-absolutas">
+          <a href="#Unidades-absolutas" class="heading-link"><i class="fas fa-link"></i></a>Unidades absolutas</h2>
+      <p>Las unidades absolutas que trabaja css son:</p>
+<ul>
+<li>Pulgadas (<code>in</code>)</li>
+<li>Centímetros (<em><code>cm</code></em>)</li>
+<li>Milímetros (<em><code>mm</code></em>)</li>
+<li>Puntos (<em><code>pt</code></em>)</li>
+</ul>
+<p>Sin embargo estas unidades de medida ya no se utilizan dado que no se adecuan a medios cambiantes como lo son las pantallas.</p>
+
+        <h2 id="Unidades-Relativas">
+          <a href="#Unidades-Relativas" class="heading-link"><i class="fas fa-link"></i></a>Unidades Relativas</h2>
+      <p>La unidades relativas son mayormente usadas ya que se adaptan más fácilmente a los diferentes medios.</p>
+<ul>
+<li>Pixeles (<code>px</code>)</li>
+<li>Letra (<code>em</code>)</li>
+<li>Letra Raiz (<code>rem</code>)</li>
+</ul>
+
+        <h2 id="Porcentajes">
+          <a href="#Porcentajes" class="heading-link"><i class="fas fa-link"></i></a>Porcentajes</h2>
+      <p>Css establece una unidad de medida proporcional a lo que se desee según donde se use, puede ser relativo al tamaño de la letra, al tamaño del elemento mismo o al tamaño del contenedor.</p>
+<ul>
+<li>Porcentual (<code>%</code>)</li>
+<li>Proporcional al viewport (<code>vh</code> y <code>vw</code>)</li>
+</ul>
+
+        <h1 id="Modelo-de-Cajas">
+          <a href="#Modelo-de-Cajas" class="heading-link"><i class="fas fa-link"></i></a>Modelo de Cajas</h1>
+      
+        <h2 id="Tamano">
+          <a href="#Tamano" class="heading-link"><i class="fas fa-link"></i></a>Tamaño</h2>
+      <p>Todos los elementos de HTML ocupa un espacio en la página web, por lo que poseen un tamaño en <strong>alto</strong> y <strong>ancho</strong> dentro del documento. Sin embargo, podemos manipular los tamaños de cada elemento con las propiedades:</p>
+<ul>
+<li><code>width</code>: Ajusta el <strong>ancho</strong> de un elemento.</li>
+<li><code>height</code>: Ajusta el <strong>alto</strong> de un elemento.</li>
+</ul>
+<p>La mayoría de los elementos tienen predefinido su ancho al 100% de su contenedor y su alto de forma automático según su contenido.</p>
+<p>Los posibles valores de estas propiedades son:</p>
+<ul>
+<li><em><code>auto</code></em>: El navegador calcula su tamaño.</li>
+<li><em><code>Unidad de Medida</code></em>: Alguna unidad relativa o proporcional.</li>
+<li><em><code>fit-content</code></em>: Se ajusta al tamaño del contenido.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_dimension.asp">CSS Height and Width</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Limites-de-tamano">
+          <a href="#Limites-de-tamano" class="heading-link"><i class="fas fa-link"></i></a>Límites de tamaño</h2>
+      <p>Adicionalmente también se pueden establecer límites tanto superior como inferior del tamaño que pueda tomar un elemento html.</p>
+<ul>
+<li><code>min-height</code>: Define el tamaño mínimo en alto.</li>
+<li><code>min-width</code>: Define el tamaño mínimo en ancho.</li>
+<li><code>max-height</code>: Define el tamaño máximo en alto.</li>
+<li><code>max-width</code>: Define el tamaño máximo en ancho.</li>
+</ul>
+<p>Con estas propiedades podemos crear elementos de un tamaño mínimo específico y que se puedan agrandar a medida que aumenta su contenido, hasta completar un tamaño máximo.</p>
+
+        <h2 id="Content">
+          <a href="#Content" class="heading-link"><i class="fas fa-link"></i></a>Content</h2>
+      <p>El contenido se refiere al <strong><em>ESPACIO</em></strong> donde se almacena todo lo que está <em>“dentro”</em> del elemento html, ya sea texto, contenedores u otros elementos como listas, tablas, etc.</p>
+<ul>
+<li>En el caso de elementos multimedia como <code>&lt;img&gt;</code>, <code>video</code> o <code>iframe</code>, su contenido será el recurso cargado.</li>
+<li>En el caso de <code>&lt;hr&gt;</code> y <code>&lt;br&gt;</code> no tienen contenido alguno.</li>
+</ul>
+<p>Generalmente cuando definimos el tamaño de un elemento, estamos definiendo el tamaño del espacio del contenido.</p>
+
+        <h2 id="Padding">
+          <a href="#Padding" class="heading-link"><i class="fas fa-link"></i></a>Padding</h2>
+      <p>El padding o relleno es un espacio que agregamos para separar el contenido de nuestro elemento de su borde.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.contenedor</span> {</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">1em</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/padding">padding</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_padding.asp">CSS Padding</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Border">
+          <a href="#Border" class="heading-link"><i class="fas fa-link"></i></a>Border</h2>
+      <p>La propiedad <code>border</code> nos permite agregar una línea que rodea nuestro elemento. Para agregar un borde se debe especificar el <em>tipo de borde</em>, sin embargo se pueden especificar más detalles como el <em>grosor del borde</em> o <em>color del borde</em>.</p>
+
+        <h3 id="border-type">
+          <a href="#border-type" class="heading-link"><i class="fas fa-link"></i></a>border-type</h3>
+      <p>Con la propiedad <code>border-style</code> podemos especificar el tipo de borde, los cuales pueden ser:</p>
+<ul>
+<li><em><code>solid</code></em>: Línea contínua.</li>
+<li><em><code>dashed</code></em>: Líneas discontínuas.</li>
+<li><em><code>doted</code></em>: Puntos seguidos.</li>
+</ul>
+
+        <h3 id="border-width">
+          <a href="#border-width" class="heading-link"><i class="fas fa-link"></i></a>border-width</h3>
+      <p>Con la propiedad <code>border-width</code> podemos cambiar el grosor del borde indicándole la unidad de medida que deseemos, por defecto ocupa <code>3px</code>.</p>
+
+        <h3 id="border-color">
+          <a href="#border-color" class="heading-link"><i class="fas fa-link"></i></a>border-color</h3>
+      <p>Con la propiedad <code>border-color</code> podemos cambiar el color del borde, el cual inicialmente es el mismo color que el de la letra.</p>
+
+        <h3 id="border">
+          <a href="#border" class="heading-link"><i class="fas fa-link"></i></a>border</h3>
+      <p>Con la propiedad <code>border</code> se puede especificar las diferentes características de los bordes en una sola linea:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> {</span><br><span class="line">    <span class="comment">/* Borde sólido de 3px y del color de la letra */</span></span><br><span class="line">    <span class="attribute">border</span>: solid;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="comment">/* Borde sólido de 1px y rojo */</span></span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Para esta propiedad no importa el orden de los valores.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/border">border</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_border.asp">CSS Borders</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Border-Radius">
+          <a href="#Border-Radius" class="heading-link"><i class="fas fa-link"></i></a>Border-Radius</h3>
+      <p>Los bordes de cualquier elemento se pueden redondear usando la propiedad <code>border-radius</code>, en donde se indica el radio del redondeo en cualquier unidad de medida.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Se pueden generar circunferencias cuando se utilizan tamaños en porcentajes por encima del <code>50%</code></p>
+
+        <h2 id="Margin">
+          <a href="#Margin" class="heading-link"><i class="fas fa-link"></i></a>Margin</h2>
+      <p>El Margen es el espacio que agregamos para separar elementos entre sí. El body del html trae por defecto un <code>margin</code> de 8px.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> {</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/margin">margin</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_margin.asp">CSS Margin</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Contorno">
+          <a href="#Contorno" class="heading-link"><i class="fas fa-link"></i></a>Contorno</h2>
+      <p>El contorno de un elemento se trata de una línea que rodea un elemento pero no pertenece al elemento. Se suele encontrar en inputs o botones.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_outline.asp">CSS Outline</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="ShortHands">
+          <a href="#ShortHands" class="heading-link"><i class="fas fa-link"></i></a>ShortHands</h1>
+      <p>Algunas propiedades CSS permiten asignar el valor de muchas otras propiedades de CSS al mismo tiempo, reduciendo así la cantidad de código que escribimos.</p>
+<ul>
+<li>En el caso de los bordes, la propiedad <code>border</code> simplifica la declaración del ancho, color y estilo.</li>
+<li>Para el caso del <code>margin</code> y <code>padding</code>, se simplifica el valor de los 4 <strong>lados</strong>.</li>
+<li>Para el caso del <code>border-radius</code>, se simplifica el valor del radio de las 4 <strong>esquinas</strong>.</li>
+</ul>
+<p>En muchos casos, varias propiedades que pertenecen a una sola categoría se pueden resumir en un shorthand, por ejemplo propiedades de fuente o de fondo.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Shorthand_properties">Propiedades abreviadas</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Lados">
+          <a href="#Lados" class="heading-link"><i class="fas fa-link"></i></a>Lados</h2>
+      <p>Tanto <code>border</code>, <code>padding</code> y <code>margin</code> manejan los cuatro lados de cada elemento</p>
+<ul>
+<li>Lado Superior: <code>top</code></li>
+<li>Lado Derecho: <code>right</code></li>
+<li>Lado Inferior: <code>bottom</code></li>
+<li>Lado Izquierdo: <code>left</code></li>
+</ul>
+<p>Estos manejan en general un tamaño, pero se le puede indicar un tamaño a cada lado agregando el nombre del lado que se desea modificar después de la propiedad y unido con un guión (<code>-</code>) como se muestra a continuación:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">border-top</span>: solid <span class="number">3px</span> black;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">1.3em</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="4-Tamanos">
+          <a href="#4-Tamanos" class="heading-link"><i class="fas fa-link"></i></a>4 Tamaños</h3>
+      <p>Si se desea modificar todos los lados al mismo tiempo se puede simplificar para el caso del <code>padding</code> y el <code>margin</code> indicando los 4 valores consecutivamente en sentido de las agujas del reloj comenzando con el lado superior:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span> <span class="number">40px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Lo cual será lo mismo qué:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">40px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="3-Tamanos">
+          <a href="#3-Tamanos" class="heading-link"><i class="fas fa-link"></i></a>3 Tamaños</h3>
+      <p>Cuando se escriben 3 tamaños en estas propiedades, se indican: lado superior, lados laterales, lado inferior:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Lo cual será lo mismo que:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">30px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="2-Tamanos">
+          <a href="#2-Tamanos" class="heading-link"><i class="fas fa-link"></i></a>2 Tamaños</h3>
+      <p>Cuando se indican 2 tamaños, se relacionan: lados superior e inferior y lados laterales:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Lo cual será lo mismo que:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Esquinas">
+          <a href="#Esquinas" class="heading-link"><i class="fas fa-link"></i></a>Esquinas</h2>
+      <p>Así como con los lados, algunos estilos como el <code>border-radius</code>, manejan las cuatro esquinas de cada elemento</p>
+<ul>
+<li>Esquina Superior - Izquierda</li>
+<li>Esquina Superior - Derecha</li>
+<li>Esquina Inferior - Derecha</li>
+<li>Esquina Inferior - Izquierda</li>
+</ul>
+<p>Estos también manejan en general un tamaño, y se le puede indicar un tamaño a cada lado en sentido de las agujas del reloj comenzando con el lado superior</p>
+
+        <h3 id="4-Tamanos-1">
+          <a href="#4-Tamanos-1" class="heading-link"><i class="fas fa-link"></i></a>4 Tamaños</h3>
+      <figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span> <span class="number">40px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<ul>
+<li>Esquina Superior - Izquierda: 10px</li>
+<li>Esquina Superior - Derecha: 20px</li>
+<li>Esquina Inferior - Derecho: 30px</li>
+<li>Esquina Inferior - Izquierda: 40px</li>
+</ul>
+
+        <h3 id="3-Tamanos-1">
+          <a href="#3-Tamanos-1" class="heading-link"><i class="fas fa-link"></i></a>3 Tamaños</h3>
+      <figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<ul>
+<li>Esquina Superior - Izquierda: 10px</li>
+<li>Esquina Superior - Derecha: 20px</li>
+<li>Esquina Inferior - Derecha: 30px</li>
+<li>Esquina Inferior - Izquierda: 20px</li>
+</ul>
+
+        <h3 id="2-Tamanos-1">
+          <a href="#2-Tamanos-1" class="heading-link"><i class="fas fa-link"></i></a>2 Tamaños</h3>
+      <figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> {</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<ul>
+<li>Esquina Superior - Izquierda: 10px</li>
+<li>Esquina Superior - Derecha: 20px</li>
+<li>Esquina Inferior - Derecha: 10px</li>
+<li>Esquina Inferior - Izquierda: 20px</li>
+</ul>
+<hr>
+
+        <h1 id="Tipos-de-Cajas">
+          <a href="#Tipos-de-Cajas" class="heading-link"><i class="fas fa-link"></i></a>Tipos de Cajas</h1>
+      <p>En CSS existen dos tipos fundamentales de cajas: en bloque y en línea.</p>
+<p>Las cajas en <strong>bloque</strong> (<code>block</code>) son aquellos que:</p>
+<ul>
+<li>Ocupan el 100% del ancho del contenedor donde se encuentre</li>
+<li>Generan saltos de línea obligatorios antes y después de cada elemento.</li>
+</ul>
+<p>Algunos elementos en bloque son:</p>
+<ul>
+<li>Contenedores: <code>&lt;div&gt;</code></li>
+<li>Todos los títulos: <code>&lt;h1&gt;</code> … <code>&lt;h6&gt;</code></li>
+<li>Párrafos: <code>&lt;p&gt;</code></li>
+<li>Listas: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code></li>
+<li>Tablas <code>&lt;table&gt;</code></li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements">Elementos en bloque</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>Las cajas <strong>en línea</strong> (<code>inline</code>) son elementos que:</p>
+<ul>
+<li><p>Siguen el flujo del texto</p>
+</li>
+<li><p>Se ajusta solamente al tamaño del texto dentro</p>
+</li>
+<li><p>Ignoran los tamaños adicionales, paddings y margins superiores e inferiores.</p>
+<p>  Aunque sí los puede mostrar, no afectan a los demás elementos.</p>
+</li>
+</ul>
+<p>Algunos elementos en línea:</p>
+<ul>
+<li>Contenedor de Texto: <code>&lt;span&gt;</code></li>
+<li>Manipuladores de texto:  <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;small&gt;</code>, <code>&lt;mark&gt;</code>.</li>
+<li>Hipervínculos: <code>&lt;a&gt;</code></li>
+<li>Multimedia<ul>
+<li>Imágenes: <code>&lt;img&gt;</code></li>
+<li>Audio: <code>&lt;audio&gt;</code></li>
+<li>Video: <code>&lt;video&gt;</code></li>
+<li>Embebidos: <code>&lt;iframe&gt;</code></li>
+</ul>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/HTML/Elementos_en_l%C3%ADnea">Elementos en línea</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Display">
+          <a href="#Display" class="heading-link"><i class="fas fa-link"></i></a>Display</h2>
+      <p>Usando la propidad <code>display</code> de css, podemos cambiar el tipo de caja de cualquier elemento según se necesite.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/pr_class_display.asp">CSS display property</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/display">display</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Otros-Modelos">
+          <a href="#Otros-Modelos" class="heading-link"><i class="fas fa-link"></i></a>Otros Modelos</h2>
+      <p>Existen otros modelos de caja en bloque que permiten visualizar los elementos con estilos particulares:</p>
+<ul>
+<li><code>list-item</code>: Para Ítems de Lista, son exactamente como bloques pero se agregan los literales correspondiente a la lista que pertenece (<code>&lt;li&gt;</code>)</li>
+<li><code>table</code>: Para Tablas (<code>&lt;table&gt;</code>), también generan saltos de línea, pero no ocupan el 100% del ancho por defecto.<ul>
+<li><code>table-row-group</code>: Para grupos (<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>)</li>
+<li><code>table-row</code>: para filas (<code>&lt;tr&gt;</code>)</li>
+<li><code>table-cell</code>: Para títulos y celdas (<code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>)</li>
+</ul>
+</li>
+</ul>
+<p>También existen modelos de cajas que permiten manipular su contenido de forma personalizada.</p>
+<ul>
+<li>Flex: Permite manipular el contenido de forma flexible.</li>
+<li>Grid: Permite acomodar el contenido en forma de red.</li>
+</ul>
+<p>Estos modelos se comportan como cajas en bloque.</p>
+
+        <h2 id="Modelos-en-linea">
+          <a href="#Modelos-en-linea" class="heading-link"><i class="fas fa-link"></i></a>Modelos en linea</h2>
+      <p>Algunos elementos combinan los modelos de caja en bloque para acomodarlos en línea (<code>inline-block</code>) y así crear cajas con tamaño variable pero que sigue el flujo del texto, como es el caso de los elementos de formularios:</p>
+<ul>
+<li><code>&lt;input&gt;</code></li>
+<li><code>&lt;textarea&gt;</code></li>
+<li><code>&lt;select&gt;</code></li>
+<li><code>&lt;button&gt;</code></li>
+</ul>
+<p>Los elementos de multimedia (<em>embebidos</em>) se consideran elementos en línea, sin embargo tienen un comportamiento de bloque en línea (<em>inline-block</em>)</p>
+<p>Así mismo, usando la propiedad <em>display</em> se pueden crear tablas en linea, así conservan sus tamaños pero siguen el flujo del texto (<code>inline-table</code>).</p>
+<p>También existen modelos de <em>flex en linea</em> y <em>grid en linea</em></p>
+
+        <h2 id="Ocultar-Elementos">
+          <a href="#Ocultar-Elementos" class="heading-link"><i class="fas fa-link"></i></a>Ocultar Elementos</h2>
+      <p>La propiedad Display también se puede utilizar para ocultar elementos de una página web, usando el valor <code>none</code></p>
+
+        <h1 id="Centrar-Elementos">
+          <a href="#Centrar-Elementos" class="heading-link"><i class="fas fa-link"></i></a>Centrar Elementos*</h1>
+      <p>Según el modelo de caja podemos alinear horizontalmente un elemento.</p>
+
+        <h3 id="Elementos-de-Bloque">
+          <a href="#Elementos-de-Bloque" class="heading-link"><i class="fas fa-link"></i></a>Elementos de Bloque</h3>
+      <p>Cuando se trata de elementos en bloque, podemos usar la margen (<code>margin</code>) lateral de éstos para centrarlo indicando el valor <code>auto</code></p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bloque-centrado</span> {</span><br><span class="line">	<span class="attribute">margin-left</span>: auto;</span><br><span class="line">	<span class="attribute">margin-right</span>: auto;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bloque-derecha</span> {</span><br><span class="line">	<span class="attribute">margin-left</span>: auto;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bloque-izquierda</span> {</span><br><span class="line">	<span class="attribute">margin-right</span>: auto;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Elementos-en-Linea">
+          <a href="#Elementos-en-Linea" class="heading-link"><i class="fas fa-link"></i></a>Elementos en Línea</h3>
+      <p>Cuando tenemos elementos en línea, debemos usar <code>text-align</code> en el contenedor, ya que estos elementos siguen el flujo del texto.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.texto-centrado</span> {</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/pr_text_text-align.ASP">CSS text-align property</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">text-align</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Alineamiento-Vertical">
+          <a href="#Alineamiento-Vertical" class="heading-link"><i class="fas fa-link"></i></a>Alineamiento Vertical</h3>
+      <p>Cuando un elemento tiene un modelo <code>inline-block</code> o similar, se pueden alinear verticalmente con el texto usando la propiedad <code>vertical-align</code>, en el elemento mismo.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.centrado-vertical</span> {</span><br><span class="line">	<span class="attribute">vertical-align</span>: middle;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/vertical-align">vertical-align</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/vertical-align">vertical-align</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Box-sizing">
+          <a href="#Box-sizing" class="heading-link"><i class="fas fa-link"></i></a>Box-sizing</h1>
+      <p>Inicialmente las propiedades de tamaño solamente definen el tamaño del <strong>content</strong> (*espacio donde iría el contenido**), mientras que el tamaño <strong>TOTAL</strong> de un elemento varía según el tamaño del content, padding y border.</p>
+<ul>
+<li><strong>Ancho total:</strong> width + (padding-left + padding-right) + (border-size-left + border-size-right)</li>
+<li><strong>Alto total:</strong> height + (padding-top + padding-bottom) + (border-size-top + border-size-bottom).</li>
+</ul>
+<p>Sin embargo, podemos indicarle al user-agent que calcule el tamaño total según las propiedades de tamaño (width y height), en este caso, el tamaño de los elementos es siempre el mismo sin importar cuánto haya de padding o borde.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* {</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>El valor por defecto es <em><code>content-box</code></em></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/box-sizing">box-sizing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_box-sizing.asp">CSS Box Sizing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/">Box model - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Demo-Interactivo">
+          <a href="#Demo-Interactivo" class="heading-link"><i class="fas fa-link"></i></a>Demo Interactivo</h2>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://guyroutledge.github.io/">Box Model Demo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Box-Model/">https://edisonpem.github.io/fundamentos-desarrollo-web/Box-Model/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Layout/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Layout</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Bootstrap/"><span class="paginator-prev__text">Bootstrap</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Unidades-de-Medida"><span class="toc-number">1.</span> <span class="toc-text">
+          Unidades de Medida</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Unidades-absolutas"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Unidades absolutas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unidades-Relativas"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Unidades Relativas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Porcentajes"><span class="toc-number">1.3.</span> <span class="toc-text">
+          Porcentajes</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Modelo-de-Cajas"><span class="toc-number">2.</span> <span class="toc-text">
+          Modelo de Cajas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tamano"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Tamaño</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Limites-de-tamano"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Límites de tamaño</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Content"><span class="toc-number">2.3.</span> <span class="toc-text">
+          Content</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Padding"><span class="toc-number">2.4.</span> <span class="toc-text">
+          Padding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Border"><span class="toc-number">2.5.</span> <span class="toc-text">
+          Border</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#border-type"><span class="toc-number">2.5.1.</span> <span class="toc-text">
+          border-type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#border-width"><span class="toc-number">2.5.2.</span> <span class="toc-text">
+          border-width</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#border-color"><span class="toc-number">2.5.3.</span> <span class="toc-text">
+          border-color</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#border"><span class="toc-number">2.5.4.</span> <span class="toc-text">
+          border</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Border-Radius"><span class="toc-number">2.5.5.</span> <span class="toc-text">
+          Border-Radius</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Margin"><span class="toc-number">2.6.</span> <span class="toc-text">
+          Margin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Contorno"><span class="toc-number">2.7.</span> <span class="toc-text">
+          Contorno</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ShortHands"><span class="toc-number">3.</span> <span class="toc-text">
+          ShortHands</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Lados"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Lados</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Tamanos"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          4 Tamaños</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Tamanos"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          3 Tamaños</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Tamanos"><span class="toc-number">3.1.3.</span> <span class="toc-text">
+          2 Tamaños</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Esquinas"><span class="toc-number">3.2.</span> <span class="toc-text">
+          Esquinas</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Tamanos-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">
+          4 Tamaños</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Tamanos-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">
+          3 Tamaños</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Tamanos-1"><span class="toc-number">3.2.3.</span> <span class="toc-text">
+          2 Tamaños</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tipos-de-Cajas"><span class="toc-number">4.</span> <span class="toc-text">
+          Tipos de Cajas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Display"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Display</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Otros-Modelos"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Otros Modelos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modelos-en-linea"><span class="toc-number">4.3.</span> <span class="toc-text">
+          Modelos en linea</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ocultar-Elementos"><span class="toc-number">4.4.</span> <span class="toc-text">
+          Ocultar Elementos</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Centrar-Elementos"><span class="toc-number">5.</span> <span class="toc-text">
+          Centrar Elementos*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Elementos-de-Bloque"><span class="toc-number">5.0.1.</span> <span class="toc-text">
+          Elementos de Bloque</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Elementos-en-Linea"><span class="toc-number">5.0.2.</span> <span class="toc-text">
+          Elementos en Línea</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alineamiento-Vertical"><span class="toc-number">5.0.3.</span> <span class="toc-text">
+          Alineamiento Vertical</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Box-sizing"><span class="toc-number">6.</span> <span class="toc-text">
+          Box-sizing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo-Interactivo"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Demo Interactivo</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Estructura de Contenedor &#x2F; Contenido                           Contenedores       Se considera contenedor a cualquier elemento HTML que tenga etiqueta de apertura y cierre, sin embargo segú">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Estructura HTML&#x2F;CSS">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Estructura de Contenedor &#x2F; Contenido                           Contenedores       Se considera contenedor a cualquier elemento HTML que tenga etiqueta de apertura y cierre, sin embargo segú">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/Untitled.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/Untitled1.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/Untitled2.png">
+<meta property="article:published_time" content="2020-09-08T21:22:57.153Z">
+<meta property="article:modified_time" content="2020-09-08T23:19:55.199Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/Untitled.png"><title>Estructura HTML/CSS | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Estructura HTML/CSS</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><h1 id="Estructura-de-Contenedor-Contenido">
+          <a href="#Estructura-de-Contenedor-Contenido" class="heading-link"><i class="fas fa-link"></i></a>Estructura de Contenedor / Contenido</h1>
+      
+        <h2 id="Contenedores">
+          <a href="#Contenedores" class="heading-link"><i class="fas fa-link"></i></a>Contenedores</h2>
+      <p>Se considera contenedor a cualquier elemento <strong>HTML</strong> que tenga etiqueta de apertura y cierre, sin embargo según la etiqueta se define el modelo de contenido que puede almacenar.</p>
+<p>Los <strong>contenedores</strong> son espacios de almacenamiento de código HTML, en donde podemos organizar, estructurar y diseñar nuestra página web.</p>
+<p>Existen diversos tipos de contenedores, inicialmente tenemos el contenedor <strong>Raiz</strong> del documento, el cuál se crea con la etiqueta <code>&lt;html&gt;</code> y tenemos el contenedor de todos los elementos visuales, el cual se define con la etiqueta <code>&lt;body&gt;</code>.</p>
+<a id="more"></a>
+
+
+        <h3 id="Contenedores-Genericos">
+          <a href="#Contenedores-Genericos" class="heading-link"><i class="fas fa-link"></i></a>Contenedores Genéricos</h3>
+      <p>Cada etiqueta de html define diferentes tipos de contenedores, pero muchas veces su contenido en muchos casos es específico o limitado (como <code>&lt;table&gt;</code> con <code>&lt;thead&gt;</code> y <code>&lt;tbody&gt;</code> o <code>&lt;ul&gt;</code> con <code>&lt;li&gt;</code>).</p>
+<p>Sin embargo existen etiquetas de HTML que nos permite agrupar contenidos de nuestra página web, y con los que podemos organizar la estructura de nuestra página web de una forma más flexible. Las etiquetas que usamos como contenedores son:</p>
+<ul>
+<li><code>&lt;span&gt;</code>: Generalmente se utiliza para modificar los estilos de un texto en particular.</li>
+<li><code>&lt;div&gt;</code>: Permite crear divisiones en el documento, puede contener cualquier tipo de contenido así como otros elementos div.</li>
+</ul>
+<p>Los contenedores en bloque son los más usados para estructurar una página, siendo <code>&lt;div&gt;</code> el más habitual de todos, dado que <code>div</code> no tiene significado semántico dentro de una página.</p>
+
+        <h3 id="Contenedores-Semanticos">
+          <a href="#Contenedores-Semanticos" class="heading-link"><i class="fas fa-link"></i></a>Contenedores Semánticos</h3>
+      <p>En HTML también existen etiquetas que nos permiten organizar el contenido de una página web según su significado semántico dentro de la página como cabeceras, pie de página, barra de navegación, contenido principal, contenido secundario, entre otros.</p>
+
+        <h2 id="Tipo-de-Contenido">
+          <a href="#Tipo-de-Contenido" class="heading-link"><i class="fas fa-link"></i></a>Tipo de Contenido</h2>
+      <p>Todos los elementos de HTML tienen definido qué tipo de contenido pueden contener y qué no. Así mismo cada elemento HTML se clasifica en uno o más <strong>modelos de contenido.</strong></p>
+<p><img src="/fundamentos-desarrollo-web/Estructura-HTML-CSS/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+<p>Modelos de Contenido.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido">Categorías de contenido</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html">HTML5</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Metadata">
+          <a href="#Metadata" class="heading-link"><i class="fas fa-link"></i></a>Metadata</h3>
+      <p>En este modelo se agrupan los metadatos de la página, estos pueden modificar el comportamiento de la página, así como asociar recursos externos, como hojas de estilo, scripts, favicon, entre otros.</p>
+
+        <h3 id="Flow">
+          <a href="#Flow" class="heading-link"><i class="fas fa-link"></i></a>Flow</h3>
+      <p>A esta categoría pertenece la mayor parte de los elementos HTML, generalmente estos elementos contienen texto o contenido incrustado.</p>
+
+        <h3 id="Sectioning">
+          <a href="#Sectioning" class="heading-link"><i class="fas fa-link"></i></a>Sectioning</h3>
+      <p>En esta categoría se encuentran los contenedores de HTML5 que discriminan secciones de una página web.</p>
+
+        <h3 id="Heading">
+          <a href="#Heading" class="heading-link"><i class="fas fa-link"></i></a>Heading</h3>
+      <p>En esta categoría se encuentran las etiquetas de título (<em>h1…h6</em>), debe contener únicamente los títulos.</p>
+
+        <h3 id="Phrasing">
+          <a href="#Phrasing" class="heading-link"><i class="fas fa-link"></i></a>Phrasing</h3>
+      <p>El contenido de frase define el texto y el marcado (<em>modificación</em>) que contiene, por lo que la redacción de esta categoría forma párrafos.</p>
+
+        <h3 id="Embebed">
+          <a href="#Embebed" class="heading-link"><i class="fas fa-link"></i></a>Embebed</h3>
+      <p>El contenido incrustado importa otro recurso o inserta contenido de otro lenguaje de marcado o espacio de nombres en el documento, como los elementos de multimedia.</p>
+
+        <h3 id="Interactive">
+          <a href="#Interactive" class="heading-link"><i class="fas fa-link"></i></a>Interactive</h3>
+      <p>Se considera contenido interactivo cuando el usuario puede interactuar con estos elementos, como videos y audios cuando tienen controls, links, botones o inputs.</p>
+
+        <h1 id="Interpretacion-de-Estilos">
+          <a href="#Interpretacion-de-Estilos" class="heading-link"><i class="fas fa-link"></i></a>Interpretación de Estilos</h1>
+      
+        <h2 id="Cascada-y-Especifidad">
+          <a href="#Cascada-y-Especifidad" class="heading-link"><i class="fas fa-link"></i></a>Cascada y Especifidad</h2>
+      <p>Todos los elementos de HTML tienen valores iniciales para cada una de las propiedades de css, estos valores iniciales son proporcionados por cada navegador y se les conoce como <strong>estilos predeterminados</strong> o “<strong>estilos de usuario-agente</strong>“.</p>
+<p>La mayoría de las propiedades de css tienen el mismo valor predeterminado en cualquier navegador, pues éstos deben seguir los estándares de la w3c.</p>
+<p>Cuando definimos reglas de estilo para nuestro documento (ya sea externo o interno) estamos modificando estos valores iniciales.</p>
+<p>El navegador lee las reglas de estilos y los va interpretando en forma de cascada (<em>de arriba hacia abajo</em>), por lo que si tenemos dos reglas que cumplen el mismo objetivo se cumplirá la última regla definida. Sin embargo, si se define una regla con mayor importancia (<em>Especifidad</em>) que otra, se tendrá en cuenta, así se escriba antes.</p>
+<p><strong>Selectores de ID</strong> tienen mayor importancia que <strong>Selectores de Clase</strong>, y éstos a su vez tienen mayor importancia que <strong>Selectores de etiqueta</strong>.</p>
+
+        <h2 id="Herencia">
+          <a href="#Herencia" class="heading-link"><i class="fas fa-link"></i></a>Herencia</h2>
+      <p><strong>Algunas</strong> propiedades de css tienen la característica de que son heredables, esto significa que los elementos que son descendientes de un contenedor con estilos heredables, también compartiran estos estilos.</p>
+<p>La mayoría de propiedades heredables son:</p>
+<ul>
+<li><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.notion.so/CSS-B-sico-969b70e895db4d99baa516e7ba21241a#2dd6b10ed16a41a1be03c2d78d40ef14">Fuentes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.notion.so/CSS-B-sico-969b70e895db4d99baa516e7ba21241a#e3218efd0f5147bb93e59626ae4ee8a1">Texto</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.notion.so/CSS-B-sico-969b70e895db4d99baa516e7ba21241a#dff73345f0d8459d976bde706e410475">Color de Texto</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>Estilos de Listas (Numeración)</li>
+<li>Estilos de Tablas (Border-Collapse)</li>
+</ul>
+<p>Sin embargo, la mayoría de las propiedades NO son heredables, como</p>
+<ul>
+<li><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.notion.so/CSS-B-sico-969b70e895db4d99baa516e7ba21241a#27a0b5c145164fd1a312acc95c8f4c6d">Fondos</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>Tamaños (Modelo de Cajas)</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3.org/TR/css-2010/#properties">Cascading Style Sheets (CSS) Snapshot 2010</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Control-de-la-Herencia">
+          <a href="#Control-de-la-Herencia" class="heading-link"><i class="fas fa-link"></i></a>Control de la Herencia</h2>
+      <p>Como no todas las propiedades son heredables en css, se puede usar el valor <code>inherit</code> para definir explícitamente la herencia de dichas propiedades.</p>
+<p>Por el contrario, cuando tenemos propiedades heredadas, pero queremos cancelar dicha herencia, podemos usar el valor <code>initial</code> para que el elemento use los valores iniciales según la etiqueta.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/inheritance">Herencia</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://mosaic.uoc.edu/ac/le/es/m6/ud2/">CSS - Herencia y cascada</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia">Cascada y herencia</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Renderizacion-Web">
+          <a href="#Renderizacion-Web" class="heading-link"><i class="fas fa-link"></i></a>Renderización Web</h1>
+      
+        <h2 id="DOM">
+          <a href="#DOM" class="heading-link"><i class="fas fa-link"></i></a>DOM</h2>
+      <p>Cuando escribimos HTML y abrimos un archivo de este tipo desde un navegador, el navegador se encarga de transformar el código en el <strong>Modelo de Objetos del Documento</strong> (<em>Document Object Model</em> - DOM).</p>
+<p>Éste se trata de una estructura jerárquica padre-hijo (<em>contenedor-contenido</em>) de todos los elementos que componen la página web. En esta estructura, cualquier elemento (<em>etiqueta html</em>) que se encuentre como contenido de otro elemento será considerado como un <em>“<strong>hijo</strong>“</em> del primero y el primero será considerado como el “*<strong>padre</strong>“* del segundo.</p>
+<p>Podemos visualizar el <strong>DOM</strong> como una estructura de árbol de la siguiente forma:</p>
+<p><img src="/fundamentos-desarrollo-web/Estructura-HTML-CSS/Untitled1.png" alt="Untitled1.png" loading="lazy"></p>
+<p>Esta estructura la podemos visualizar con las <strong>herramientas de desarrollador</strong> (Consola) de los navegadores.</p>
+<p>También podemos manipular el DOM desde código JavaScript, con ésto podemos generar páginas dinámicas.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://desarrolloweb.com/articulos/que-es-el-dom.html">Qué es el DOM</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://html.conclase.net/w3c/dom1-es/introduction.html">Qu es el Modelo de Objetos del Documento?</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="CSSOM">
+          <a href="#CSSOM" class="heading-link"><i class="fas fa-link"></i></a>CSSOM</h2>
+      <p>Mientras que el DOM captura los elementos y relaciones de HTML, el CSSOM captura el aspecto que debe tener cada elemento al representarse en el navegador.</p>
+<p>Al interpretar los estilos de la página, el navegador comienza por la regla aplicable más general para cualquier nodo, por ejemplo, aplica primero las reglas definidas para el body en todos los elementos hijos (en el caso que sea una propiedad Heredable), luego irá descendiendo hacia las más específicas, es decir, las reglas se ordenan en cascada de forma “descendente”.</p>
+<p><img src="/fundamentos-desarrollo-web/Estructura-HTML-CSS/Untitled2.png" alt="Untitled2.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model?hl=es">Construcción del modelo de objetos | Web | Google Developers</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://varvy.com/performance/cssom.html">CSSOM</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=es">Construcción, diseño y pintura del árbol de representación | Web</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/user_agent">User agent</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/">https://edisonpem.github.io/fundamentos-desarrollo-web/Estructura-HTML-CSS/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Formularios/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Formularios</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Objetos-JavaScript/"><span class="paginator-prev__text">Objetos JavaScript</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Estructura-de-Contenedor-Contenido"><span class="toc-number">1.</span> <span class="toc-text">
+          Estructura de Contenedor &#x2F; Contenido</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Contenedores"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Contenedores</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Contenedores-Genericos"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          Contenedores Genéricos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Contenedores-Semanticos"><span class="toc-number">1.1.2.</span> <span class="toc-text">
+          Contenedores Semánticos</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tipo-de-Contenido"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Tipo de Contenido</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Metadata"><span class="toc-number">1.2.1.</span> <span class="toc-text">
+          Metadata</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flow"><span class="toc-number">1.2.2.</span> <span class="toc-text">
+          Flow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sectioning"><span class="toc-number">1.2.3.</span> <span class="toc-text">
+          Sectioning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Heading"><span class="toc-number">1.2.4.</span> <span class="toc-text">
+          Heading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Phrasing"><span class="toc-number">1.2.5.</span> <span class="toc-text">
+          Phrasing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Embebed"><span class="toc-number">1.2.6.</span> <span class="toc-text">
+          Embebed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interactive"><span class="toc-number">1.2.7.</span> <span class="toc-text">
+          Interactive</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Interpretacion-de-Estilos"><span class="toc-number">2.</span> <span class="toc-text">
+          Interpretación de Estilos</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cascada-y-Especifidad"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Cascada y Especifidad</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Herencia"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Herencia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Control-de-la-Herencia"><span class="toc-number">2.3.</span> <span class="toc-text">
+          Control de la Herencia</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Renderizacion-Web"><span class="toc-number">3.</span> <span class="toc-text">
+          Renderización Web</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM"><span class="toc-number">3.1.</span> <span class="toc-text">
+          DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSSOM"><span class="toc-number">3.2.</span> <span class="toc-text">
+          CSSOM</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

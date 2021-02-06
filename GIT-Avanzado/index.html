@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Ramas       Las ramas de Git representan líneas independientes de desarrollo, por lo que se puede trabajar en diferentes características de un proyecto de forma paralela sin que se crucen l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GIT Avanzado">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Ramas       Las ramas de Git representan líneas independientes de desarrollo, por lo que se puede trabajar en diferentes características de un proyecto de forma paralela sin que se crucen l">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled1.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled3.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled4.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled5.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled6.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled7.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled8.png">
+<meta property="article:published_time" content="2020-09-08T21:22:57.146Z">
+<meta property="article:modified_time" content="2020-09-08T23:15:51.337Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/Untitled.png"><title>GIT Avanzado | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">GIT Avanzado</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><h1 id="Ramas">
+          <a href="#Ramas" class="heading-link"><i class="fas fa-link"></i></a>Ramas</h1>
+      <p>Las ramas de Git representan líneas independientes de desarrollo, por lo que se puede trabajar en diferentes características de un proyecto de forma paralela sin que se crucen los cambios.</p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.atlassian.com/es/git/tutorials/using-branches">rama de git | Atlassian Git Tutorial</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar">Git - Procedimientos Básicos para Ramificar y Fusionar</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://desarrolloweb.com/articulos/trabajar-ramas-git.html">Trabajar con ramas en Git: git branch</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+
+        <h2 id="Ver-Ramas">
+          <a href="#Ver-Ramas" class="heading-link"><i class="fas fa-link"></i></a>Ver Ramas</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">$ git branch --list</span><br><span class="line">$ git branch --all</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Crear-Ramas">
+          <a href="#Crear-Ramas" class="heading-link"><i class="fas fa-link"></i></a>Crear Ramas</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch [*NombreRama*]</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Cambiar-de-Rama">
+          <a href="#Cambiar-de-Rama" class="heading-link"><i class="fas fa-link"></i></a>Cambiar de Rama</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout [*NombreRama*]</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Crear-y-Cambiar-ramas-al-tiempo">
+          <a href="#Crear-y-Cambiar-ramas-al-tiempo" class="heading-link"><i class="fas fa-link"></i></a>Crear y Cambiar ramas al tiempo</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b [*NombreRama*]</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Eliminar-Ramas">
+          <a href="#Eliminar-Ramas" class="heading-link"><i class="fas fa-link"></i></a>Eliminar Ramas</h2>
+      <p>Una rama no se podrá eliminar si se tiene trabajo que no se ha fusionado.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d [*NombreRama*]</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="Diferencias">
+          <a href="#Diferencias" class="heading-link"><i class="fas fa-link"></i></a>Diferencias</h1>
+      <p>Para ver qué diferencias existen entre ramas se puede usar el siguiente comando:</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff [*NombreRama1*] [*NombreRama2*]</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="Historial">
+          <a href="#Historial" class="heading-link"><i class="fas fa-link"></i></a>Historial</h1>
+      <p>Para ver las ramas en el historial de cambios se puede complementar el comando git log de la siguiente forma.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --all --graph --oneline</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="Fusion-Merge">
+          <a href="#Fusion-Merge" class="heading-link"><i class="fas fa-link"></i></a>Fusión (Merge)</h1>
+      <p>Cuando se han terminado de desarrollar las diferentes características se deben mezclar los cambios en una rama principal. La rama principal de git es <strong>master.</strong></p>
+<p>Para fusionar ramas, se debe primero parar en la rama que recibirá los cambios y luego el comando <strong><em>git merge.</em></strong> por lo que los siguientes 2 serán diferentes.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">$ git merge [*NombreRama1*]</span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout [*NombreRama1*]</span><br><span class="line">$ git merge master</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Sin embargo según los archivos que se modifiquen y los commits que se hagan pueden haber diferentes tipos de mezclas (esto no requiere configuración adicional, git lo hace automáticamente).</p>
+
+        <h2 id="Avance-Rapido-Fast-Forward">
+          <a href="#Avance-Rapido-Fast-Forward" class="heading-link"><i class="fas fa-link"></i></a>Avance Rápido (Fast Forward)</h2>
+      <p>El tipo de merge fast forward se aplica cuando la rama que se modificó parte de la rama a la que se va a fusionar, y en la rama base no se realizaron cambios.</p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled1.png" alt="Untitled1.png" loading="lazy"></p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled2.png" alt="Untitled2.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://marksabino.com/defproc/blog/2012/git-un-merge/">Git Un-Merge</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Recursive">
+          <a href="#Recursive" class="heading-link"><i class="fas fa-link"></i></a>Recursive</h2>
+      <p>Esta estrategia se aplica cuando la rama que se modificó parte de la rama a la que se va a fusionar, pero en la rama base se realizaron cambios.</p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled3.png" alt="Untitled3.png" loading="lazy"></p>
+
+        <h2 id="Resolucion-de-Conflictos">
+          <a href="#Resolucion-de-Conflictos" class="heading-link"><i class="fas fa-link"></i></a>Resolución de Conflictos</h2>
+      <p>Cuando se realizan cambios tanto en la rama base como en la rama secundaria, al intentar mezclarlas se puede generar un conflicto si se trata de modificaciones en las <strong>mismas líneas de código del mismo archivo</strong>.</p>
+<p>En ese caso el merge no se podrá hacer y se pedirá al usuario definir cuales cambios desea conservar en la mezcla, esto se verá así:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"footer"</span>&gt;</span>contact : email.support@github.com<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">=======</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"footer"</span>&gt;</span></span><br><span class="line"> please contact us at support@github.com</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; develop:index.html</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Donde <strong>HEAD</strong> se refiere a la rama actual y <strong>develop</strong> en este caso es la rama secundaria.</p>
+<p>El fragmento de código que hay entre los símbolos <strong>&lt;&lt;&lt;&lt;&lt;&lt;&lt;** y  **=======** son los cambios base y el fragmento de código que hay entre los símbolos **=======** y **&gt;&gt;&gt;&gt;&gt;&gt;&gt;</strong> son los cambios de la segunda rama. Aunque aparezcan estos símbolos, el usuario deberá eliminarlos y organizar el código manualmente, estos son solo informativos.</p>
+<p>Una vez hecho los respectivos arreglos, el usuario deberá hacer un commit.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add -A</span><br><span class="line">$ git commit -m <span class="string">'Mezcla con develop'</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>La resolución de conflictos en visual Studio Code es más simple, pues vscode ofrece las opciones de <strong>mantener cambios actuales</strong> (en la rama base), <strong>mantener los cambios de la rama entrante</strong>, o <strong>mantener ambos cambios,</strong> igualmente el usuario debe hacer un commit después de organizar el código.</p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled4.png" alt="Untitled4.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://styde.net/ramas-y-resolucion-de-conflictos-en-git/">Ramas y resolución de conflictos en git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.atlassian.com/es/git/tutorials/using-branches/git-merge">Git merge | Atlassian Git Tutorial</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar">Git - Procedimientos Básicos para Ramificar y Fusionar</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Git-Flow">
+          <a href="#Git-Flow" class="heading-link"><i class="fas fa-link"></i></a>Git-Flow</h1>
+      <p>Gitflow es un diseño de flujo de trabajo de Git que define un modelo estricto de ramificación diseñado alrededor de la publicación del proyecto. Proporciona un marco sólido para gestionar proyectos más grandes.</p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled5.png" alt="Untitled5.png" loading="lazy"></p>
+<ul>
+<li>La rama <strong>master</strong> será la rama principal donde habitan las versiones estables de un proyecto.</li>
+<li>La rama <strong>develop</strong> será la rama principal de desarrollo, donde se integran cambios y se realizan pruebas.</li>
+<li>Las ramas <strong>feature</strong> corresponden a las diferentes características que se desarrollan de forma aislada e independientes, estas ramas se integran con develop usando fusiones recursivas (—no-ff)</li>
+<li>La rama <strong>release</strong> corresponde a las versiones de entrega, en esta rama se realizan pruebas y correcciones para desplegar una versión estable.</li>
+<li>En la rama <strong>hotfix</strong> se deben corregir errores <strong>(<em>bugs</em>)</strong> que existan en producción.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow">Flujo de trabajo de Gitflow | Atlassian Git Tutorial</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Github">
+          <a href="#Github" class="heading-link"><i class="fas fa-link"></i></a>Github</h1>
+      <p>Cuando se trabaja con plataformas como github se pueden crear y cambiar de ramas en la nube, sin embargo no es recomendable si no es necesario, es preferible subir los cambios de las ramas desde local, sin embargo las mezclas en la nube mejoran la gestión de un proyecto.</p>
+
+        <h2 id="Publicar-nuevas-ramas-a-la-nube">
+          <a href="#Publicar-nuevas-ramas-a-la-nube" class="heading-link"><i class="fas fa-link"></i></a>Publicar nuevas ramas a la nube</h2>
+      <p>Para publicar una nueva rama se realiza un <strong><em>push</em></strong> con la bandera <strong>-u</strong></p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin [*NombreRama*]</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Actualizar-ramas-en-la-nube">
+          <a href="#Actualizar-ramas-en-la-nube" class="heading-link"><i class="fas fa-link"></i></a>Actualizar ramas en la nube</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout [*NombreRama*]</span><br><span class="line">$ git push</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Actualizar-ramas-locales">
+          <a href="#Actualizar-ramas-locales" class="heading-link"><i class="fas fa-link"></i></a>Actualizar ramas locales</h2>
+      <figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout [*NombreRama*]</span><br><span class="line">$ git pull</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Bajar-nuevas-ramas">
+          <a href="#Bajar-nuevas-ramas" class="heading-link"><i class="fas fa-link"></i></a>Bajar nuevas ramas</h2>
+      <p>Para actualizar el repositorio con ramas existentes en github pero no en local, se pueden bajar las nuevas ramas con el siguiente comando.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch --all </span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Eliminar-ramas-del-repositorio-remoto">
+          <a href="#Eliminar-ramas-del-repositorio-remoto" class="heading-link"><i class="fas fa-link"></i></a>Eliminar ramas del repositorio remoto</h2>
+      <p>Para publicar una nueva rama se realiza un <strong><em>push</em></strong> con la bandera <strong>-d</strong></p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -d origin [*NombreRama*]</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Bajar-un-repositorio-existente">
+          <a href="#Bajar-un-repositorio-existente" class="heading-link"><i class="fas fa-link"></i></a>Bajar un repositorio existente</h2>
+      <p>Para bajar un repositorio existente debe hacerse fuera de VSCode, ya que esto <strong>descargará</strong> la carpeta donde se encuentra el proyecto, por lo que se deberá hacer por consola desde donde se desea descargar el proyecto.</p>
+<p>Cuando un repositorio se baja por primera vez, se baja con todas las ramas.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/userName/repoName.git</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="Gestion-de-Proyectos">
+          <a href="#Gestion-de-Proyectos" class="heading-link"><i class="fas fa-link"></i></a>Gestión de Proyectos</h1>
+      
+        <h2 id="Pull-Request">
+          <a href="#Pull-Request" class="heading-link"><i class="fas fa-link"></i></a>Pull Request</h2>
+      <p>Una forma eficiente de mantener orden a las ramas de un repositorio es usando <strong>pull resquest</strong> aunque el nombre es confuso, un pull request es una petición para <strong>mezclar ramas en la nube</strong>, para esto se puede asignar un revisor para que valide los cambios que se desean incorporar al proyecto desde una rama secundaria.</p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled6.png" alt="Untitled6.png" loading="lazy"></p>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled7.png" alt="Untitled7.png" loading="lazy"></p>
+
+        <h3 id="Resolucion-de-Conflictos-1">
+          <a href="#Resolucion-de-Conflictos-1" class="heading-link"><i class="fas fa-link"></i></a>Resolución de Conflictos</h3>
+      <p>Si no se presentan conflictos se podrá hacer el merge automáticamente una vez se apruebe el pull request. Si se presentan conflictos se pueden resolver inmediatamente en github o se puede actualizar la rama en local con los conflictos resueltos y hacer <strong>push</strong> a la nube**.**</p>
+<p>Para esto se recomienda mezclar la rama remota en la rama que se desea mezclar (hacer un merge inverso desde la nube a local) de la siguiente forma</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout develop</span><br><span class="line">$ git pull</span><br><span class="line">$ git checkout rama1</span><br><span class="line">$ git merge develop</span><br><span class="line"><span class="comment"># Se resuelven los conflictos en local desde vscode</span></span><br><span class="line">$ git add -A</span><br><span class="line">$ git commit -m <span class="string">'Resolviendo conflictos con develop'</span></span><br><span class="line">$ git push</span><br></pre></td></tr></tbody></table></div></figure>
+<p>El pull resquest se actualizará automáticamente.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout rama1</span><br><span class="line">$ git pull origin develop</span><br><span class="line"><span class="comment"># Se resuelven los conflictos en local desde vscode</span></span><br><span class="line">$ git commit -am <span class="string">'Integrando develop'</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Issues">
+          <a href="#Issues" class="heading-link"><i class="fas fa-link"></i></a>Issues</h2>
+      <p>Los <strong>issues</strong> de github es la forma en la que podemos gestionar tareas, entendiendo una tarea parte del desarrollo, los issues pueden referirse a nuevas funcionalidades, problemas de integración o errores de producción.</p>
+<p>Los issues se pueden contener:</p>
+<ul>
+<li>Un&nbsp;<strong>título</strong>&nbsp;y una&nbsp;<strong>descripción</strong>&nbsp;describen de qué se trata el problema.</li>
+<li>Las&nbsp;<strong>etiquetas</strong>&nbsp;codificadas por colores lo&nbsp;ayudan a clasificar y filtrar sus problemas (al igual que las etiquetas en el correo electrónico).</li>
+<li>Un&nbsp;<strong>milestone</strong>&nbsp;actúa como un contenedor para problemas.&nbsp;Esto es útil para asociar problemas con características específicas o fases del proyecto (por ejemplo,&nbsp;<em>Weekly Sprint 9 / 5-9 / 16</em>&nbsp;o&nbsp;<em>Shipping 1.0</em>&nbsp;).</li>
+<li>Asignar un responsable (<strong>assignee</strong>) para trabajar en el tema en un momento dado.</li>
+<li><strong>Los comentarios</strong>&nbsp;permiten que cualquier persona con acceso al repositorio proporcione comentarios.</li>
+</ul>
+<p>Para cerrar un issue se puede realizar de forma manual, o con palabras clave en los mensajes de los commits o en la descripción de los PR.</p>
+<ul>
+<li>close #x</li>
+<li>fix #x</li>
+<li>resolve #x</li>
+</ul>
+<p>Aquí los <strong>#x</strong> se refiere al identificador del issue correspondiente.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://guides.github.com/features/issues/">Mastering Issues</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue">Linking a pull request to an issue</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Labels">
+          <a href="#Labels" class="heading-link"><i class="fas fa-link"></i></a>Labels</h2>
+      <p>Tanto issues como pull request pueden tener asociados etiquetas, estas pueden ser personalizadas, sin embargo github provee unas etiquetas base:</p>
+<ul>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/bug">bug</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> Algo no funciona</li>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/documentation">documentation</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> Mejoras o adiciones a la documentación.</li>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/duplicate">duplicate</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> Este issue o pull request ya existe.</li>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/enhancement">enhancement</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> Solicitud de nuevas funciones.</li>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/help%20wanted">help wanted</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> Se necesita atención adicional.</li>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/invalid">invalid</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> Indica que un issue o Pull Request ya no es relevante.</li>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/question">question</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> Se solicita más información.</li>
+<li><strong><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels/wontfix">wontfix</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>:</strong> indica que no se trabajará en un issue o pull request.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/EdisonPeM/repo-ramas/labels">EdisonPeM/repo-ramas</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Github-Projects">
+          <a href="#Github-Projects" class="heading-link"><i class="fas fa-link"></i></a>Github Projects</h2>
+      <p>Github provee de un gestor de proyectos con github projects, en donde se pueden crear Tableros Ágiles (<strong>Agile Dashboard</strong>) y se pueden crear tarjetas (como kanban) para representar tareas. </p>
+<p>Los tableros de proyectos están formados por notas, issues y pull requests que se clasifican como <strong>tarjetas</strong> en columnas de su elección.&nbsp;Puede arrastrar y soltar o usar métodos abreviados de teclado para reordenar las tarjetas dentro de una columna, mover tarjetas de una columna a otra y cambiar el orden de las columnas.</p>
+<p>Existen diferentes modelos de tableros</p>
+<ul>
+<li><strong>Kanban básico:</strong>  Realiza un seguimiento de sus tareas con las columnas To Do, In progress y Done.</li>
+<li><strong>Kanban automatizado:</strong>    Las tarjetas se mueven automáticamente entre las columnas To Do, In progress y Done. Según el estado de los issues y pull requests.</li>
+<li><strong>Kanban automatizado con revisión</strong>: Las tarjetas se mueven automáticamente entre las columnas To Do, In progress y Done, con activadores adicionales para el estado de revisión de pull requests.</li>
+<li><strong>Triage de Bugs</strong>: Triage y priorice los errores con las columnas To Do, Alta prioridad, Baja prioridad y Cerrado</li>
+</ul>
+<p><img src="/fundamentos-desarrollo-web/GIT-Avanzado/Untitled8.png" alt="Untitled8.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards">About project boards</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/">https://edisonpem.github.io/fundamentos-desarrollo-web/GIT-Avanzado/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Efectos-Animaciones/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Efectos y Animaciones</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Control-Versiones/"><span class="paginator-prev__text">Control de Versiones</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ramas"><span class="toc-number">1.</span> <span class="toc-text">
+          Ramas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ver-Ramas"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Ver Ramas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Crear-Ramas"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Crear Ramas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cambiar-de-Rama"><span class="toc-number">1.3.</span> <span class="toc-text">
+          Cambiar de Rama</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Crear-y-Cambiar-ramas-al-tiempo"><span class="toc-number">1.4.</span> <span class="toc-text">
+          Crear y Cambiar ramas al tiempo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Eliminar-Ramas"><span class="toc-number">1.5.</span> <span class="toc-text">
+          Eliminar Ramas</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Diferencias"><span class="toc-number">2.</span> <span class="toc-text">
+          Diferencias</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Historial"><span class="toc-number">3.</span> <span class="toc-text">
+          Historial</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fusion-Merge"><span class="toc-number">4.</span> <span class="toc-text">
+          Fusión (Merge)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Avance-Rapido-Fast-Forward"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Avance Rápido (Fast Forward)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recursive"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Recursive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resolucion-de-Conflictos"><span class="toc-number">4.3.</span> <span class="toc-text">
+          Resolución de Conflictos</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-Flow"><span class="toc-number">5.</span> <span class="toc-text">
+          Git-Flow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Github"><span class="toc-number">6.</span> <span class="toc-text">
+          Github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Publicar-nuevas-ramas-a-la-nube"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Publicar nuevas ramas a la nube</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Actualizar-ramas-en-la-nube"><span class="toc-number">6.2.</span> <span class="toc-text">
+          Actualizar ramas en la nube</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Actualizar-ramas-locales"><span class="toc-number">6.3.</span> <span class="toc-text">
+          Actualizar ramas locales</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bajar-nuevas-ramas"><span class="toc-number">6.4.</span> <span class="toc-text">
+          Bajar nuevas ramas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Eliminar-ramas-del-repositorio-remoto"><span class="toc-number">6.5.</span> <span class="toc-text">
+          Eliminar ramas del repositorio remoto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bajar-un-repositorio-existente"><span class="toc-number">6.6.</span> <span class="toc-text">
+          Bajar un repositorio existente</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gestion-de-Proyectos"><span class="toc-number">7.</span> <span class="toc-text">
+          Gestión de Proyectos</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Pull-Request"><span class="toc-number">7.1.</span> <span class="toc-text">
+          Pull Request</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Resolucion-de-Conflictos-1"><span class="toc-number">7.1.1.</span> <span class="toc-text">
+          Resolución de Conflictos</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Issues"><span class="toc-number">7.2.</span> <span class="toc-text">
+          Issues</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Labels"><span class="toc-number">7.3.</span> <span class="toc-text">
+          Labels</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github-Projects"><span class="toc-number">7.4.</span> <span class="toc-text">
+          Github Projects</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

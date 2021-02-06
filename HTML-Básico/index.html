@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Introducción       El desarrollo web es un término que se refiere la creación de páginas, sitios y aplicaciones web, éste tiene formas diferentes según la complejidad de un proyecto: desde">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML Básico">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Introducción       El desarrollo web es un término que se refiere la creación de páginas, sitios y aplicaciones web, éste tiene formas diferentes según la complejidad de un proyecto: desde">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/tagbreakdown.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/html-element-structure.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/void_element_breakdown.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled1.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled3.png">
+<meta property="article:published_time" content="2021-02-05T23:57:32.429Z">
+<meta property="article:modified_time" content="2021-02-05T23:57:32.429Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/tagbreakdown.png"><title>HTML Básico | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">HTML Básico</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2021-02-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-02-05</span></span></div></header><div class="post-body"><h1 id="Introduccion">
+          <a href="#Introduccion" class="heading-link"><i class="fas fa-link"></i></a>Introducción</h1>
+      <p>El <em>desarrollo web</em> es un término que se refiere la creación de páginas, sitios y aplicaciones web, éste tiene formas diferentes según la complejidad de un proyecto: desde la creación de páginas web con gestores de contenido como <strong>Wordpress o Wix</strong>, o la creación de páginas web con solamente <strong>HTML y CSS</strong>, hasta la implementación de frameworks de javascript, que permiten crear páginas más rápidas y con un diseño reactivo y basado en componentes.</p>
+<a id="more"></a>
+
+<p>Independientemente del nivel de complejidad de una página, toda la web está basada en <strong>HTML</strong> o <strong>Lenguaje de Marcado de Hipertexto</strong>, el cual fue creado desde 1980 por <em>Tim Berners-Lee</em> como la propuesta de “<em>hipertexto”</em> (<em>El hipertexto es texto que contiene enlaces a otros textos</em>) sobre el que se basaría el programa de la <strong>World Wide Web</strong> (<em>www</em>) lanzado en 1991, sistema de distribución de documentos de hipertexto o hipermedia interconectados y accesibles a través de <strong>Internet.</strong> </p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.bbvaopenmind.com/tecnologia/visionarios/tim-berners-lee-y-el-origen-de-la-web/">Tim Berners-Lee y el origen de la Web | OpenMind</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://es.wikipedia.org/wiki/World_Wide_Web#Historia">World Wide Web</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://uniwebsidad.com/libros/xhtml/capitulo-1/breve-historia-de-html">1.2. Breve historia de HTML (Introducción a XHTML)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<blockquote>
+<p>Con un <strong>navegador web</strong>, un usuario visualiza <strong>sitios web</strong> compuestos de <strong>páginas web</strong> que pueden contener textos, imágenes, vídeos u otros contenidos multimedia, y navega a través de esas páginas usando hipervínculo.</p>
+</blockquote>
+<p>En octubre de 1994, <em>Tim Berners-Lee</em> fundó el <strong>World Wide Web Consortium (W3C)</strong>, Organismo encargado de crear todos los estándares relacionados con la web, para así crear una web universal, accesible y fácil de usar para todo el mundo.</p>
+<p>Estos estándares se publican en diferentes niveles según su maduración y aceptación:</p>
+<ul>
+<li>Borrador de trabajo (WD)</li>
+<li>Recomendación candidata (CR)</li>
+<li>Recomendación propuesta (PR)</li>
+<li>Recomendación de W3C (REC)</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://desarrolloweb.com/articulos/proceso-estandarizacion-w3c.html">El proceso de estandarización de la W3C</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://disenowebakus.net/estandares-web.php">Estándares Web W3C - Qué son, cómo funciona, para qué sirven</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>En Octubre del 2014 tras varias revisiones, se publicó el estándar <strong>HTML5</strong> (HTML versión 5), con el que se agregan nuevas etiquetas y funcionalidades a HTML. La última recomendación de la w3c es HTML 5.2 en Diciembre de 2017.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/HTML/HTML5">HTML5</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Etiquetas">
+          <a href="#Etiquetas" class="heading-link"><i class="fas fa-link"></i></a>Etiquetas</h2>
+      <p>HTML es un lenguaje de marcado que se basa en el uso de etiquetas, con las que un navegador da formato al contenido de las mismas. Según el tipo de etiqueta el navegador podrá mostrar el texto de una determinada forma, crear hipervínculos, o cargar archivos multimedia.</p>
+<p>Todas las etiquetas se definen dentro de paréntesis angulares ( &lt; &gt; ) para distinguirlas del contenido de la página misma.</p>
+<p>Todos los elementos que existen en una página web, están definidos entre una <strong>etiqueta de apertura</strong> y una <strong>etiqueta de cierre</strong> (la etiqueta de cierre generalmente utiliza el símbolo &lt;/ &gt;)</p>
+<p><img src="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/tagbreakdown.png" alt="tagbreakdown.png" loading="lazy"></p>
+<p><img src="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/html-element-structure.png" alt="html-element-structure.png" loading="lazy"></p>
+<p>Estructura básica de un elemento HTML</p>
+<p>En este ejemplo, la etiqueta <code>&lt;p&gt;</code> representa la <strong>etiqueta de apertura</strong> de un párrafo, <em>“Hello Wold”</em> es el contenido del párrafo, y la etiqueta <code>&lt;/p&gt;</code> determina el final de este párrafo siendo la <strong>etiqueta de cierre</strong>.</p>
+<p>Algunas pocas etiquetas no utilizan <strong>etiqueta de cierre</strong>, como <code>&lt;meta&gt;</code> <code>&lt;img&gt;</code> <code>&lt;br&gt;</code> y <code>&lt;hr&gt;</code>, este tipo de etiquetas se les denomina <strong>self-closing</strong> o <strong>void-elements (**<em>elementos vacíos</em></strong>)**, porque no almacenan un contenido en sí.</p>
+<p><img src="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/void_element_breakdown.png" alt="void_element_breakdown.png" loading="lazy"></p>
+<p>Estructura de un elemento sin etiqueta de cierre.</p>
+
+        <h2 id="Atributos">
+          <a href="#Atributos" class="heading-link"><i class="fas fa-link"></i></a>Atributos</h2>
+      <p>Todas las etiquetas de HTML soportan el uso de <strong>atributos</strong> que modifican su presentación y configuración dentro de la página.</p>
+<p><img src="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+<p>Estructura de un elemento HTML con Atributos.</p>
+<p>En este ejemplo se muestra un hipervínculo, el cuál utiliza el atributo <strong>href</strong>, en este atributo se indica la url a la que redirecciona dicho hipervínculo.</p>
+<p>A la hora de agregar atributos siga estas recomendaciones:</p>
+<ul>
+<li>Todos los atributos se escriben justo después del nombre de la etiqueta y antes del símbolo mayor que <strong>( &gt; )</strong></li>
+<li>Todos los atributos van separados por un espacio entre sí.</li>
+<li>Cada atributo va acompañado de su respectivo valor después del símbolo igual <strong>( = )</strong></li>
+<li>Los valores de cualquier atributo deben ir siempre entre comillas dobles <strong>( “ “ )</strong></li>
+<li>En las etiquetas de cierre no se escriben atributos</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_attributes.asp">HTML Attributes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Atributos-Globales">
+          <a href="#Atributos-Globales" class="heading-link"><i class="fas fa-link"></i></a>Atributos Globales</h2>
+      <p>Todos los elementos de html comparten ciertos atributos como: <strong>id</strong>, <strong>class</strong>, <strong>style</strong>, <strong>title,</strong> entre otros. Sin embargo otros elementos tienen atributos específicos para cumplir su función, como lo son <strong>src</strong> para cargar imágenes o <strong>href</strong> para especificar la URL de un hipervínculo.</p>
+
+        <h3 id="Atributo-ID">
+          <a href="#Atributo-ID" class="heading-link"><i class="fas fa-link"></i></a>Atributo ID</h3>
+      <p>El atributo <em><code>id</code></em>, nos permite agregar un <strong>identificador único</strong> a cualquier elemento html, lo que significa que cualquier etiqueta podrá tener este atributo, con un <em><code>id</code></em> se podrá diferenciar los elementos entre sí a la hora de agregar manipular el documento con Javascript.</p>
+
+        <h3 id="Atributo-CLASS">
+          <a href="#Atributo-CLASS" class="heading-link"><i class="fas fa-link"></i></a>Atributo CLASS</h3>
+      <p>El atributo <em><code>class</code></em> permite crear una <strong>clasificación de elementos</strong>, ya sean un subconjunto del mismo tipo de etiqueta o varios de diferente tipo de etiqueta, cualquier elemento html puede tener una o más clases y lo utilizamos cuando queremos agrupar elementos para que compartan estilos.</p>
+
+        <h3 id="Atributo-TITLE">
+          <a href="#Atributo-TITLE" class="heading-link"><i class="fas fa-link"></i></a>Atributo TITLE</h3>
+      <p>El atributo <em><code>title</code></em> se utiliza para generar un elemento informativo sobre cualquier elemento, este atributo se agrega en cualquier elemento seguido de un mensaje que se mostrará cuando el usuario pase el mouse por encima de nuestro elemento.</p>
+
+        <h2 id="FILE-SYSTEM">
+          <a href="#FILE-SYSTEM" class="heading-link"><i class="fas fa-link"></i></a>FILE SYSTEM</h2>
+      <p>El <strong>File System</strong> o sistema de gestión de archivos, es la forma en la que los archivos están organizados dentro de nuestro equipo, todos los archivos se organizan en carpetas, y éstas a su vez pueden tener carpetas dentro.</p>
+<figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Escritorio:</span><br><span class="line">	  Proyecto:</span><br><span class="line">		    - Archivo1</span><br><span class="line">		    Imágenes:</span><br><span class="line">			      - imagen.png</span><br></pre></td></tr></tbody></table></div></figure>
+<p>El sistema de archivos básico de un proyecto web es similar al siguiente:</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">miPaginaWeb:</span><br><span class="line">    - index.html</span><br><span class="line">    images:</span><br><span class="line">        - userProfile.jpg</span><br><span class="line">        - fondo.png</span><br><span class="line">    css:</span><br><span class="line">        - style.css</span><br><span class="line">    js:</span><br><span class="line">        - script.js</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="COMENTARIOS">
+          <a href="#COMENTARIOS" class="heading-link"><i class="fas fa-link"></i></a>** COMENTARIOS*</h1>
+      <p>HTML permite agregar comentarios usando las etiquetas <code>&lt;!-- Esto es un Comentario --&gt;</code><br>lo que se encuentre dentro de esta etiquetas no será procesado por el navegador.</p>
+
+        <h1 id="Head-y-Body">
+          <a href="#Head-y-Body" class="heading-link"><i class="fas fa-link"></i></a>Head y Body</h1>
+      <p>Una página HTML en blanco tiene la siguiente estructura:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Meta Datos --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Elementos --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>La etiqueta <code>&lt;!DOCTYPE html&gt;</code> nos indica que nuestro archivo es de tipo HTML y que estamos usando el estándar HTML5 mientras que la etiqueta <code>&lt;html&gt;</code> da comienzo al documento.</p>
+<p>Todo documento web está dividido en dos partes <strong>Head y Body</strong> definidos por la etiqueta <code>&lt;head&gt;</code>  y la etiqueta <code>&lt;body&gt;</code> respectivamente.</p>
+<p>Todo lo que se defina dentro de la <strong>cabecera del documento</strong> (Head) no se mostrará en nuestra página, mientras que en el <strong>cuerpo del documento</strong> (Body) se encuentran todos los elementos visuales de una página web, como párrafos, imágenes, botones y demás.</p>
+
+        <h2 id="HEAD">
+          <a href="#HEAD" class="heading-link"><i class="fas fa-link"></i></a>HEAD</h2>
+      <p>En esta parte del html se definen <strong>meta-datos</strong> como el nombre de la página, el autor, la descripción, el título o incluso el lenguaje.</p>
+
+        <h3 id="Meta-Datos">
+          <a href="#Meta-Datos" class="heading-link"><i class="fas fa-link"></i></a>Meta Datos</h3>
+      <p>Los Meta-datos es información que no se muestra al usuario pero que nos ayudan a configurar y darle una descripción a nuestra página, estos meta datos se agregan en la cabecera del documento.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Metados_en">¿Qué hay en la cabecera? Metadatos en HTML</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Lenguaje">
+          <a href="#Lenguaje" class="heading-link"><i class="fas fa-link"></i></a>Lenguaje</h3>
+      <p>Podemos especificar en qué lenguaje se encuentra el contenido de nuestra página, éste se puede hacer de dos formas, con la etiqueta <code>&lt;meta&gt;</code> de la siguiente forma:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Language"</span> <span class="attr">content</span>=<span class="string">"es"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>o , como atributo en la etiqueta <code>&lt;html&gt;</code> con el atributo <code>lang</code>.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"es"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>El lenguaje se define por diminutivos, <em>“es”</em> significa “español”, “inglés” sería <em>“en”</em> (english), y así con los demás idiomas, “francés” sería <em>“fr”</em>, “alemán” sería <em>“de”</em>, “portugués” sería “pt”, etc.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/tags/ref_language_codes.asp">HTML Language Code Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Charset">
+          <a href="#Charset" class="heading-link"><i class="fas fa-link"></i></a>Charset</h3>
+      <p>El charset define un conjunto de caracteres para manejar en la página, el conjunto de caracteres más común y genérico es el <strong>UTF-8</strong>, con este charset podemos utilizar todos los caracteres conocidos sin ningún problema, como tíldes, tíldes invertidas, diéresis, ñ, entre muchos otros como <strong>ASCII</strong>, <strong>ANSI</strong>, etc, éste se agrega con la etiqueta <code>&lt;meta&gt;</code> de la siguiente forma:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_charset.asp">HTML Charset</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Metas-Descriptivos">
+          <a href="#Metas-Descriptivos" class="heading-link"><i class="fas fa-link"></i></a>Metas Descriptivos</h3>
+      <p>Podemos agregar metadatos sobre el Autor, la Descripción y Palabras Clave para describir nuestra página, estos se indican con la etiqueta <code>&lt;meta&gt;</code> de la siguiente forma:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"Edison Peñuela"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"mi primera página"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"html, tutorial"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Se pueden agregar más metadatos indicando el nombre del metadato en el atributo <code>name</code> y su respectivo valor en el atributo <code>content</code>.</p>
+
+        <h3 id="Titulo">
+          <a href="#Titulo" class="heading-link"><i class="fas fa-link"></i></a>Título</h3>
+      <p>El título del documento es lo que muestra en la parte superior de una pestaña o ventana del navegador, este título se agrega con la etiqueta <code>&lt;title&gt;</code></p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>En el ejemplo anterior <em><code>Document</code></em> sería el título de nuestra página.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">: The Document Title element</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Favicon">
+          <a href="#Favicon" class="heading-link"><i class="fas fa-link"></i></a>Favicon</h3>
+      <p>El favicon es la pequeña imagen que aparece junto al nombre de nuestra página en la pestaña del navegador, para agregar un favicon a nuestro documento basta con agregar un archivo llamado favicon.ico en la misma carpeta que nuestro index.html.</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">miProyecto:</span><br><span class="line">    - index.html</span><br><span class="line">    - favico.ico</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Nuestro ícono debe tener el formato <strong>ico</strong>, para lo cual existen conversores de <em>png</em> o <em>jpg</em> a ico, el tamaño del favicon generalmente es de 16x16 píxeles, pero en otros lugares como los marcadores puede tener un tamaño mayor (24x24, 32x32, 48x48 o 64x64).</p>
+<p>Si se desea cargar otro formato de imagen, como png o jpg, se debe utilizar la etiqueta <code>&lt;link&gt;</code> de la siguiente forma:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">type</span>=<span class="string">"image/x-icon"</span> <span class="attr">href</span>=<span class="string">"filePath"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.mclibre.org/consultar/htmlcss/html/html-favicon.html">Favicon</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Otros-Metadatos">
+          <a href="#Otros-Metadatos" class="heading-link"><i class="fas fa-link"></i></a>Otros Metadatos</h3>
+      <p>Existen muchos metadatos que nos ayudan a configurar una página web, por ejemplo el <em>viewport</em> que nos ayuda a configurar nuestro sitio para ser responsive y se agrega de la siguiente forma:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Estructura-inicial">
+          <a href="#Estructura-inicial" class="heading-link"><i class="fas fa-link"></i></a>Estructura inicial</h3>
+      <p>Para comenzar a crear una página, es recomendable partir de una estructura como la siguiente, en donde los meta-datos son agregados al inicio y así solo nos preocuparemos por el contenido del documento.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"es"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Metas Suficientes ---&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--- Metas Adicionales --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">type</span>=<span class="string">"image/png"</span> <span class="attr">href</span>=<span class="string">"filePath"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"Edison Peñuela"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"mi primera página"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"html, tutorial"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="BODY">
+          <a href="#BODY" class="heading-link"><i class="fas fa-link"></i></a>BODY</h2>
+      <p>En el body se escriben todos los elementos que se visualizan en nuestra página, como títulos, párrafos, listas, tablas y demás. Para los ejemplos de este punto en adelante, se asume que están escritos dentro de la etiqueta <code>&lt;body&gt;</code>.</p>
+
+        <h2 id="Elementos-Comunes">
+          <a href="#Elementos-Comunes" class="heading-link"><i class="fas fa-link"></i></a>Elementos Comunes</h2>
+      
+        <h3 id="Parrafos">
+          <a href="#Parrafos" class="heading-link"><i class="fas fa-link"></i></a>Párrafos</h3>
+      <p>Aunque bien se puede escribir texto directamente en el <code>&lt;body&gt;</code>, se recomienda y se suele utilizar siempre párrafos para separar y manipular estos textos.</p>
+<p>Para crear párrafos se utiliza la etiqueta <code>&lt;p&gt;</code>  y todo lo que esté escrito entre esta etiqueta se mostrará como un bloque sólido de texto, sin embargo siempre inicia en una línea nueva y genera un salto de línea al final.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat nisi massa,sit amet rutrum erat pharetra in. Suspendisse ultrices, turpis et imperdiet maximus, ante metus vehicula dolor, in suscipit nisi sapien a diam. Cras eget nunc tortor. Suspendisse potenti.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Titulos">
+          <a href="#Titulos" class="heading-link"><i class="fas fa-link"></i></a>Títulos</h3>
+      <p>Para generar títulos en html existe un conjunto de etiquetas llamadas cabeceras, éstas etiquetas son:</p>
+<ul>
+<li><p><code>&lt;h1&gt;</code>: Crea un título principal</p>
+</li>
+<li><p><code>&lt;h2&gt;</code>: Crea un título secundario</p>
+</li>
+<li><p><code>&lt;h3&gt;</code>: Crea un título 3</p>
+</li>
+<li><p><code>&lt;h4&gt;</code>: Crea un título 4</p>
+<p>  <em>Este título tiene el mismo tamaño que la letra normal en negrita.</em></p>
+</li>
+<li><p><code>&lt;h5&gt;</code>: Crea un título 5</p>
+</li>
+<li><p><code>&lt;h6&gt;</code>: Crea un título 6</p>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_paragraphs.asp">HTML Paragraphs</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_headings.asp">HTML Headings</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/texto">Fundamentos de texto en HTML</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Modificadores-de-Texto">
+          <a href="#Modificadores-de-Texto" class="heading-link"><i class="fas fa-link"></i></a>Modificadores de Texto</h3>
+      <p>Existen además, una colección de etiquetas que nos ayudan a dar formato al texto dentro del navegador, estas etiquetas pueden ser usadas dentro de los títulos como dentro de los párrafos.</p>
+<ul>
+<li><p><code>&lt;b&gt;</code>: Crea un texto en negrita (<strong>bold</strong>).</p>
+</li>
+<li><p><code>&lt;strong&gt;</code>: Crea un texto reforzado</p>
+<p>  se muestra también en negrita, pero indica que tiene más importancia que los demás</p>
+</li>
+<li><p><code>&lt;i&gt;</code>: Crea un texto en cursiva (<em>italic</em>).</p>
+</li>
+<li><p><code>&lt;em&gt;</code>: Crea un texto enfatizado</p>
+<p>  se muestra también en cursiva, pero indica que es relevante</p>
+</li>
+<li><p><code>&lt;u&gt;</code>: Crea un texto subrayando (underline).</p>
+</li>
+<li><p><code>&lt;del&gt;</code>: Crea un texto tachado (deleted).</p>
+</li>
+<li><p><code>&lt;small&gt;</code>: Crea un texto con letra pequeña.</p>
+</li>
+<li><p><code>&lt;sup&gt;</code>: Crea un texto en superíndice.</p>
+</li>
+<li><p><code>&lt;sub&gt;</code>: Crea un texto en subíndice.</p>
+</li>
+<li><p><code>&lt;mark&gt;</code>: Crea un texto resaltado.</p>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_formatting.asp">HTML Text Formatting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Saltos-de-Linea">
+          <a href="#Saltos-de-Linea" class="heading-link"><i class="fas fa-link"></i></a>Saltos de Línea</h3>
+      <p>Se pueden crear saltos de línea con la etiqueta <code>&lt;br&gt;</code> justo después de cualquier elemento.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    Texto Normal<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span>&gt;</span>Texto en negrita<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>Texto en cursiva<span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">u</span>&gt;</span>Texto subrayado<span class="tag">&lt;/<span class="name">u</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">small</span>&gt;</span>Letra pequeña<span class="tag">&lt;/<span class="name">small</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">del</span>&gt;</span>Texto tachado<span class="tag">&lt;/<span class="name">del</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>Texto reforzado<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">sup</span>&gt;</span>Texto en superíndice<span class="tag">&lt;/<span class="name">sup</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">sub</span>&gt;</span>Texto en subíndice<span class="tag">&lt;/<span class="name">sub</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mark</span>&gt;</span>Texto resaltado<span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Separador-con-linea-horizontal">
+          <a href="#Separador-con-linea-horizontal" class="heading-link"><i class="fas fa-link"></i></a>Separador con línea horizontal</h3>
+      <p>Con la etiqueta <code>&lt;hr&gt;</code> podemos generar una línea horizontal para separar elementos verticalmente.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">p</span>&gt;</span>    </span><br><span class="line">		Texto Normal<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span>&gt;</span>Texto en negrita<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>Texto en cursiva<span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">u</span>&gt;</span>Texto subrayado<span class="tag">&lt;/<span class="name">u</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">small</span>&gt;</span>Letra pequeña<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">del</span>&gt;</span>Texto tachado<span class="tag">&lt;/<span class="name">del</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>Texto reforzado<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">sup</span>&gt;</span>Texto en superíndice<span class="tag">&lt;/<span class="name">sup</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">sub</span>&gt;</span>Texto en subíndice<span class="tag">&lt;/<span class="name">sub</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mark</span>&gt;</span>Texto resaltado<span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Las etiquetas <code>&lt;br&gt;</code> y <code>&lt;hr&gt;</code> son <strong>self-closing</strong>, es decir, no usan etiqueta de cierre.</p>
+
+        <h3 id="Hipervinculos">
+          <a href="#Hipervinculos" class="heading-link"><i class="fas fa-link"></i></a>Hipervínculos</h3>
+      <p>Para agregar hipervínculos a nuestra página, se utiliza la etiqueta <code>&lt;a&gt;</code>, esta etiqueta utiliza varios atributos:</p>
+<ul>
+<li><code>href</code>: La dirección URL a donde apunta este hipervínculo.</li>
+</ul>
+<p>Podemos indicarle a un link, en dońde abrir su contenido usando el atributo <code>target</code>, el valor por defecto es la misma pestaña, sin embargo podemos indicarle que abra en una pestaña nueva con <em><code>_blank</code></em>. Además se agrega el atributo <code>rel="noopener noreferrer"</code> para evitar vulnerabilidades causadas por sitios externos.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://google.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"noopener noreferrer"</span>&gt;</span></span><br><span class="line">    go to google</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>El atributo <em><code>title</code></em> se utiliza para generar un elemento informativo sobre cualquier elemento, este atributo indica un mensaje que se mostrará cuando el usuario pase el mouse por encima de nuestro elemento. </p>
+<ul>
+<li><code>title</code>: Este atributo es genérico para todos los elementos, pero se suele utilizar en los hipervínculos para mostrar a cuál página se redireccionará.</li>
+</ul>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://google.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"google.com"</span>&gt;</span></span><br><span class="line">    go to google</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><strong>Navegación Local</strong></p>
+<p>Otra forma de usar hipervínculos es de forma local, esto es que abran páginas html que estén dentro de nuestro proyecto, o que hagan referencia a elementos dentro de nuestra propia página (como un índice de contenido).</p>
+<ul>
+<li>Para hacer referencia a archivos locales, le indicamos el <strong>filePath</strong> del archivo html.</li>
+<li>Para hacer referencia a elementos dentro de nuestra página usamos los <strong>id</strong>, indicamos el nombre del id justo después del símbolo numeral #<strong>.</strong></li>
+</ul>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"about.html"</span>&gt;</span></span><br><span class="line">    Alguna página</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#chapter-2"</span>&gt;</span></span><br><span class="line">    go to links</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks">https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_links.asp">HTML Links</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Listas">
+          <a href="#Listas" class="heading-link"><i class="fas fa-link"></i></a>Listas</h3>
+      <p>Existen dos tipos de listas en html:</p>
+<ul>
+<li><code>&lt;ol&gt;</code>: listas ordenadas</li>
+<li><code>&lt;ul&gt;</code>: listas No ordenadas</li>
+</ul>
+<p>Ambos tipos de listas utilizan la etiqueta <code>&lt;li&gt;</code> (í<em>tems de lista</em>) para mostrar sus elementos.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Lista No Ordenada<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Lista Ordenada<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Dentro de los ítems de lista pueden haber más elementos, como títulos, párrafos u otras listas.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1</span><br><span class="line">				<span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">				    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1-1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1-2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1-3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Sin embargo se puede indicar cuál es el tipo de numeración para cada sub-lista con los siguientes atributos:</p>
+<ul>
+<li><code>type</code>: Define el tipo de numeración a utilizar, sus posibles valores son:<ul>
+<li><em><code>"1"</code>, <code>"i"</code>, <code>"I"</code>, <code>"a"</code>, <code>"A"</code></em></li>
+</ul>
+</li>
+<li><code>start</code>: Define el número en el que inicia la numeración.</li>
+</ul>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span> <span class="attr">type</span>=<span class="string">"A"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1</span><br><span class="line">				<span class="tag">&lt;<span class="name">ol</span> <span class="attr">type</span>=<span class="string">"i"</span>&gt;</span></span><br><span class="line">				    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1-1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1-2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 1-3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Las listas no deben ir dentro de párrafos o Títulos.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://htmlreference.io/lists/">Lists - HTML Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_lists.asp">HTML Lists</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Tablas">
+          <a href="#Tablas" class="heading-link"><i class="fas fa-link"></i></a>Tablas</h3>
+      <p>Para generar elementos tipo tabla se utilizan las etiquetas:</p>
+<ul>
+<li><code>&lt;table&gt;</code>: Esta etiqueta genera una tabla</li>
+<li><code>&lt;thead&gt;</code>: Genera el grupo de títulos.</li>
+<li><code>&lt;th&gt;</code>: Describe cada título de la tabla</li>
+<li><code>&lt;tbody&gt;</code>: Genera el grupo de valores.</li>
+<li><code>&lt;tr&gt;</code>: Genera las filas de la tabla.</li>
+<li><code>&lt;td&gt;</code>: Aquí se encuentran los datos mismos.</li>
+<li><code>&lt;caption&gt;</code>: Se utiliza para agregarle un título propio a la tabla.</li>
+</ul>
+<p>La estructura básica de una tabla es de la siguiente forma:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">caption</span>&gt;</span>Mi Tabla<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Título 1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>Celda 1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Podemos agregar el atributo <code>border="1"</code> a la etiqueta table, para agregar un borde básico.</p>
+<p>La forma de las tablas puede variar usando algunos atributos:</p>
+<ul>
+<li><code>rowspan</code>: Permite extender una celda a lo largo de <em><code>n</code></em> filas.</li>
+<li><code>colspan</code>: Permite extender una celda a lo largo de <em><code>n</code></em> columnas</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://htmlreference.io/tables/">Tables - HTML Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Multimedia">
+          <a href="#Multimedia" class="heading-link"><i class="fas fa-link"></i></a>Multimedia</h2>
+      <p>Todos los archivos multimedia se agregan como referencia al html, es decir, se le indica a las etiquetas la ubicación de los archivos multimedia que queremos cargar a la página web, y el navegador se encargará de mostrarlo en pantalla.</p>
+
+        <h3 id="FilePath">
+          <a href="#FilePath" class="heading-link"><i class="fas fa-link"></i></a>FilePath</h3>
+      <p>Se le conoce como <strong>FilePath</strong> a la ubicación de un archivo dentro de un equipo, y existen dos formas de ubicar un archivo, con una “<strong>ruta relativa</strong>” y una “<strong>ruta absoluta</strong>”.</p>
+<ul>
+<li><strong>Ruta Absoluta</strong>: Es la ubicación exacta de un archivo dentro de un pc<ul>
+<li>en Windows sería: <code>"C:\\users\Edison\Escritorio\miPaginaWeb\imagenes\usuario.png"</code></li>
+<li>mientras que en Linux podría ser: <code>"/home/edison/Escritorio/miPaginaWeb/imagenes/usuario.png"</code></li>
+</ul>
+</li>
+</ul>
+<p>También se le llama ruta absoluta a las rutas de internet (URL)</p>
+<ul>
+<li><strong>Ruta Relativa</strong>: Se refiere la ubicación de un archivo respecto a otro, para esto se deben seguir las siguientes reglas:<ul>
+<li><strong>Carpeta Actual</strong>: usando un punto (<code>.</code>) podemos referirnos a la carpeta actual, por ejemplo si deseamos agregar una imagen dentro de nuestro <code>index.html</code> podemos usar la ruta: <code>"./images/userProfile.jpg"</code>.</li>
+<li><strong>Carpeta Superior</strong>: usando punto punto (<code>..</code>) Diferente de dos puntos (<code>:</code>), podemos referirnos a una carpeta superior y luego ubicar un archivo, por ejemplo si deseamos cargar una imagen desde un documento html que se encuentra en una subcarpeta, se podría usar la ruta <code>"../images/userProfile.png"</code></li>
+</ul>
+</li>
+</ul>
+<p>El filepath es <strong>case sensitive,</strong> esto significa que hace distinción entre mayúsculas y minúsculas, siempre se deben indicar el nombre de las carpetas o archivos <strong>exactamente</strong> igual a como a parecen en el explorador de archivos.</p>
+
+        <h3 id="Imagenes">
+          <a href="#Imagenes" class="heading-link"><i class="fas fa-link"></i></a>Imágenes</h3>
+      <p>Para agregar una imagen a nuestro html, debemos usar la etiqueta <code>&lt;img&gt;</code>, esta se debe usar con 2 atributos obligatorios:</p>
+<ul>
+<li><code>src</code>: En este atributo indicamos la dirección del archivo de nuestra imagen.</li>
+<li><code>alt</code>: En este atributo indicamos un texto alternativo en caso que no cargue la imagen.</li>
+</ul>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"filePath"</span> <span class="attr">alt</span>=<span class="string">"Imagen"</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>En adicional se pueden agregar el alto y el ancho con los atributos:</p>
+<ul>
+<li><code>height</code>: Indica el alto en píxeles</li>
+<li><code>width</code>: Indica el ancho en píxeles</li>
+</ul>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"450_1000.jpg"</span> <span class="attr">alt</span>=<span class="string">"Imagen Luna"</span> <span class="attr">height</span>=<span class="string">"100px"</span> <span class="attr">width</span>=<span class="string">"150px"</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Se puede indicar un valor para un alto o ancho especifico y el valor complementario se ajustará automáticamente</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"450_1000.jpg"</span> <span class="attr">alt</span>=<span class="string">"Imagen Luna"</span> <span class="attr">width</span>=<span class="string">"100px"</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_images.asp">HTML Images</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">: The Image Embed element</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Audios">
+          <a href="#Audios" class="heading-link"><i class="fas fa-link"></i></a>Audios</h3>
+      <p>Para agregar un audio a nuestra página usamos la etiqueta <code>&lt;audio&gt;</code>, esta etiqueta necesita de la etiqueta <code>&lt;source&gt;</code> que tendrá la fuente o fuentes de audio.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"audioName.mp3"</span> <span class="attr">type</span>=<span class="string">"audio/mpeg"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"audioName.ogg"</span> <span class="attr">type</span>=<span class="string">"audio/ogg"</span>&gt;</span></span><br><span class="line">    Your browser does not support the audio element.</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>HTML5 soporta la mayoría de tipos de audios existentes actuales.</p>
+<p>Esta etiqueta de audio soporta los siguientes atributos:</p>
+<ul>
+<li><code>controls</code>: Muestra los controles del audio, si no se agrega este atributo no se mostrará el clip de audio.</li>
+<li><code>autoplay</code>: Cuando se tiene este atributo el clip de audio se reproduce solo.</li>
+<li><code>loop</code>: Establece si al terminar el audio se volverá a repetir o no.</li>
+</ul>
+<p>Este tipo de Atributos no usa un valor especifico, se les llama <strong>atributos booleanos</strong> ya que el navegador reconocerá si tiene o no tiene dicho atributo para renderizar el elemento.</p>
+<p>Si no se muestra el clip, osea, si no se tiene el atributo <code>controls</code>, pero tiene <code>autoplay</code> y <code>loop</code> puede funcionar como sonido de fondo.</p>
+<p>La etiqueta <code>&lt;source&gt;</code> utiliza dos atributos:</p>
+<ul>
+<li><code>src</code>: Con el que se le indica la dirección del archivo (filePath) del clip de audio.</li>
+<li><code>type</code>: Para indicar el tipo de archivo multimedia que se está cargando, si es audio se debe indicar el valor de: <em><code>audio/[extension]</code></em>.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">: The Embed Audio element</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html5_audio.asp">HTML Audio</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Videos">
+          <a href="#Videos" class="heading-link"><i class="fas fa-link"></i></a>Videos</h3>
+      <p>Para agregar un video a nuestra página usamos la etiqueta <code>&lt;video&gt;</code>, al igual que <code>&lt;audio&gt;</code> esta etiqueta necesita de la etiqueta <code>&lt;source&gt;</code>, la cuál tendrá la fuente o fuentes de video.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"videoName.mp4"</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"videoName.ogg"</span> <span class="attr">type</span>=<span class="string">"video/ogg"</span>&gt;</span></span><br><span class="line">  Your browser does not support HTML5 video.</span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>HTML5 soporta la mayoría de tipos de video existentes actuales.</p>
+<p>Esta etiqueta de video soporta los mismos atributos que la etiqueta de audio.</p>
+<p>Para el caso de la etiqueta <code>&lt;source&gt;</code> en video cambia el type, y se debe usar el valor de: <em><code>video/[extension]</code>.</em></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">: The Video Embed element</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html5_video.asp">HTML Video</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Embebidos">
+          <a href="#Embebidos" class="heading-link"><i class="fas fa-link"></i></a>Embebidos</h3>
+      <p>Muchas veces queremos agregar parte de otras páginas dentro de la nuestra, como comentarios de <strong>twitter</strong>, videos de <strong>youtube</strong> o publicidad de <strong>google adds</strong>, a estos elementos se les conoce como embebidos.</p>
+<p>Al <strong>compartir</strong> un video de youtube podemos generar el código para un elemento <strong>embebido</strong> en nuestro html que muestre el respectivo video</p>
+<p><img src="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled1.png" alt="Untitled1.png" loading="lazy"></p>
+<p>Compartimos un video de youtube.</p>
+<p>Opción Incorporar:</p>
+<p><img src="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled2.png" alt="Untitled2.png" loading="lazy"></p>
+<p><img src="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/Untitled3.png" alt="Untitled3.png" loading="lazy"></p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">"560"</span> <span class="attr">height</span>=<span class="string">"315"</span> <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/ZbZSe6N_BXs"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">allow</span>=<span class="string">"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Usando embebidos podemos mostrar una página que hayamos creado dentro de otra, usando la etiqueta <code>&lt;iframe&gt;</code> y sus atributos <code>src</code>, en donde escribiremos la dirección (<code>filePath</code>) de nuestro archivo html.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"./about.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">: The Inline Frame element</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_youtube.asp">HTML YouTube Videos</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Referencia-Completa-de-Etiquetas-HTML">
+          <a href="#Referencia-Completa-de-Etiquetas-HTML" class="heading-link"><i class="fas fa-link"></i></a>Referencia Completa de Etiquetas HTML</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://htmlreference.io/">HTML Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento">Referencia de Elementos HTML</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/tags/default.asp">HTML Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/">https://edisonpem.github.io/fundamentos-desarrollo-web/HTML-B%C3%A1sico/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/"><span class="paginator-prev__text">Diseño Responsive</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduccion"><span class="toc-number">1.</span> <span class="toc-text">
+          Introducción</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Etiquetas"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Etiquetas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Atributos"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Atributos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Atributos-Globales"><span class="toc-number">1.3.</span> <span class="toc-text">
+          Atributos Globales</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Atributo-ID"><span class="toc-number">1.3.1.</span> <span class="toc-text">
+          Atributo ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atributo-CLASS"><span class="toc-number">1.3.2.</span> <span class="toc-text">
+          Atributo CLASS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atributo-TITLE"><span class="toc-number">1.3.3.</span> <span class="toc-text">
+          Atributo TITLE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FILE-SYSTEM"><span class="toc-number">1.4.</span> <span class="toc-text">
+          FILE SYSTEM</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#COMENTARIOS"><span class="toc-number">2.</span> <span class="toc-text">
+          ** COMENTARIOS*</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Head-y-Body"><span class="toc-number">3.</span> <span class="toc-text">
+          Head y Body</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HEAD"><span class="toc-number">3.1.</span> <span class="toc-text">
+          HEAD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Meta-Datos"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          Meta Datos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lenguaje"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          Lenguaje</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Charset"><span class="toc-number">3.1.3.</span> <span class="toc-text">
+          Charset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Metas-Descriptivos"><span class="toc-number">3.1.4.</span> <span class="toc-text">
+          Metas Descriptivos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Titulo"><span class="toc-number">3.1.5.</span> <span class="toc-text">
+          Título</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Favicon"><span class="toc-number">3.1.6.</span> <span class="toc-text">
+          Favicon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Otros-Metadatos"><span class="toc-number">3.1.7.</span> <span class="toc-text">
+          Otros Metadatos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Estructura-inicial"><span class="toc-number">3.1.8.</span> <span class="toc-text">
+          Estructura inicial</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BODY"><span class="toc-number">3.2.</span> <span class="toc-text">
+          BODY</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elementos-Comunes"><span class="toc-number">3.3.</span> <span class="toc-text">
+          Elementos Comunes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Parrafos"><span class="toc-number">3.3.1.</span> <span class="toc-text">
+          Párrafos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Titulos"><span class="toc-number">3.3.2.</span> <span class="toc-text">
+          Títulos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modificadores-de-Texto"><span class="toc-number">3.3.3.</span> <span class="toc-text">
+          Modificadores de Texto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Saltos-de-Linea"><span class="toc-number">3.3.4.</span> <span class="toc-text">
+          Saltos de Línea</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Separador-con-linea-horizontal"><span class="toc-number">3.3.5.</span> <span class="toc-text">
+          Separador con línea horizontal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hipervinculos"><span class="toc-number">3.3.6.</span> <span class="toc-text">
+          Hipervínculos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Listas"><span class="toc-number">3.3.7.</span> <span class="toc-text">
+          Listas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tablas"><span class="toc-number">3.3.8.</span> <span class="toc-text">
+          Tablas</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Multimedia"><span class="toc-number">3.4.</span> <span class="toc-text">
+          Multimedia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FilePath"><span class="toc-number">3.4.1.</span> <span class="toc-text">
+          FilePath</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Imagenes"><span class="toc-number">3.4.2.</span> <span class="toc-text">
+          Imágenes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Audios"><span class="toc-number">3.4.3.</span> <span class="toc-text">
+          Audios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Videos"><span class="toc-number">3.4.4.</span> <span class="toc-text">
+          Videos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Embebidos"><span class="toc-number">3.4.5.</span> <span class="toc-text">
+          Embebidos</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Referencia-Completa-de-Etiquetas-HTML"><span class="toc-number">4.</span> <span class="toc-text">
+          Referencia Completa de Etiquetas HTML</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

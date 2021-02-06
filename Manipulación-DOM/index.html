@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Introducción       JavaScript permite modificar el DOM (Modelo de Objetos del Documento HTML) de muchas formas, desde agregar y eliminar elementos al documento, modificar los atributos de e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Manipulación del DOM">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Manipulaci%C3%B3n-DOM/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Introducción       JavaScript permite modificar el DOM (Modelo de Objetos del Documento HTML) de muchas formas, desde agregar y eliminar elementos al documento, modificar los atributos de e">
+<meta property="og:locale" content="es_ES">
+<meta property="article:published_time" content="2020-09-08T21:22:57.163Z">
+<meta property="article:modified_time" content="2020-09-08T23:16:07.327Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary"><title>Manipulación del DOM | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Manipulaci%C3%B3n-DOM/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Manipulación del DOM</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><h1 id="Introduccion">
+          <a href="#Introduccion" class="heading-link"><i class="fas fa-link"></i></a>Introducción</h1>
+      <p>JavaScript permite modificar el DOM (<em>Modelo de Objetos del Documento</em> HTML) de muchas formas, desde agregar y eliminar elementos al documento, modificar los atributos de elementos existentes (incluyendo las clases y estilos del mismo) y agregar funciones que reaccionan ante eventos del usuario.</p>
+<p>! Cada elemento del DOM se conoce como <strong>Nodo,</strong> entre los cuales se distinguen los <strong>nodos de elemento</strong> (div, p, h1, etc…) y los <strong>nodos de texto</strong> (directamente el texto)</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/">Understanding Document Object Model in JavaScript</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+
+        <h1 id="Seleccionar-Elementos">
+          <a href="#Seleccionar-Elementos" class="heading-link"><i class="fas fa-link"></i></a>Seleccionar Elementos</h1>
+      <p>Para que Js pueda modificar elementos de DOM debe seleccionarlos primero usando uno de las siguientes funciones del objeto <strong>document</strong>:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById() <span class="comment">// Selecciona un elemento por su **id**</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementsByName() <span class="comment">// Selecciona elementos por su atributo **name**</span></span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName() <span class="comment">// Selecciona elementos por su **etiqueta**</span></span><br><span class="line"><span class="built_in">document</span>.getElementsByClassName() <span class="comment">// Selecciona elementos por sus **clases**</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelectorAll() <span class="comment">// Selecciona elementos usando selectores de CSS</span></span><br><span class="line"><span class="built_in">document</span>.querySelector() <span class="comment">// Selecciona el primer elemento usando selectores de CSS</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Usualmente la forma más directa de seleccionar un elemento es por medio de la función <code>document.getElementById('')</code> ya que los id son únicos e irrepetibles dentro de un documento, mientras que el resto de funciones nos devuelven una <strong>lista</strong> de todos los elementos que coincidan con la selección.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"banner"</span> <span class="attr">class</span>=<span class="string">"banner-container bg-dark"</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- content --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> banner = <span class="built_in">document</span>.getElementById(<span class="string">'banner'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(banner)</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-getelementbyid/">JavaScript getElementById() - Selecting an Element By Id</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Modificar-Elementos">
+          <a href="#Modificar-Elementos" class="heading-link"><i class="fas fa-link"></i></a>Modificar Elementos</h1>
+      <p>Cuando seleccionamos un elemento de HTML creamos un objeto de JS, donde los atributos HTML del elemento se pueden acceder a traves de propiedades.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"perfil"</span> <span class="attr">class</span>=<span class="string">"user-foto flotante"</span> <span class="attr">src</span>=<span class="string">"images/user.jpg"</span></span></span><br><span class="line"><span class="tag">			<span class="attr">alt</span>=<span class="string">"foto de Usuario"</span> <span class="attr">title</span>=<span class="string">"Esta es la foto de perfil"</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fotoUsuario = <span class="built_in">document</span>.getElementById(<span class="string">'perfil'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(fotoUsuario.src);</span><br><span class="line"><span class="built_in">console</span>.log(fotoUsuario.alt);</span><br><span class="line"><span class="built_in">console</span>.log(fotoUsuario.title);</span><br><span class="line"><span class="built_in">console</span>.log(fotoUsuario.classList); <span class="comment">// para acceder a las clases se usa classList</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Modificar los atributos de un elemento se puede realizar asignando un nuevo valor al atributo que se desea cambiar:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fotoUsuario.src = <span class="string">'images/userProfile2.jpg'</span>;</span><br><span class="line">fotoUsuario.title = <span class="string">'Hemos cambiado la foto de perfil'</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Modificar-el-contenido">
+          <a href="#Modificar-el-contenido" class="heading-link"><i class="fas fa-link"></i></a>Modificar el contenido</h2>
+      <p>Si se desea modificar el texto contenido de un elemento se puede usar la propiedad <strong>textContent</strong></p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"parrafo"</span>&gt;</span></span><br><span class="line">	lorem Ipsum, ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> parr = <span class="built_in">document</span>.getElementById(<span class="string">'parrafo'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(parr.textContent) <span class="comment">// lorem Ipsum, ....</span></span><br><span class="line"></span><br><span class="line">parr.textContent = <span class="string">'Hola Mundo'</span>;</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-textcontent/">JavaScript textContent: Getting or Setting Text for a Node</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Modificando-Estilos">
+          <a href="#Modificando-Estilos" class="heading-link"><i class="fas fa-link"></i></a>Modificando Estilos</h2>
+      <p>Js también puede modificar los estilos de un elemento accediendo y modificando el valor del atributo <strong>style,</strong> de esta forma se agregan estilos en linea al elemento:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fotoUsuario.style.width = <span class="string">'500px'</span>; <span class="comment">// width: 500px;</span></span><br><span class="line">fotoUsuario.style.height = <span class="string">'300px'</span>; <span class="comment">// height: 500px;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Sin embargo, la notación de cada propiedad cambia, dado que js no acepta el guion (<code>-</code>) en sus nombres, las propiedades se re nombran:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fotoUsuario.style.borderRadius = <span class="string">'15px'</span>; <span class="comment">// border-radius: 15px;</span></span><br><span class="line">fotoUsuario.style.objectFit = <span class="string">'cover'</span>; <span class="comment">// object-fit: cover;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Modificando-Clases">
+          <a href="#Modificando-Clases" class="heading-link"><i class="fas fa-link"></i></a>Modificando Clases</h2>
+      <p>Por medio de Js se pueden agregar y eliminar clases de css a un elemento, por lo que permite una mejor manipulación de estilos, dejando la responsabilidad de éstos a css.</p>
+<p>Para manipular las clases de los elementos se debe acceder a la propiedad <strong>classList</strong> de un elemento, con la cuál podemos usar las siguientes funciones:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> navbar = <span class="built_in">document</span>.getElementById(<span class="string">'navbar'</span>);</span><br><span class="line"></span><br><span class="line">navbar.classList.add(<span class="string">'sticky-top'</span>) <span class="comment">// Permite agregar una clase a un elemento</span></span><br><span class="line">navbar.classList.remove(<span class="string">'transparent'</span>) <span class="comment">// Permite eliminar una clase del elemento</span></span><br><span class="line"></span><br><span class="line">navbar.classList.contains(<span class="string">'validar'</span>) <span class="comment">// confirma si el elemento tiene la clase</span></span><br><span class="line">navbar.classList.replace(<span class="string">'navbar-dark'</span>, <span class="string">'navbar-light'</span>) </span><br><span class="line">		<span class="comment">// Permite remplazar una clase por otraconfirma si el elemento tiene la clase</span></span><br><span class="line"></span><br><span class="line">navbar.classList.toggle(<span class="string">'dark-mode'</span>) <span class="comment">// Elimina o agrega una clase si Existe o No</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-classlist/">JavaScript classList: Manipulating CSS properties of an Element</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Ocultando-Elementos">
+          <a href="#Ocultando-Elementos" class="heading-link"><i class="fas fa-link"></i></a>Ocultando Elementos</h2>
+      <p>Usando JS también se pueden ocultar y mostrar elementos cambiando el valor de la propiedad <strong>hidden</strong> entre <code>true</code> (oculto) y <code>false</code> (visible)</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">navbar.hidden = <span class="literal">true</span>;</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Un elemento con el atributo <code>hidden</code> (en true) es similar a tener una clase con<br> <code>display: none;</code></p>
+
+        <h1 id="Eventos">
+          <a href="#Eventos" class="heading-link"><i class="fas fa-link"></i></a>Eventos</h1>
+      <p>Un evento es una acción que ocurre en el navegador web, ya sea por la interacción del usuario o por algún otro evento externo a la página. </p>
+<p>Cada evento puede tener un controlador de eventos (<em>event handler</em>), el cuál consiste en una función que se ejecutará cuando ocurra el evento.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"modo-nocturno"</span>&gt;</span>Activar Modo Nocturno<span class="tag">&lt;<span class="name">button</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. Se selecciona el elemento al cuál se agregará el *event handler*</span></span><br><span class="line"><span class="keyword">let</span> modoNoctBtn = <span class="built_in">document</span>.getElementById(<span class="string">'modo-nocturno'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. Se crea la función que se ejecuta con el evento</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeMode</span>(<span class="params"></span>)</span>{</span><br><span class="line">	<span class="built_in">document</span>.body.classList.toggle(<span class="string">'dark-mode'</span>)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. Asoiar la función con el evento</span></span><br><span class="line">modoNoctBtn.addEventListener(<span class="string">'click'</span>, changeMode);</span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Otra forma de obtener el mismo resultado con menos lineas de código</span></span><br><span class="line"><span class="comment">//	 es utilizando la siguiente notación.</span></span><br><span class="line">element.addEventListener(<span class="string">'event'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">	<span class="comment">// code block</span></span><br><span class="line">});</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-events/">Understanding JavaScript Events</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Tipos-de-Eventos">
+          <a href="#Tipos-de-Eventos" class="heading-link"><i class="fas fa-link"></i></a>Tipos de Eventos</h2>
+      <p>HTML y JS utilizan un gran conjunto de eventos para agregar interacción a una página web, entre los diferentes eventos que existen podemos encontrar:</p>
+<ul>
+<li><p><strong>document</strong></p>
+<ul>
+<li><code>load</code>: es el evento principal, ocurre cuando una página termina de cargar.</li>
+<li><code>scroll</code>: cuando se realiza un scroll en el documento (u otro elemento)</li>
+</ul>
+</li>
+<li><p>Mouse:</p>
+<ul>
+<li><p><code>mousedown</code>: cuando el usuario hace click (antes de soltarlo)</p>
+</li>
+<li><p><code>mouseup</code>: cuando el usuario suelta el click</p>
+</li>
+<li><p><code>click</code>: cuando el usuario hace click (ocurre después de soltarse)</p>
+</li>
+<li><p><code>dblclick</code>: cuando el usuario hace dobleclick</p>
+</li>
+<li><p><code>contextmenu</code>: cuando se hace click derecho (antes de desplegar el menú)</p>
+<p>Movimiento del Mouse:</p>
+</li>
+<li><p><code>mouseover</code>: cuando el usuario mueve el mouse hacia adentro de un elemento</p>
+</li>
+<li><p><code>mouseomove</code>: cuando el usuario mueve el mouse sobre el elemento (se ejecuta continuamente mientras el mouse esté moviendose)</p>
+</li>
+<li><p><code>mouseoout</code>: cuando el usuario mueve el mouse hacia afuera de un elemento</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/">Understanding JavaScript Mouse Events By Examples</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+</li>
+<li><p>Teclado (usualmente asociados a inputs)</p>
+<ul>
+<li><p><code>keydown</code>: cuando se apreta una tecla</p>
+</li>
+<li><p><code>keyup</code>: cuando se apreta una tecla y se suelta</p>
+</li>
+<li><p><code>keypress</code>: cuando se mantiene apretada una tecla</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-keyboard-events/">JavaScript Keyboard Events Explained</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+</li>
+<li><p>Texto:</p>
+<ul>
+<li><code>copy</code>: cuando el usuario copia un texto</li>
+<li><code>cut</code>: cuando el usuario corta un texto</li>
+<li><code>paste</code>: cuando el usuario pega un texto (usualmente inputs)</li>
+</ul>
+</li>
+<li><p>Inputs:</p>
+<ul>
+<li><p><code>focus</code>: cuando un input está seleccionado para escribir (se ejecuta continuamente mientras esté seleccionado)</p>
+</li>
+<li><p><code>input</code>: cada vez que el usuario ingresa datos a un input</p>
+</li>
+<li><p><code>select</code>: cuando el usuario selecciona un texto (en inputs)</p>
+</li>
+<li><p><code>change</code>: cuando el usuario ingresa cambia un valor de un input</p>
+</li>
+<li><p><code>blur</code>: cuando un input está seleccionado para escribir y se deselecciona</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-focus-events/">JavaScript Focus Events</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+</li>
+<li><p>Formularios:</p>
+<ul>
+<li><p><code>submit</code>: Cuando se envía un formulario (antes de enviar los datos)</p>
+</li>
+<li><p><code>reset</code>: cuando se reinicia un formulario.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.javascripttutorial.net/javascript-dom/javascript-form/">JavaScript Form</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="Cancelar-un-evento">
+          <a href="#Cancelar-un-evento" class="heading-link"><i class="fas fa-link"></i></a>Cancelar un evento</h2>
+      <p>Para cancelar un eventoc por defecto, como el <code>submit</code> de un formulario, se puede usar la función <code>preventDefault()</code> del evento de la siguiente forma</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cancelEvent</span>(<span class="params">event</span>) </span>{</span><br><span class="line">    event.preventDefault()</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">form.addEventListener(<span class="string">'submit'</span>, cancelEvent)</span><br><span class="line">input.addEventListener(<span class="string">'paste'</span>, cancelEvent)</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/tags/ref_eventattributes.asp">HTML Event Attributes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Event Object</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Manipulaci%C3%B3n-DOM/">https://edisonpem.github.io/fundamentos-desarrollo-web/Manipulaci%C3%B3n-DOM/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Assets/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Assets</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Elementos-Boostrap/"><span class="paginator-prev__text">Elementos de Boostrap</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduccion"><span class="toc-number">1.</span> <span class="toc-text">
+          Introducción</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Seleccionar-Elementos"><span class="toc-number">2.</span> <span class="toc-text">
+          Seleccionar Elementos</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Modificar-Elementos"><span class="toc-number">3.</span> <span class="toc-text">
+          Modificar Elementos</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Modificar-el-contenido"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Modificar el contenido</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modificando-Estilos"><span class="toc-number">3.2.</span> <span class="toc-text">
+          Modificando Estilos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Modificando-Clases"><span class="toc-number">3.3.</span> <span class="toc-text">
+          Modificando Clases</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ocultando-Elementos"><span class="toc-number">3.4.</span> <span class="toc-text">
+          Ocultando Elementos</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Eventos"><span class="toc-number">4.</span> <span class="toc-text">
+          Eventos</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tipos-de-Eventos"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Tipos de Eventos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cancelar-un-evento"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Cancelar un evento</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

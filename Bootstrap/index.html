@@ -1,0 +1,422 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Introducción        Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.  Bootstrap consiste de una colección d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bootstrap">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Introducción        Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.  Bootstrap consiste de una colección d">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/Untitled.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/Untitled1.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/Untitled2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/Untitled3.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/Untitled4.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/Untitled5.png">
+<meta property="article:published_time" content="2020-09-08T21:22:57.166Z">
+<meta property="article:modified_time" content="2020-09-11T17:11:00.768Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/Untitled.png"><title>Bootstrap | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Bootstrap</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-11</span></span></div></header><div class="post-body"><h1 id="Introduccion">
+          <a href="#Introduccion" class="heading-link"><i class="fas fa-link"></i></a>Introducción</h1>
+      <blockquote>
+<p>Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.</p>
+</blockquote>
+<p>Bootstrap consiste de una colección de varios elementos web personalizables y funciones completamente empaquetados en una sola herramienta.</p>
+<p>Se creó en el 2011 como solución interna para solucionar las inconsistencias en el desarrollo dentro del equipo de ingeniería de Twitter. Básicamente, no se había establecido ninguna convención sobre las formas en las que los ingenieros de Twitter elegían cómo desarrollar la plataforma.</p>
+<p>La versión actual (<em>Julio 2020</em>) es bootstrap v4.5.0 y se encuentra en desarrollo la versión bootstrap v5.0</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/">Bootstrap</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/bootstrap4/default.asp">Bootstrap 4 Tutorial</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+
+        <h1 id="Configuracion">
+          <a href="#Configuracion" class="heading-link"><i class="fas fa-link"></i></a>Configuración</h1>
+      <p>Para incorporar bootstrap a un sitio web basta con agregar los links correspondientes a los estilos y a los javascript.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- CSS only --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"</span> <span class="attr">integrity</span>=<span class="string">"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"</span> <span class="attr">crossorigin</span>=<span class="string">"anonymous"</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- JS, Popper.js, and jQuery --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="attr">integrity</span>=<span class="string">"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"</span> <span class="attr">crossorigin</span>=<span class="string">"anonymous"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"</span> <span class="attr">integrity</span>=<span class="string">"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"</span> <span class="attr">crossorigin</span>=<span class="string">"anonymous"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"</span> <span class="attr">integrity</span>=<span class="string">"sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"</span> <span class="attr">crossorigin</span>=<span class="string">"anonymous"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/getting-started/introduction/">Introduction</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Reboot">
+          <a href="#Reboot" class="heading-link"><i class="fas fa-link"></i></a>Reboot</h1>
+      <p>Bootstrap internamente <strong>reinicia</strong> todos los estilos base de una página web para que exista una uniformidad entre diferentes navegadores, por lo que al usar bootstrap ya no es necesario definir reglas como:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">*,</span><br><span class="line">*<span class="selector-pseudo">::before</span>,</span><br><span class="line">*<span class="selector-pseudo">::after</span> {</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> {</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Algunos de sus cambios son:</p>
+<ul>
+<li>Las fuentes web predeterminadas (Helvetica Neue, Helvetica y Arial) cambian en Bootstrap 4 y son remplazadas con una “pila de fuentes nativas” para una representación de texto óptima en cada dispositivo y sistema operativo.</li>
+<li>Todos los elementos de encabezado, párrafos y listas no poseen margin-top, y poseen un <code>margin-bottom: 1rem</code>;<ul>
+<li>Las listas anidadas no tienen margin.</li>
+</ul>
+</li>
+<li>Las listas de descripción también poseen diferentes márgenes, el elemento <code>&lt;dd&gt;</code> no posee <code>margin-left</code> y el elemento <code>&lt;dt&gt;</code> están en negrita.</li>
+<li>Las tablas están ajustadas a bordes colapsados  y aseguran una consistencia constante <strong>text-align</strong>. Cambios adicionales para bordes, relleno y más vienen con la clase <code>.table</code></li>
+<li>Varios elementos de formulario tienen estilos base más simples.<ul>
+<li><code>&lt;fieldset&gt;</code>: No tiene bordes, relleno o margen, por lo que se pueden usar fácilmente como envoltorios para entradas individuales o grupos de entradas.</li>
+<li><code>&lt;legend&gt;</code>: Se han rediseñado para mostrarse como una especie de encabezado.</li>
+<li><code>&lt;label&gt;</code>: Tiene ahora un <code>display: inline-block</code> para soportar márgenes.</li>
+<li><code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code> y <code>&lt;button&gt;s</code> se abordan principalmente mediante Normalize, pero Reboot también elimina sus márgenes.</li>
+<li><code>&lt;textarea&gt;</code>: Solo se puede cambiar de tamaño verticalmente.</li>
+<li><code>&lt;button&gt;</code>: Tiene un <code>cursor: pointer</code> cuando no está deshabilitado.</li>
+</ul>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/content/reboot/">Reboot</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Nuevo-Atributo">
+          <a href="#Nuevo-Atributo" class="heading-link"><i class="fas fa-link"></i></a>Nuevo Atributo</h2>
+      <p>Se agrega el atributo de html <code>hidden</code> con el que se define un <code>display:none</code> por defecto.</p>
+
+        <h1 id="Contenido">
+          <a href="#Contenido" class="heading-link"><i class="fas fa-link"></i></a>Contenido</h1>
+      <p>Bootstrap define diferentes conjuntos de clases para personalizar el contenido de una página según la categoría.</p>
+
+        <h2 id="Tipografia">
+          <a href="#Tipografia" class="heading-link"><i class="fas fa-link"></i></a>Tipografía</h2>
+      <ul>
+<li>Las clases <code>.h1</code> hasta <code>.h6</code> simulan los tamaños de los titulos, permitiendo usar las etiquetas de html según su finalidad semántica.</li>
+<li>Las clases <code>.display-1</code> hasta <code>.display-4</code> muestran texto más grande que los títulos tradicionales.</li>
+<li>La clase <code>.text-muted</code> ayuda a denotar texto secundario.</li>
+<li>La case <code>.lead</code> permite destacar un párrafo</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/content/typography/">Typography</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Texto">
+          <a href="#Texto" class="heading-link"><i class="fas fa-link"></i></a>Texto</h2>
+      <p>Entre las diferentes clases que bootstrap tiene para gestionar el comportamiento del texto destacan.</p>
+<ul>
+<li><code>.text-left</code>: Texto alineado a la izquierda</li>
+<li><code>.text-center</code>: Texto centrado</li>
+<li><code>.text-right</code>: Texto alineado a la derecha</li>
+<li><code>.text-justify</code>: Texto justificado</li>
+</ul>
+<p>Estas clases permiten un comportamiento responsive.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/text/">Text</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/interactions/">Interactions</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Listas">
+          <a href="#Listas" class="heading-link"><i class="fas fa-link"></i></a>Listas</h2>
+      <ul>
+<li>La clase <code>.list-unstyled</code> permite generar una lista sin viñetas (ya sea ordenada o sin ordenar).</li>
+<li>La clase <code>.list-inline</code> permite generar una lista en línea (horizontal), para ello los ítems de lista deben usar la clase <code>.list-inline-item</code></li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/content/typography/#lists">Typography</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Tablas">
+          <a href="#Tablas" class="heading-link"><i class="fas fa-link"></i></a>Tablas</h2>
+      <p>Las tablas de boostrap no tienen decoración alguna, solamente colapsan los bordes, sin embargo se pueden personalizar con la clase .table acompañada de las variaciones de diseño.</p>
+<ul>
+<li><code>.table</code> Agrega un estilo de tabla con líneas horizontales a una tabla</li>
+<li><code>.table-dark</code> Acompaña a la clase <code>.table</code> para crear una tabla oscura con texto claro.</li>
+<li><code>.table-striped</code> acompaña a la clase .table para crar una tabla con colores intercalados entre las filas de la tabla.</li>
+<li><code>.thead-light</code> y <code>.thead-dark</code> definen los estilos de la cabecera de la tabla (<code>&lt;thead&gt;</code>).</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/content/tables/">Tables</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Imagenes">
+          <a href="#Imagenes" class="heading-link"><i class="fas fa-link"></i></a>Imágenes</h2>
+      <ul>
+<li><code>.img-fluid</code> con esta clase se pueden crear imágenes responsive, es decir <code>max-width:100%</code></li>
+<li><code>.img-thumbnail</code> permite agregar un marco (padding) y borde redondeado de 1px.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/content/images/">Images</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Embebidos">
+          <a href="#Embebidos" class="heading-link"><i class="fas fa-link"></i></a>Embebidos</h2>
+      <p>Para videos de youtube embebidos, bootstrap maneja una serie de clases que permiten gestionar el aspecto del video.</p>
+<ul>
+<li>La clase <code>.embed-responsive-item</code> Se debe agregar al <code>&lt;iframe&gt;</code></li>
+<li>Este debe ir dentro de un div con la clase <code>.embed-responsive</code>, esta clase puede ir acompañada de la clase correspondiente al aspecto que se desea:<ul>
+<li><code>.embed-responsive-21by9</code></li>
+<li><code>.embed-responsive-16by9</code></li>
+<li><code>.embed-responsive-4by3</code></li>
+<li><code>.embed-responsive-1by1</code></li>
+</ul>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/embed/">Embeds</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Colores">
+          <a href="#Colores" class="heading-link"><i class="fas fa-link"></i></a>Colores</h2>
+      <p>Bootstrap tiene predefinido un set de colores:</p>
+<ul>
+<li><strong>primary</strong>: #007bff</li>
+<li><strong>secondary</strong>: #6c757d</li>
+<li><strong>success</strong>: #28a745</li>
+<li><strong>danger</strong>: #dc3545</li>
+<li><strong>warning</strong>: #ffc107</li>
+<li><strong>info</strong>: #17a2b8</li>
+<li><strong>light</strong>: #f8f9fa</li>
+<li><strong>dark</strong>: #343a40</li>
+<li><strong>white</strong>: #fff</li>
+</ul>
+<p><img src="/fundamentos-desarrollo-web/Bootstrap/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+<p>Estos colores se utilizan agregando la palabra clave según donde sea posible</p>
+<ul>
+<li><code>.text-[color]</code> Permite dar color al texto según la palabra clave del set de colores</li>
+<li><code>.bg-[color]</code> Permiten cambiar el color de fondo según la palabra clave del set de colores</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/colors/">Colors</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>Otros elementos donde se utilizan estas palabras son:</p>
+<ul>
+<li><code>.border-[color]</code> Permite cambiar el color del borde según la palabra clave del set de colores (esta debe ir acompañada de las clases de bordes <code>.border</code>)</li>
+<li><code>.btn-[color]</code> Permite cambiar el color de un botón según la palabra clave del set de colores (esta debe ir acompañada de las clases de botones <code>.btn</code>)</li>
+</ul>
+
+        <h1 id="Responsive-Design">
+          <a href="#Responsive-Design" class="heading-link"><i class="fas fa-link"></i></a>Responsive Design</h1>
+      <p>Bootstrap utiliza un diseño mobile-first con un sistema de 12 columnas y 4 diferentes breakpoints, con lo que permite crear 5 diferentes diseños.</p>
+<p><strong>El objetivo es el diseño móvil primero y sensible</strong>. El CSS de Bootstrap tiene como objetivo aplicar el mínimo de estilos para hacer que un diseño funcione en el punto de interrupción más pequeño, y luego capas en estilos para ajustar ese diseño para dispositivos más grandes. Esto optimiza el CSS, mejora el tiempo de representación y proporciona una gran experiencia para sus visitantes.</p>
+<ul>
+<li>El tamaño <strong>base</strong> usa el nombre de <strong>Extra Small (</strong>&lt;576px**)** <em>- Mobile Portrait</em></li>
+<li><strong>Small (sm)</strong> se utiliza para pantallas más grandes de 576px. <em>- Mobile Landscape</em></li>
+<li><strong>Medium (md)</strong> se utiliza para pantallas más grandes de 768px. <em>- Tablet Portrait</em></li>
+<li><strong>Large (lg)</strong> se utiliza para pantallas más grandes de 992px. <em>- Tablet landscape, Desktops</em></li>
+<li><strong>Extra Large (xl)</strong> se utiliza para pantallas más grandes de 1200px. <em>- Large Desktops</em></li>
+</ul>
+<p><img src="/fundamentos-desarrollo-web/Bootstrap/Untitled1.png" alt="Untitled1.png" loading="lazy"></p>
+<p><img src="/fundamentos-desarrollo-web/Bootstrap/Untitled2.png" alt="Untitled2.png" loading="lazy"></p>
+<p><img src="/fundamentos-desarrollo-web/Bootstrap/Untitled3.png" alt="Untitled3.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints">Overview</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Contenedores">
+          <a href="#Contenedores" class="heading-link"><i class="fas fa-link"></i></a>Contenedores</h2>
+      <p>Los contenedores de Bootstrap permiten contener y centrar el contenido de un sitio dentro de ellos, estos contenedores matienen un tamaño inicial de 100% y luego para cada breakpoint utilizan un tamaño fijo buscando mantener una buena proporción en cada pantalla.</p>
+<p>Existen diferentes tipos de contenedores, cada uno busca ocupar el 100% hasta llegar al breakpoint que se corresponda según:</p>
+<p><img src="/fundamentos-desarrollo-web/Bootstrap/Untitled4.png" alt="Untitled4.png" loading="lazy"></p>
+<p><code>.container</code> y <code>.container-sm</code> cumplen el mismo objetivo</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/layout/overview/">Overview</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/bootstrap4/bootstrap_containers.asp">Bootstrap 4 Containers</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Layouts">
+          <a href="#Layouts" class="heading-link"><i class="fas fa-link"></i></a>Layouts</h2>
+      <p>El sistema de grid layout de Bootstrap utiliza una serie de contenedores (<code>.container-*</code>), filas (<code>.row</code>) y columnas (<code>.col-*</code>) para diseñar y alinear el contenido.</p>
+<ul>
+<li>Los contenedores proporcionan un medio para centrar y rellenar horizontalmente los contenidos de su sitio.</li>
+<li>Las filas son envoltorios para columnas. Cada columna tiene un padding horizontal para controlar el espacio entre ellas.<ul>
+<li>Se pueden eliminar esos espacios con la clase <code>.no-gutters</code> junto con <code>.row</code></li>
+</ul>
+</li>
+<li>El contenido debe colocarse dentro de las columnas y solo las columnas pueden ser hijos inmediatos de las filas.</li>
+<li>Las clases de columnas indican la cantidad de columnas que le gustaría usar de las 12 posibles por fila.</li>
+</ul>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-7"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<hr>
+<p>Las columnas de bootstrap responden a los breakpoints, esto es que siempre buscan ocupar las 12 columnas hasta llegar al breakpoint que se corresponda, luego se organizan según la cantidad de columnas que se definió y según los infijos que se utilicen (sm, md, lg, xl).</p>
+<p><img src="/fundamentos-desarrollo-web/Bootstrap/Untitled5.png" alt="Untitled5.png" loading="lazy"></p>
+<p>Se pueden combinar diferentes tipos de columnas para crear un diseño responsive</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-6 col-lg-3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-6 col-lg-7"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-lg-2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="AutoLayout">
+          <a href="#AutoLayout" class="heading-link"><i class="fas fa-link"></i></a>AutoLayout</h3>
+      <p>Se pueden utilizar las clases de columnas (<code>.col</code>, <code>.col-sm</code>, <code>.col-md</code>, <code>.col-lg</code> y <code>.col-xl</code>) sin indicar la cantidad de columnas que ocupará cada columna y así generar columnas con el mismo tamaño.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">****		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/layout/grid/">Grid system</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp">Bootstrap 4 Grid System</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Alineamiento">
+          <a href="#Alineamiento" class="heading-link"><i class="fas fa-link"></i></a>Alineamiento</h3>
+      <p>La clase <code>.row</code> utiliza el módulo de flexbox, por lo que admite utilidades de flexbox para alinear las columnas horizontalmente.</p>
+
+        <h1 id="Box-Model">
+          <a href="#Box-Model" class="heading-link"><i class="fas fa-link"></i></a>Box-Model</h1>
+      <p>Bootstrap configura el box model en border-box, esto es, que los tamaños de los elementos incluyen el border y el padding.</p>
+
+        <h2 id="Tamanos">
+          <a href="#Tamanos" class="heading-link"><i class="fas fa-link"></i></a>Tamaños</h2>
+      <p>La configuración de tamaño se puede realizar con clases de bootstrap, sin embargo estas son limitadas:</p>
+<p><code>.w-25</code>: Width 25%</p>
+<p><code>.w-50</code>: Width 50%</p>
+<p><code>.w-75</code>: Width 75%</p>
+<p><code>.w-100</code>: Width 100%</p>
+<p><code>.w-auto</code>: Width auto</p>
+<p><code>.h-25</code>: Height 25% </p>
+<p><code>.h-50</code>: Height 50% </p>
+<p><code>.h-75</code>: Height 75% </p>
+<p><code>.h-100</code>: Height 100% </p>
+<p><code>.h-auto</code>: Height auto</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/sizing/">Sizing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Espacios">
+          <a href="#Espacios" class="heading-link"><i class="fas fa-link"></i></a>Espacios</h2>
+      <p>Los espacios se refieren al <strong>margin</strong> y al <strong>padding</strong>, para ello bootstrap cuenta con un conjunto de clases bien estructuradas que permiten gestionar los tamaños y lados de los espacios.</p>
+<p>Este conjunto de clases tiene la siguiente estructura:</p>
+<ul>
+<li><code>.{propiedad}{lado(s)}-{tamaño}</code> Para Mobile portrait</li>
+<li><code>.{propiedad}{lado(s)}-{breakpoint}-{tamaño}</code> Para otras pantallas</li>
+</ul>
+<p>Donde la propiedad se refiere al margin (<code>m</code>) o padding (<code>p</code>)</p>
+<p>Los lados se refiere a top (<code>t</code>), right (<code>r</code>), bottom (<code>b</code>), left (<code>l</code>), top y bottom (<code>y</code>), left y right (<code>x</code>).</p>
+<p>Los tamaños son relativos a un tamaño predeterminado de bootstrap, estos se utilizan como números entre <code>0</code> (sin espacios) hasta <code>5</code> (tamaño más grande), además del valor <code>auto</code></p>
+<p>El breakpoint se refiere a los infijos <code>sm</code>, <code>md</code>, <code>lg</code> y <code>xl</code>, con esto se refiere a que los espacios definidos solamente se aplicarán DESDE el breackpoint correspondiente.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"p-1 p-md-3"</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- contenido --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Las clases <code>mx-auto</code> y <code>mx-{breakpoint}-auto</code> funcionan bien para centrar elementos de bloque.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/spacing/">Spacing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Borders">
+          <a href="#Borders" class="heading-link"><i class="fas fa-link"></i></a>Borders</h2>
+      <p>Para agregar bordes a un elemento se puede usar la clase:</p>
+<ul>
+<li><code>.border</code> con ésto se crea un borde sólido de 1px de ancho (color gris por defecto).</li>
+<li>Para cambiar los colores del borde se pueden agregar las clases <code>.border-*[color]*</code> donde [color] se refiere a una palabra clave del set de colores de bootstrap.</li>
+<li><code>.rounded</code> Se utiliza para agregar bordes redondeados, esto agrega un redondeo de .25rem (<em>4px si la fuente es de 16px</em>).</li>
+<li><code>.rounded-circle</code> Se utiliza para crear un círculo, agregando un redondeado de 50%.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/borders/">Borders</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Sombras">
+          <a href="#Sombras" class="heading-link"><i class="fas fa-link"></i></a>Sombras</h2>
+      <p>Para agregar sombras de bootstrap se pueden usar las clases:</p>
+<ul>
+<li><code>.shadow</code>: Genera una sombra Normal de bootstrap</li>
+<li><code>.shadow-sm</code>: Genera una sombra más pequeña (no debe confundirse con el breakpoint sm)</li>
+<li><code>.shadow-lg</code>:  Genera una sombra más grande (no debe confundirse con el breakpoint lg)</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/shadows/">Shadows</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Display">
+          <a href="#Display" class="heading-link"><i class="fas fa-link"></i></a>Display</h1>
+      <p>Las clases que manipulan el display de un elemento puede variar según los puntos de quiebre, estas clases tienen la estructura:</p>
+<ul>
+<li><code>.d-{tipo}</code> Para Mobile portrait</li>
+<li><code>.d-{breakpoint}-{tipo}</code> Para Otras pantallas</li>
+</ul>
+<p>Donde los tipos son:</p>
+<ul>
+<li><p><code>none</code></p>
+</li>
+<li><p><code>block</code></p>
+</li>
+<li><p><code>flex</code></p>
+</li>
+<li><p><code>inline</code></p>
+</li>
+<li><p><code>inline-block</code></p>
+</li>
+<li><p><code>inline-flex</code></p>
+</li>
+</ul>
+<p>El breakpoint se refiere a los infijos <code>sm</code>, <code>md</code>, <code>lg</code> y <code>xl</code>, con esto se refiere a que el display aplicará DESDE el breackpoint correspondiente.</p>
+<p>Esto nos permite cambiar el tipo de display entre diferentes breakpoints, y de la misma forma nos permite ocultar y mostrar elementos en diferentes pantallas.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Elemento oculto en celular --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">""</span><span class="attr">d-none</span> <span class="attr">d-md-block</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Elemento visible en celular y escritorio grande pero oculto en tablet --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">""</span><span class="attr">d-md-none</span> <span class="attr">d-xl-block</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Elemento block en celular pero flex en tablet y desktop--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">""</span><span class="attr">d-block</span> <span class="attr">d-md-flex</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Bootstrap v4.5 no tiene soporte para <code>display: grid</code>;</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/display/">Display property</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/display/#hiding-elements">Display property</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Flexbox">
+          <a href="#Flexbox" class="heading-link"><i class="fas fa-link"></i></a>Flexbox</h1>
+      <p>Para manipular las configuraciones de un flexbox bootstrap ofrece un conjunto de clases correspondientes:</p>
+<ul>
+<li><strong>Flex-direction</strong>: <code>.flex-row</code>,<code>.flex-row-reverse</code>, <code>.flex-column</code>, <code>.flex-column-reverse</code></li>
+<li><strong>Flex-wrap</strong>: <code>.flex-nowrap</code>, <code>.flex-wrap</code>, <code>.flex-wrap-reverse</code></li>
+<li><strong>Justify-content</strong>: <code>.justify-content-start</code>, <code>.justify-content-end</code>, <code>.justify-content-center</code>, <code>.justify-content-between</code>, <code>.justify-content-around</code></li>
+<li><strong>align-items</strong>: <code>.align-items-start</code>, <code>.align-items-end</code>, <code>.align-items-center</code>, <code>.align-items-baseline</code>, <code>.align-items-stretch</code></li>
+</ul>
+<p>Todas las clases de flexbox tienen comportamiento responsive, esto es que admiten los puntos de quiebre.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/flex/">Flex</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Float">
+          <a href="#Float" class="heading-link"><i class="fas fa-link"></i></a>Float</h1>
+      <p>El módulo de flotantes de bootstrap también contiene clases responsivas según los puntos de quiebre, estas clases tienen la estructura:</p>
+<ul>
+<li><code>.float-{tipo}</code> Para Mobile portrait</li>
+<li><code>.float-{breakpoint}-{tipo}</code> Para otras pantallas</li>
+</ul>
+<p>Donde los tipos son:</p>
+<ul>
+<li><code>left</code></li>
+<li><code>right</code></li>
+<li><code>none</code></li>
+</ul>
+<p>El breakpoint se refiere a los infijos <code>sm</code>, <code>md</code>, <code>lg</code> y <code>xl</code>, con esto el elemento se puede configurar para que flote solamente en ciertas pantallas</p>
+<p>Para evitar desbordamientos por flotantes, el contenedor debe tener la clase <code>.clearfix</code></p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"d-block mx-auto float-md-left "</span> <span class="attr">src</span>=<span class="string">"..."</span> <span class="attr">alt</span>=<span class="string">"..."</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">		lorem....</span><br><span class="line">	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"img-fluid d-block mx-auto float-md-right m-md-2"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">		lorem....</span><br><span class="line">	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/float/">Float</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/clearfix/">Clearfix</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Position">
+          <a href="#Position" class="heading-link"><i class="fas fa-link"></i></a>Position</h1>
+      <p>Existen diferentes clases para manipular el posicionamiento de un elemento, entre estas existen clases para fijar elementos en la pantalla:</p>
+<ul>
+<li><code>.fixed-top</code>: Para fijar un elemento en la parte superior de lado a lado</li>
+<li><code>.fixed-bottom</code>: Para fijar un elemento en la parte superior de lado a lado</li>
+<li><code>.sticky-top</code>: Genera un comportamiento sticky en la parte superior de lado a lado</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.5/utilities/position/">Position</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/">https://edisonpem.github.io/fundamentos-desarrollo-web/Bootstrap/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Box-Model/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Box Model</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Estilos-Avanzados/"><span class="paginator-prev__text">Estilos Avanzados</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduccion"><span class="toc-number">1.</span> <span class="toc-text">
+          Introducción</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Configuracion"><span class="toc-number">2.</span> <span class="toc-text">
+          Configuración</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reboot"><span class="toc-number">3.</span> <span class="toc-text">
+          Reboot</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nuevo-Atributo"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Nuevo Atributo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contenido"><span class="toc-number">4.</span> <span class="toc-text">
+          Contenido</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tipografia"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Tipografía</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Texto"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Texto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Listas"><span class="toc-number">4.3.</span> <span class="toc-text">
+          Listas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tablas"><span class="toc-number">4.4.</span> <span class="toc-text">
+          Tablas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Imagenes"><span class="toc-number">4.5.</span> <span class="toc-text">
+          Imágenes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Embebidos"><span class="toc-number">4.6.</span> <span class="toc-text">
+          Embebidos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Colores"><span class="toc-number">4.7.</span> <span class="toc-text">
+          Colores</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Responsive-Design"><span class="toc-number">5.</span> <span class="toc-text">
+          Responsive Design</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Contenedores"><span class="toc-number">5.1.</span> <span class="toc-text">
+          Contenedores</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Layouts"><span class="toc-number">5.2.</span> <span class="toc-text">
+          Layouts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AutoLayout"><span class="toc-number">5.2.1.</span> <span class="toc-text">
+          AutoLayout</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alineamiento"><span class="toc-number">5.2.2.</span> <span class="toc-text">
+          Alineamiento</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Box-Model"><span class="toc-number">6.</span> <span class="toc-text">
+          Box-Model</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tamanos"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Tamaños</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Espacios"><span class="toc-number">6.2.</span> <span class="toc-text">
+          Espacios</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Borders"><span class="toc-number">6.3.</span> <span class="toc-text">
+          Borders</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sombras"><span class="toc-number">6.4.</span> <span class="toc-text">
+          Sombras</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Display"><span class="toc-number">7.</span> <span class="toc-text">
+          Display</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Flexbox"><span class="toc-number">8.</span> <span class="toc-text">
+          Flexbox</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Float"><span class="toc-number">9.</span> <span class="toc-text">
+          Float</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Position"><span class="toc-number">10.</span> <span class="toc-text">
+          Position</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

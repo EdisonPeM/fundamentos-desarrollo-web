@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="@keyframes       La regla-at @keyframes permite crear la estructura de una animación a partir de la definición de los diferentes estados de ésta, de esta forma se puede tener un control más">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Animaciones Automáticas">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="@keyframes       La regla-at @keyframes permite crear la estructura de una animación a partir de la definición de los diferentes estados de ésta, de esta forma se puede tener un control más">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/Untitled.png">
+<meta property="article:published_time" content="2021-02-05T22:30:11.161Z">
+<meta property="article:modified_time" content="2021-02-05T22:30:11.161Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/Untitled.png"><title>Animaciones Automáticas | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Animaciones Automáticas</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2021-02-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-02-05</span></span></div></header><div class="post-body"><h1 id="keyframes">
+          <a href="#keyframes" class="heading-link"><i class="fas fa-link"></i></a>@keyframes</h1>
+      <p>La regla-at @keyframes permite crear la estructura de una animación a partir de la definición de los diferentes estados de ésta, de esta forma se puede tener un control más específico sobre los pasos intermedios de la secuencia de animación que se obtiene al dejar que el navegador maneje todo automáticamente.</p>
+<a id="more"></a>
+
+<p>Para crear keyframes se debe indicar el nombre del keyframe justo después de la regla y dentro del bloque de código se deben escribir los diferentes estados</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> *nombre-animacion* {</span><br><span class="line">	<span class="comment">/* Estados de la animación */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/@keyframes">@keyframes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">CSS @keyframes Rule</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Estado-inicial-Estado-final">
+          <a href="#Estado-inicial-Estado-final" class="heading-link"><i class="fas fa-link"></i></a>Estado inicial - Estado final</h2>
+      <p>Para definir solamente un estado inicial y un estado final de una animación se pueden utilizar las palabras clave <strong>from</strong> y <strong>to</strong></p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> nombre-animacion {</span><br><span class="line">	<span class="selector-tag">from</span> {</span><br><span class="line">		<span class="comment">/* Propiedades del estado inicial */</span></span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	<span class="selector-tag">to</span> {</span><br><span class="line">		<span class="comment">/* Propiedades del estado final */</span></span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><img src="/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+
+        <h2 id="Estados-intermedios">
+          <a href="#Estados-intermedios" class="heading-link"><i class="fas fa-link"></i></a>Estados intermedios</h2>
+      <p>Cuando se desea que una animación tenga más de dos estados se pueden especificar los diferentes momentos del tiempo según un porcentaje de la duración de la animación.</p>
+<p>En este sentido 0% representa el estado de partida (<strong>from</strong>) y 100% el estado final (<strong>to</strong>).</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframe</span> animacion-variada {</span><br><span class="line">	0% {</span><br><span class="line">		<span class="comment">/* Propiedades del estado inicial */</span></span><br><span class="line">	}</span><br><span class="line">	50%{</span><br><span class="line">		<span class="comment">/* Propiedades del estado intermedio a la mitad del tiempo */</span></span><br><span class="line">	}</span><br><span class="line">	70%{</span><br><span class="line">		<span class="comment">/* Propiedades del estado intermedio al 70% del tiempo */</span></span><br><span class="line">	}</span><br><span class="line">	100%{</span><br><span class="line">		<span class="comment">/* Propiedades del estado final */</span></span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Cuando se trabajan estados intermedios, varios estados pueden compartir los mismos estilos, separando los porcentajes con una coma (<code>,</code>)</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframe</span> animacion-ciclo {</span><br><span class="line">	0%, </span><br><span class="line">  100% {</span><br><span class="line">		<span class="comment">/* Propiedades del estado inicial y final */</span></span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">  25%, </span><br><span class="line">  75% {</span><br><span class="line">		<span class="comment">/* Propiedades de los estados intermedios al 25% y 75% del tiempo */</span></span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	50%{</span><br><span class="line">		<span class="comment">/* Propiedades del estado intermedio a la mitad del tiempo */</span></span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Propiedades-Animables">
+          <a href="#Propiedades-Animables" class="heading-link"><i class="fas fa-link"></i></a>Propiedades Animables</h2>
+      <p>Al igual que las transiciones, no todas las propiedades son animables, sin embargo si se incluyen las propiedades que no se pueden animar en sus reglas de keyframe, se mostraran pero no se animarán.</p>
+<p>Entre las diferentes propiedades animables, se recomienda trabajar <strong>colores, transformaciones y opacidad</strong>.</p>
+<p><a href="Efectos%20y%20Animaciones%20cb7adc506baa415dba392904c314c533.md">Efectos y Animaciones</a></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">Animatable CSS properties</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Animacion">
+          <a href="#Animacion" class="heading-link"><i class="fas fa-link"></i></a>Animación</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/almanac/properties/a/animation/">animation | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS">Usando animaciones CSS</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_animations.asp">CSS Animations</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/animations/">Animations - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Nombre-de-la-Animacion">
+          <a href="#Nombre-de-la-Animacion" class="heading-link"><i class="fas fa-link"></i></a>Nombre de la Animación</h2>
+      <p>Una vez creado los keyframes se pueden asociar por medio de la propiedad <strong><code>animation-name</code></strong></p>
+
+        <h2 id="Duracion">
+          <a href="#Duracion" class="heading-link"><i class="fas fa-link"></i></a>Duración</h2>
+      <p>Para determinar la duración de un ciclo de la animación se debe especificar la propiedad <strong><code>animation-duration</code></strong>, esta es obligatoria ya que su valor por defecto es <strong>0s</strong>.</p>
+<p>Esta propiedad acepta medidas de tiempo en Segundos (<code>s</code>) y mili segundos (<code>ms</code>). </p>
+
+        <h2 id="Delay">
+          <a href="#Delay" class="heading-link"><i class="fas fa-link"></i></a>Delay</h2>
+      <p>La propiedad <code>animation-delay</code> permite definir un tiempo de espera entre el momento en que el elemento se carga y el comienzo de la secuencia de la animación.</p>
+
+        <h2 id="Cantidad-de-ciclos">
+          <a href="#Cantidad-de-ciclos" class="heading-link"><i class="fas fa-link"></i></a>Cantidad de ciclos</h2>
+      <p>Dado que las animaciones con @keyframes son automáticas, es decir, no necesita la interacción del usuario, se puede definir cuántas veces se desea que se repita con la propiedad <code>**animation-iteration-count</code>.**</p>
+<p>Esta propiedad recibe un número sin unidad de medida, también se puede indicar&nbsp;<code>infinite</code>&nbsp;para repetir la animación indefinidamente.</p>
+
+        <h2 id="Funcion-de-Tiempo">
+          <a href="#Funcion-de-Tiempo" class="heading-link"><i class="fas fa-link"></i></a>Función de Tiempo</h2>
+      <p>Con la propiedad <code>**animation-timing-function**</code> se puede cambiar la variación en la velocidad de la animación. Para ello se especifica una <strong>curva cúbica bézier</strong>, sus posibles valores son: ****</p>
+<ul>
+<li><code>ease</code>: Inicio normal, luego rápido, luego finaliza normal (<em>default</em>)</li>
+<li><code>linear</code>: velocidad constante de principio a fin.</li>
+<li><code>ease-in</code>: inicio lento.</li>
+<li><code>ease-out</code>: Final lento.</li>
+<li><code>ease-in-out</code>: Inicio y fin lentos.</li>
+<li><code>cubic-bezier(n,n,n,n)</code>: le permite definir sus propios valores en una función de cubic-bezier</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cubic-bezier.com/#0,0,1,1">cubic-bezier.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://easings.net/#">Easing Functions Cheat Sheet</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Direccion">
+          <a href="#Direccion" class="heading-link"><i class="fas fa-link"></i></a>Dirección</h2>
+      <p>Dado que los @keyframes definen diferentes estados, se puede especificar la dirección de la animación (principio-fin / fin-principio) con la propiedad <code>**animation-direction**</code></p>
+<p>Sus posibles valores son:</p>
+<ul>
+<li><code>**normal**</code>: La animación se reproduce hacia adelante.</li>
+<li><code>reverse</code>: La animación se reproduce hacia atrás</li>
+<li><code>alternate</code>: La animación se reproduce primero hacia adelante, luego hacia atrás</li>
+<li><code>alternate-reverse</code>: La animación se reproduce primero hacia atrás, luego hacia adelante</li>
+</ul>
+
+        <h2 id="Fill-Mode">
+          <a href="#Fill-Mode" class="heading-link"><i class="fas fa-link"></i></a>Fill Mode</h2>
+      <p>Con la propiedad <code>**animation-fill-mode</code>** se puede especificar si al finalizar una animación el elemento mantendrá las propiedades del último estado, del primero, ninguno o ambos.</p>
+<ul>
+<li><code>none</code></li>
+<li><code>forwards</code></li>
+<li><code>backwards</code></li>
+<li><code>both</code></li>
+</ul>
+
+        <h2 id="ShortHand">
+          <a href="#ShortHand" class="heading-link"><i class="fas fa-link"></i></a>ShortHand</h2>
+      <p>Usando la propiedad <code>**animation**</code> se pueden resumir las demás propiedades. Este shorthand debe respetar el siguiente orden:</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-name">animation-name</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-duration">animation-duration</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-timing-function">animation-timing-function</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-delay">animation-delay</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-direction">animation-direction</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-iteration-count">animation-iteration-count</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation-play-state">animation-play-state</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>Las propiedades&nbsp;<code>animation-name</code>&nbsp;y  <code>animation-duration</code>&nbsp;son necesarias, las demás son opcionales.</p>
+<p>Se pueden agregar varias animaciones separadas por coma con sus respectivas configuraciones.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/animation">animation</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Librerias">
+          <a href="#Librerias" class="heading-link"><i class="fas fa-link"></i></a>Librerías</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://animate.style/">Animate.css</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://michalsnik.github.io/aos/">AOS</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/">https://edisonpem.github.io/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Diseño Responsive</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/CSS-B%C3%A1sico/"><span class="paginator-prev__text">CSS Básico</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#keyframes"><span class="toc-number">1.</span> <span class="toc-text">
+          @keyframes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Estado-inicial-Estado-final"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Estado inicial - Estado final</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Estados-intermedios"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Estados intermedios</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Propiedades-Animables"><span class="toc-number">1.3.</span> <span class="toc-text">
+          Propiedades Animables</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Animacion"><span class="toc-number">2.</span> <span class="toc-text">
+          Animación</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nombre-de-la-Animacion"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Nombre de la Animación</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Duracion"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Duración</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Delay"><span class="toc-number">2.3.</span> <span class="toc-text">
+          Delay</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cantidad-de-ciclos"><span class="toc-number">2.4.</span> <span class="toc-text">
+          Cantidad de ciclos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Funcion-de-Tiempo"><span class="toc-number">2.5.</span> <span class="toc-text">
+          Función de Tiempo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Direccion"><span class="toc-number">2.6.</span> <span class="toc-text">
+          Dirección</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fill-Mode"><span class="toc-number">2.7.</span> <span class="toc-text">
+          Fill Mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ShortHand"><span class="toc-number">2.8.</span> <span class="toc-text">
+          ShortHand</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Librerias"><span class="toc-number">3.</span> <span class="toc-text">
+          Librerías</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

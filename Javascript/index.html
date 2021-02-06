@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Introducción       JavaScript es un lenguaje de programación y de scripting multiplataforma, multiparadigma y de alto nivel, que es interpretado en un navegador web o en un entorno de ejecu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Introducción       JavaScript es un lenguaje de programación y de scripting multiplataforma, multiparadigma y de alto nivel, que es interpretado en un navegador web o en un entorno de ejecu">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/Untitled.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/java-y-javascript-no-son-lo-mismo.jpg">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/Untitled1.png">
+<meta property="article:published_time" content="2020-09-08T21:22:57.150Z">
+<meta property="article:modified_time" content="2020-09-08T23:19:06.784Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/Untitled.png"><title>Javascript | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Javascript</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><h1 id="Introduccion">
+          <a href="#Introduccion" class="heading-link"><i class="fas fa-link"></i></a>Introducción</h1>
+      <p>JavaScript es un lenguaje de programación y de scripting multiplataforma, multiparadigma y de alto nivel, que es interpretado en un <strong>navegador web</strong> o en un entorno de ejecución como <strong>nodejs</strong>.</p>
+<p>Un Script se trata de una secuencia de comandos o pequeñas funcionalidades que se interpretan y ejecutan en un ambiente. En páginas web, estos scripts pueden agregar dinamismo al documento y aportar respuesta a la interacción del usuario, para ello JavaScript proporciona métodos que permiten modificar el DOM (Document Object model), manipular datos, utilizar el API de Html y muchas más funcionalidades.</p>
+<p>Por otra parte, usando nodejs se puede interpretar el lenguaje del lado del servidor, permitendo crear aplicaciones con un API para comunicarse con otras aplicaciones, así como la posibilidad de conectarse con una base de datos para manipular y procesar la información con alguna lógica de negocio.</p>
+<a id="more"></a>
+
+
+        <h2 id="Historia">
+          <a href="#Historia" class="heading-link"><i class="fas fa-link"></i></a>Historia</h2>
+      <p>JavaScript nace durante la década de los años 90, durante el surgimiento de sofisticadas aplicaciones web acompañadas de una lenta velocidad de navegación, esto originó la necesidad de concebir un lenguaje de programación que se ejecutara en el mismo navegador, con el objetivo de optimizar el tiempo de respuesta de los usuarios;</p>
+<p>Un programador de Netscape llamado <strong>Brendan Eich</strong> pensó que podría solucionar este problema adaptando tecnologías existentes al navegador <strong>Netscape Navigator 2.0</strong>, que iba a lanzarse en 1995. Inicialmente lo llamó <strong>LiveScript</strong>.</p>
+<p>Posteriormente, Netscape firmó una alianza con Sun Microsystems para el desarrollo del nuevo lenguaje de programación el cuál cambió su nombre por el de JavaScript. La razón del cambio de nombre fue exclusivamente por marketing, ya que Java era la palabra de moda en el mundo informático y de Internet de la época. Varios lenguajes de programación como JScript o VBScript surgieron por ese entonces, sin embargo Javascript prevaleció ante los demás.</p>
+
+        <h3 id="Estandar">
+          <a href="#Estandar" class="heading-link"><i class="fas fa-link"></i></a>Estandar</h3>
+      <p>Posteriormente, en el año de 1997, la empresa Netscape estandarizó el lenguaje JavaScript en su versión 1.1. El organismo <strong>ECMA</strong> (<em>European Computer Manufacturers Association</em>) y el comité TC39 definieron que estandarizar era la mejor decisión, por lo que se inauguró el término <strong>ECMAScript</strong> para el estándar del lenguaje.</p>
+<p>En Diciembre de 1999 sale la tercera versión de ECMAScript y no es hasta en Diciembre de 2009 que sale la quinta versión (la 4ta fue abandonada) Ese mismo año nace nodejs. En junio de 2015 nace <strong>ECMAScript 6</strong>, esta actualización trajo cambios significativos en el lenguaje para la escritura de aplicaciones complejas, la versión actual es ECMAScript 10.</p>
+<p><img src="/fundamentos-desarrollo-web/Javascript/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+
+        <h2 id="JavaScript-Js-No-es-Java">
+          <a href="#JavaScript-Js-No-es-Java" class="heading-link"><i class="fas fa-link"></i></a>JavaScript (Js) No es Java</h2>
+      <p><img src="/fundamentos-desarrollo-web/Javascript/java-y-javascript-no-son-lo-mismo.jpg" alt="java-y-javascript-no-son-lo-mismo.jpg" loading="lazy"></p>
+<p>Java es un lenguaje de programación orientado a objetos que se incorporó al ámbito de la informática en los años noventa. La idea de Java es que pueda realizarse programas con la posibilidad de ejecutarse en cualquier contexto, en cualquier ambiente, siendo así su portabilidad uno de sus principales logros.</p>
+<p>JavaScript y Java son similares en algunos aspectos, pero fundamentalmente diferentes en otros. El lenguaje JavaScript se parece a Java pero no tiene el tipo estático (static) de Java, ni tiene un tipado fuerte. JavaScript usa la mayoría de la sintaxis de expresiones de Java, convenciones de nombrado, y las construcciones básicas de control de flujo, razón adicional por la cual se le cambió el nombre del original LiveScript a JavaScript.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://uniwebsidad.com/libros/javascript/capitulo-1/breve-historia">1.2. Breve historia (Introducción a JavaScript)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Introducci%C3%B3n">Introducción</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://desarrolloweb.com/articulos/introduccion-javascript.html">Introducción a Javascript</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Incorporacion">
+          <a href="#Incorporacion" class="heading-link"><i class="fas fa-link"></i></a>Incorporación</h1>
+      <p>Para incorporar código javascipt a una página web se puede realizar de varias formas.</p>
+
+        <h2 id="Interno">
+          <a href="#Interno" class="heading-link"><i class="fas fa-link"></i></a>Interno</h2>
+      <p>Usando la etiqueta <code>&lt;script&gt;</code> al final del documento:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">       <span class="comment">// Código Js</span></span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Externo">
+          <a href="#Externo" class="heading-link"><i class="fas fa-link"></i></a>Externo</h2>
+      <p>Usando un archivo con extensión <strong>.js</strong> en donde tengamos el código, este archivo se agrega al documento con la etiqueta <code>&lt;script&gt;</code> paro usando el atributo <code>src</code></p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"filePath"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Donde <code>href="filePath"</code> hace referencia al archivo .js</p>
+
+        <h3 id="FilePath">
+          <a href="#FilePath" class="heading-link"><i class="fas fa-link"></i></a>FilePath</h3>
+      <p>Se le conoce como <strong>FilePath</strong> a la ubicación de un archivo dentro de un equipo, y existen dos formas de ubicar un archivo, con una “<strong>ruta relativa</strong>” y una “<strong>ruta absoluta</strong>”.</p>
+<ul>
+<li><strong>Ruta Absoluta</strong>: Es la ubicación exacta de un archivo dentro de un pc<ul>
+<li>en Windows sería: <code>"C:\\users\Edison\Escritorio\miPaginaWeb\js\script.js"</code></li>
+<li>mientras que en Linux podría ser: <code>"/home/edison/Escritorio/miPaginaWeb/js/script.js"</code></li>
+</ul>
+</li>
+</ul>
+<p>También se le llama ruta absoluta a las rutas de internet (URL)</p>
+<ul>
+<li><strong>Ruta Relativa</strong>: Se refiere la ubicación de un archivo respecto a otro, para esto se deben seguir las siguientes reglas:<ul>
+<li><strong>Carpeta Actual</strong>: usando un punto (<code>.</code>) podemos referirnos a la carpeta actual, por ejemplo si deseamos agregar una imagen dentro de nuestro <code>index.html</code> podemos usar la ruta: <code>"./js/script.js"</code>.</li>
+<li><strong>Carpeta Superior</strong>: usando punto punto (<code>..</code>) Diferente de dos puntos (<code>:</code>), podemos referirnos a una carpeta superior y luego ubicar un archivo, por ejemplo si deseamos cargar una imagen desde un documento html que se encuentra en una subcarpeta, se podría usar la ruta <code>"../js/script.js"</code></li>
+</ul>
+</li>
+</ul>
+<p>El filepath es <strong>casesensitive,</strong>  esto significa que hace distinción entre mayusculas y minusculas, siempre se deben indicar el nombre de las carpetas o archivos <strong>exactamente</strong> igual a como a parecen en el explorador de archivos.</p>
+
+        <h1 id="Sintaxis">
+          <a href="#Sintaxis" class="heading-link"><i class="fas fa-link"></i></a>Sintaxis</h1>
+      <p>Como todo lenguaje de programación, javascript está basado en <strong>sentencias</strong>, cada sentencia representa una instrucción o un conjunto de instrucciones a la maquina (o al navegador).</p>
+<p>Las sentencias están separadas entre sí por <strong>punto y coma</strong> (Sin embargo no son obligatorias cuando están separadas en lineas de código independientes).</p>
+<p>JavaScript es <strong>case-sensitive</strong>, lo que significa que distingue mayúsculas y minúsculas y utiliza el conjunto de caracteres Unicode. Sin embargo para los <strong>identificadores</strong> (nombre de variables, funciones o propiedades), se deben seguir las siguients reglas:</p>
+<ul>
+<li>El primer carácter debe ser una letra (minuscula).</li>
+<li>Los caracteres posteriores pueden ser letras, dígitos o guiones bajos (_).</li>
+<li>No se permiten espacios, guiones u otros simbolos especiales en dichos nombres.</li>
+<li>Para nombres compuestos se utiliza <strong>camelCase</strong>, es decir la primera letra de la segunda palabra en adelante comienza con mayuscula y el resto en minuscula.</li>
+<li>No se pueden utilizar <strong>palabras reservadas</strong>.</li>
+</ul>
+
+        <h2 id="Comentarios">
+          <a href="#Comentarios" class="heading-link"><i class="fas fa-link"></i></a>Comentarios</h2>
+      <p>Para agregar comentarios dentro del código se utilizan dos metodos:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// comentario en una sola línea</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* este es un comentario </span></span><br><span class="line"><span class="comment">   multilínea</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="Variables">
+          <a href="#Variables" class="heading-link"><i class="fas fa-link"></i></a>Variables</h1>
+      <p>Una variable representa un espacio en la memoria de un ordenador, donde almacena información o datos (<strong>valores</strong>) y se acceden a éstos por medio de un <strong>identificador.</strong></p>
+<p>El nombre de la variable es la forma usual de referirse al valor almacenado, esta separación entre nombre y contenido permite que el nombre sea usado independientemente de la información exacta que representa.</p>
+<p>Para <strong>definir</strong> nuevas variables, se utilizan las palabras reservadas seguido del identificador o nombre de la variable:</p>
+<ul>
+<li><code>let</code>: para crear variables cuyo valor puede cambiar en tiempo de ejecución.</li>
+<li><code>const</code>: para variables cuyo valor es inmutable en tiempo de ejecución.</li>
+</ul>
+<p>Otras formas aceptadas pero ya <strong>NO</strong> se recomiendan son:</p>
+<ul>
+<li><code>var</code>: es una forma de definir variables con un alcance local más amplio (a nivel de funciones), mientras que <code>let</code> define variables con un alcance a nivel de bloques (condiciones, ciclos, etc)</li>
+<li><strong>Sin palabra reservada</strong>: Las variables creadas de esta forma tienen un alcance global sin importar donde son definidas.</li>
+</ul>
+<p>Para <strong>asignar</strong> un valor se utilizar el simbolo <code>=</code> seguido del valor correspondiente según los diferentes tipos de datos o el resultado de una operación.</p>
+
+        <h2 id="Tipos-de-Datos">
+          <a href="#Tipos-de-Datos" class="heading-link"><i class="fas fa-link"></i></a>Tipos de Datos</h2>
+      <p>JavaScript cuenta con 6 diferentes tipos de datos primitivos: </p>
+<ul>
+<li><strong>Numeros (Number):</strong> Consisten en números enteros o flotantes, Por ejemplo:&nbsp;<code>42</code>&nbsp;o&nbsp;<code>3.14159</code>.<ul>
+<li><strong>infinity:</strong> Infinito es un valor numerico que representa 1/0.</li>
+<li><strong>NaN (Not a Number):</strong> Este es un valor resultante de convertir un texto con letras en número.</li>
+</ul>
+</li>
+<li><strong>Cadenas de Texto (String):</strong> Consiste en una secuencia de caracteres, las cadenas de texo se definen entre comillas sencillas o comillas dobles, Por ejemplo&nbsp;<code>'Hola Mundo'</code></li>
+<li><strong>Booleano (Boolean):</strong> Consiste en valores binarios donde valores&nbsp;<code>true</code>&nbsp;y&nbsp;<code>false</code>.</li>
+</ul>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pi = <span class="number">3.1415</span></span><br><span class="line"><span class="keyword">let</span> foo = <span class="string">"Hola Mundo!"</span></span><br><span class="line"><span class="keyword">let</span> bar = <span class="literal">false</span></span><br></pre></td></tr></tbody></table></div></figure>
+<hr>
+<ul>
+<li><strong>undefined:</strong> Este es el tipo de dato de una variable sin valor.</li>
+<li><strong>null</strong>. Una palabra clave especial que denota un valor nulo (Propiedades no existentes de un objeto existente).</li>
+</ul>
+<p><img src="/fundamentos-desarrollo-web/Javascript/Untitled1.png" alt="Untitled1.png" loading="lazy"></p>
+<hr>
+<ul>
+<li><strong>Objeto (Object)</strong>: Todos los demás elementos de Js son objetos (los objetos de js tienen atributos y funciones)<ul>
+<li><strong>Array:</strong> Es un tipo de objeto que representa una lista de elementos.</li>
+<li><strong>Date:</strong> Es un tipo de objeto ****para trabajar con fechas.</li>
+<li><strong>Math</strong>: Es un tipo de objeto con funciones matemáticas.</li>
+</ul>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types#Basics">Gramática y Tipos</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1">W3Schools JS Exercise</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Mostrar-en-consola">
+          <a href="#Mostrar-en-consola" class="heading-link"><i class="fas fa-link"></i></a>Mostrar en consola</h2>
+      <p>Para visualizar el valor de una variable o el resultado de una operación se utiliza la función:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log()</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Donde dentro del paréntesis va lo que se va a mostrar en pantalla, ya sean datos o variables</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Hola Mundo!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(pi)</span><br><span class="line"><span class="built_in">console</span>.log(foo)</span><br></pre></td></tr></tbody></table></div></figure>
+<p>También se puede utilizar para mostrar el resultado de una operación.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_debugging.asp">JavaScript Debugging</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Operaciones">
+          <a href="#Operaciones" class="heading-link"><i class="fas fa-link"></i></a>Operaciones</h1>
+      
+        <h2 id="Aritmeticas">
+          <a href="#Aritmeticas" class="heading-link"><i class="fas fa-link"></i></a>Aritméticas</h2>
+      <p>Javascript soporta el siguiente conjunto de operaciones entre números:</p>
+<ul>
+<li><code>+</code>: Suma</li>
+<li><code>-</code>: Resta</li>
+<li><code>*</code>: Multiplicación</li>
+<li><code>/</code>: Division</li>
+<li><code>**</code>: Potencia (ES2016)</li>
+<li><code>%</code>: Modulo (Resto de la division)</li>
+</ul>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">10</span></span><br><span class="line"><span class="keyword">let</span> y = <span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x + y)</span><br><span class="line"><span class="built_in">console</span>.log(x - y)</span><br><span class="line"><span class="built_in">console</span>.log(x * y)</span><br><span class="line"><span class="built_in">console</span>.log(x / y)</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_aritm%C3%A9ticos">Expresiones y operadores</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_arithmetic.asp">JavaScript Arithmetic</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_operators1">W3Schools JS Exercise</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Incremento">
+          <a href="#Incremento" class="heading-link"><i class="fas fa-link"></i></a>Incremento</h3>
+      <p>La operación de incremento se utiliza para aumentar el valor de una variable numérica. Este incremento tiene varias formas de implementación:</p>
+<ul>
+<li><p>Una unidad a la vez, se utiliza el operador <code>++</code></p>
+  <figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> miNumero = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(miNumero) <span class="comment">// 3</span></span><br><span class="line">miNumero++;</span><br><span class="line"><span class="built_in">console</span>.log(miNumero) <span class="comment">// 4</span></span><br></pre></td></tr></tbody></table></div></figure></li>
+<li><p>Valores personalizados, se utiliza el operador <code>+=</code></p>
+  <figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> miNumero = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(miNumero) <span class="comment">// 3</span></span><br><span class="line">miNumero += <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(miNumero) <span class="comment">// 8</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Otros operadores son:</p>
+</li>
+<li><p><code>--</code> para decremento de a una unidad a la vez</p>
+</li>
+<li><p><code>-=</code> para decremento con valores personalizados</p>
+</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_asignaci%C3%B3n">Expresiones y operadores</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_assignment.asp">JavaScript Assignment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Strings">
+          <a href="#Strings" class="heading-link"><i class="fas fa-link"></i></a>Strings</h2>
+      <p>Las cadenas de texto se pueden unir usando la operación <strong>concatenación</strong>, la cuál se realiza con el símbolo <code>+</code></p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = <span class="string">'hola '</span></span><br><span class="line"><span class="keyword">let</span> bar = <span class="string">'mundo'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo + bar) <span class="comment">// 'holamundo'</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_cadenas_de_caracteres">Expresiones y operadores</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="String-Number">
+          <a href="#String-Number" class="heading-link"><i class="fas fa-link"></i></a>String + Number</h3>
+      <p>Una característica de Javascript es que tiene un tipado dinámico, por lo que las variables pueden tener cualquier tipo de dato y este puede variar en tiempo de ejecución.</p>
+<p>Al realizar operaciones entre diferentes tipos de datos se pueden dar diferentes resultados</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numero = <span class="number">2</span></span><br><span class="line"><span class="keyword">let</span> texto = <span class="string">'hola'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// La operación suma se comporta como concatenación</span></span><br><span class="line"><span class="built_in">console</span>.log(numero + texto) <span class="comment">// '2hola'</span></span><br><span class="line"><span class="built_in">console</span>.log(texto + numero) <span class="comment">// 'hola2'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Otras operaciones comportan de foma aritmética</span></span><br><span class="line"><span class="built_in">console</span>.log(numero - texto) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(texto - numero) <span class="comment">// NaN</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Sin embargo, si el texto consta solamente de caracteres numéricos, las operaciones diferentes a la suma sí se podrán realizar.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numero = <span class="number">2</span></span><br><span class="line"><span class="keyword">let</span> texto = <span class="string">'10'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// La operación suma se comporta como concatenación</span></span><br><span class="line"><span class="built_in">console</span>.log(numero + texto) <span class="comment">// '210'</span></span><br><span class="line"><span class="built_in">console</span>.log(texto + numero) <span class="comment">// '102'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Otras operaciones comportan de foma aritmética</span></span><br><span class="line"><span class="built_in">console</span>.log(numero - texto) <span class="comment">// -18</span></span><br><span class="line"><span class="built_in">console</span>.log(texto - numero) <span class="comment">//  18</span></span><br></pre></td></tr></tbody></table></div></figure>
+<hr>
+
+        <h2 id="Logicas">
+          <a href="#Logicas" class="heading-link"><i class="fas fa-link"></i></a>Lógicas</h2>
+      <p>Las operaciones lógicas son operaciones que se realizan entre <strong>booleanos</strong> y se implementan con los siguientes símbolos:</p>
+<ul>
+<li><code>&amp;&amp;</code> Operación <strong>AND</strong></li>
+<li><code>||</code> Operación <strong>OR</strong></li>
+<li><code>!</code> Operación <strong>NOT</strong></li>
+</ul>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="literal">true</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="literal">false</span></span><br><span class="line"><span class="built_in">console</span>.log(a || b) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(a &amp;&amp; b) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(!a) <span class="comment">// false</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Tabla-de-Verdad">
+          <a href="#Tabla-de-Verdad" class="heading-link"><i class="fas fa-link"></i></a>Tabla de Verdad</h3>
+      <p><strong>A</strong></p>
+<p>true</p>
+<p>true</p>
+<p>false</p>
+<p>false</p>
+<p><strong>B</strong></p>
+<p>true</p>
+<p>false</p>
+<p>true</p>
+<p>false</p>
+<p><strong>A &amp;&amp; B</strong></p>
+<p>true</p>
+<p>false</p>
+<p>false</p>
+<p>false</p>
+<p><strong>A || B</strong></p>
+<p>true</p>
+<p>true</p>
+<p>true</p>
+<p>false</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_l%C3%B3gicos">Expresiones y operadores</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Comparaciones">
+          <a href="#Comparaciones" class="heading-link"><i class="fas fa-link"></i></a>Comparaciones</h2>
+      <p>Los operadores de comparación se utilizan en declaraciones lógicas para determinar la igualdad o diferencia entre variables o valores, el resultado de una comparación es un valor booleano (<strong>true</strong> / <strong>false</strong>).</p>
+<ul>
+<li><code>==</code>: Igualdad</li>
+<li><code>===</code>: Igualdad estricta</li>
+<li><code>&gt;</code>: Mayor qué</li>
+<li><code>&gt;=</code>: Mayor <strong>o</strong> igual ****que.</li>
+</ul>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span> == <span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span> &gt; <span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span> &gt;= <span class="number">5</span>)</span><br></pre></td></tr></tbody></table></div></figure>
+<ul>
+<li><code>!=</code>: Diferencia</li>
+<li><code>!==</code>: Diferencia Estricta</li>
+<li><code>&lt;</code>: Menor que</li>
+<li><code>&lt;=</code>: Menor <strong>o</strong> igual que</li>
+</ul>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span> != <span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span> &lt; <span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">8</span> &lt;= <span class="number">5</span>)</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_comparaci%C3%B3n">Expresiones y operadores</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_comparisons.asp">JavaScript Comparison and Logical Operators</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons1">W3Schools JS Exercise</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Condicionales">
+          <a href="#Condicionales" class="heading-link"><i class="fas fa-link"></i></a>Condicionales</h1>
+      <p>Las declaraciones condicionales se utilizan para realizar diferentes acciones basadas en diferentes condiciones. Una <strong>condición</strong> es algún valor booleano, ya sea:</p>
+<ul>
+<li>Variable booleana</li>
+<li>Resultado de una comparación</li>
+<li>Resultado de una operación booleana (entre variables y/o comparaciones).</li>
+</ul>
+<p>Las condicionales se declaran usando la sentencia <strong><code>if</code></strong> y se puede complementar con las sentencias <code>**else**</code> y <code>**else if**</code>. y las instrucciones para cada caso se definen en un <strong>bloque de código</strong>.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) {</span><br><span class="line">  <span class="comment">// bloque de código si la condición se cumple</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) {</span><br><span class="line">  <span class="comment">// bloque de código si la condición se cumple</span></span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line">  <span class="comment">// bloque de código si la condición NO se cumple</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) {</span><br><span class="line">  <span class="comment">// bloque de código si la condición se cumple</span></span><br><span class="line">} <span class="keyword">else</span> <span class="keyword">if</span> (otherCondition){</span><br><span class="line">  <span class="comment">// bloque de código si la condición NO se cumple pero sí se cumple la segunda</span></span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line">  <span class="comment">// bloque de código si Ninguna condición se cumple</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Se pueden evaluar variables como condiciones, en este caso los siguientes valores se evalúan&nbsp;como&nbsp;falso (también conocidos como valores&nbsp;<strong>falsy</strong>):</p>
+<ul>
+<li><code>false</code>: Variable booleana con valor false.</li>
+<li><code>0</code>: Variable numérica con valor 0.</li>
+<li><code>NaN</code>: Variable numérica con valor NaN.</li>
+<li><code>""</code>: Variable de texto con una cadena vacía como valor.</li>
+<li><code>undefined</code>: Variable sin asignar.</li>
+<li><code>null</code>: Elemento no existente.</li>
+</ul>
+<p>Los demás valores serán considerados verdaderos (<strong>truthy</strong>).</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores#Sentencia_if...else">Control de flujo y manejo de errores</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_if_else.asp">JavaScript if else else if</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions1">W3Schools JS Exercise</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Ciclos">
+          <a href="#Ciclos" class="heading-link"><i class="fas fa-link"></i></a>Ciclos</h1>
+      <p>Los ciclos ofrecen diferentes formas de ejecutar un bloque de código repetidamente.</p>
+
+        <h2 id="While-Loop">
+          <a href="#While-Loop" class="heading-link"><i class="fas fa-link"></i></a>While Loop</h2>
+      <p>Los ciclos while se ejecutan mientras que una condición sea verdadera</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(condition){</span><br><span class="line">	<span class="comment">// bloque de código a ejecutar repetidamente</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Es importante que la condición cambie en el tiempo para finalizar el ciclo, de lo contrario se ejecutará para siempre (<strong>Loop infinito</strong>) y bloqueará la página.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Bucles_e_iteraci%C3%B3n#sentencia_while">Bucles e iteración</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_loop_while.asp">JavaScript while Loop</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_loop_while1">W3Schools JS Exercise</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Do-While-Loop">
+          <a href="#Do-While-Loop" class="heading-link"><i class="fas fa-link"></i></a>Do-While Loop</h2>
+      <p>Un ciclo do-while es similar al ciclo while, sin embargo en éste el bloque de código se ejecuta al menos una vez sin importar la validez de la condición.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> {</span><br><span class="line">	<span class="comment">// bloque de código a ejecutar repetidamente</span></span><br><span class="line">} <span class="keyword">while</span>(condition);</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Bucles_e_iteraci%C3%B3n#sentencia_do...while">Bucles e iteración</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="For-Loop">
+          <a href="#For-Loop" class="heading-link"><i class="fas fa-link"></i></a>For Loop</h2>
+      <p>Los ciclos for se utilizan cuando se desea ejecutar algo una cantidad de veces predefinidas, para ello utilizan una variable numérica que irá incrementando en cada ciclo hasta llegar a un valor específico.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cantCiclos = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cantCiclos; i++){</span><br><span class="line">		<span class="comment">// bloque de código a ejecutar 10 veces</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Los ciclos for se utilizan frecuentemente para recorrer una lista de elementos.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Bucles_e_iteraci%C3%B3n#sentencia_for">Bucles e iteración</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_loop_for.asp">JavaScript for Loop</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_loops1">W3Schools JS Exercise</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Break-Continue">
+          <a href="#Break-Continue" class="heading-link"><i class="fas fa-link"></i></a>Break / Continue</h2>
+      <p>Si se desea romper un ciclo a la fuerza se puede utilizar la palabra reservada <strong>break.</strong></p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {</span><br><span class="line">	<span class="keyword">if</span>(i == <span class="number">6</span>){</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">console</span>.log(i);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="number">0</span></span><br><span class="line">&gt; <span class="number">1</span></span><br><span class="line">&gt; <span class="number">2</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line">&gt; <span class="number">4</span></span><br><span class="line">&gt; <span class="number">5</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Si se desea saltar una iteración del ciclo se utiliza la palabra reservada <strong>continue</strong></p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {</span><br><span class="line">	<span class="keyword">if</span>(i == <span class="number">6</span>){</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">console</span>.log(i);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="number">0</span></span><br><span class="line">&gt; <span class="number">1</span></span><br><span class="line">&gt; <span class="number">2</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line">&gt; <span class="number">4</span></span><br><span class="line">&gt; <span class="number">5</span></span><br><span class="line">&gt; <span class="number">7</span></span><br><span class="line">&gt; <span class="number">8</span></span><br><span class="line">&gt; <span class="number">9</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/js/js_break.asp">JavaScript Break and Continue</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Bucles_e_iteraci%C3%B3n#sentencia_break">Bucles e iteración</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Funciones">
+          <a href="#Funciones" class="heading-link"><i class="fas fa-link"></i></a>Funciones</h1>
+      <p>Una función es un conjunto de sentencias (bloque de código) que realizan una tarea o calculan un valor. Las funciones se almacenan en memoria y solo se ejecutan cuando “algo” lo invoca.</p>
+
+        <h2 id="Invocar-Funciones">
+          <a href="#Invocar-Funciones" class="heading-link"><i class="fas fa-link"></i></a>Invocar Funciones</h2>
+      <p>Para invocar una función se debe escribir el identificador de la función seguido de paréntesis <code>()</code>.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert()</span><br><span class="line">prompt()</span><br><span class="line">confirm()</span><br></pre></td></tr></tbody></table></div></figure>
+<p>También pueden estar asociadas a un objeto, en este caso se debe escribir el identificador del objeto seguido de un punto (.) y el identificador de la función junto con los paréntesis <code>()</code>.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log()</span><br><span class="line"><span class="built_in">console</span>.clear()</span><br><span class="line"><span class="built_in">document</span>.write()</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Parametros-Argumentos">
+          <a href="#Parametros-Argumentos" class="heading-link"><i class="fas fa-link"></i></a>Parámetros / Argumentos</h2>
+      <p>Muchas veces las funciones requieren un valor para funcionar (<strong>parámetro</strong>), o para cambiar su comportamiento, este valor se escribe dentro de los paréntesis (<strong>argumento</strong>).</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'Este es un mensaje en consola'</span>)</span><br><span class="line">alert(<span class="string">'Este es un mensaje de alerta'</span>)</span><br><span class="line">confirm(<span class="string">'Esta es una pregunta de confirmación'</span>)</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Una función puede tener más de un parámetro, en este caso se utilizan comas para separar los valores.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hola'</span>, <span class="string">'Mundo'</span>, <span class="string">'Este es'</span>, <span class="string">'El curso de'</span>, <span class="string">'Fundamentos'</span>)</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Retornos">
+          <a href="#Retornos" class="heading-link"><i class="fas fa-link"></i></a>Retornos</h2>
+      <p>Algunas funciones pueden devolver un valor según el tipo de función, este valor se puede almacenar en una variable para utilizarla más adelante.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nombre = prompt(<span class="string">'Ingresa tu nombre'</span>)</span><br><span class="line">alert(<span class="string">'Bienvenido '</span> + nombre)</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Los retornos de funciones se pueden utilizar para controlar el flujo de un algoritmo (condición, ciclo, etc.)</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> continuar = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">let</span> iteracion = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(continuar){</span><br><span class="line">	iteracion++</span><br><span class="line">	alert(<span class="string">'Esta es la iteracion '</span>+iteracion);</span><br><span class="line">	continuar = confirm(<span class="string">'Desea continuar?'</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Definir-Funciones">
+          <a href="#Definir-Funciones" class="heading-link"><i class="fas fa-link"></i></a>Definir Funciones</h2>
+      <p>Para definir una función propia se utiliza la palabra reservada <code>function</code> seguido del identificador de la función con la siguiente estructura:</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">miFuncion</span>(<span class="params"></span>)</span>{</span><br><span class="line">	<span class="comment">// Código a ejecutar cuando la función sea invocada</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Si se desea agregar parámetros a la función se escribe un identificador dentro del paréntesis (la cantidad de identificadores como parámetros), estos identificadores se podrán usar como <strong>variables</strong> <strong>dentro</strong> de la función.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">saludar</span>(<span class="params">mensaje</span>)</span>{</span><br><span class="line">	<span class="comment">// Código a ejecutar cuando la función sea invocada</span></span><br><span class="line">	alert(<span class="string">'Hola, '</span> + mensaje)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Para agregar retornos se utiliza la palabra clave <code>return</code> seguido del valor que se desea retornar.</p>
+<figure class="highlight jsx"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumar</span>(<span class="params">num1, num2</span>)</span>{</span><br><span class="line">	<span class="keyword">return</span> num1 + num2</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">restar</span>(<span class="params">num1, num2</span>)</span>{</span><br><span class="line">	<span class="keyword">let</span> resta = num1 + num2</span><br><span class="line">	<span class="keyword">return</span> resta</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Todas las variables creadas dentro de una función no “existen” fuera de ella.</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/">https://edisonpem.github.io/fundamentos-desarrollo-web/Javascript/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Validaci%C3%B3n-Formularios/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Validación de Formularios</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Disposici%C3%B3n-Elementos/"><span class="paginator-prev__text">Disposición de Elementos</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduccion"><span class="toc-number">1.</span> <span class="toc-text">
+          Introducción</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Historia"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Historia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Estandar"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          Estandar</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-Js-No-es-Java"><span class="toc-number">1.2.</span> <span class="toc-text">
+          JavaScript (Js) No es Java</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Incorporacion"><span class="toc-number">2.</span> <span class="toc-text">
+          Incorporación</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Interno"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Interno</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Externo"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Externo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FilePath"><span class="toc-number">2.2.1.</span> <span class="toc-text">
+          FilePath</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sintaxis"><span class="toc-number">3.</span> <span class="toc-text">
+          Sintaxis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Comentarios"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Comentarios</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Variables"><span class="toc-number">4.</span> <span class="toc-text">
+          Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tipos-de-Datos"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Tipos de Datos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mostrar-en-consola"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Mostrar en consola</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Operaciones"><span class="toc-number">5.</span> <span class="toc-text">
+          Operaciones</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Aritmeticas"><span class="toc-number">5.1.</span> <span class="toc-text">
+          Aritméticas</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Incremento"><span class="toc-number">5.1.1.</span> <span class="toc-text">
+          Incremento</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Strings"><span class="toc-number">5.2.</span> <span class="toc-text">
+          Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Number"><span class="toc-number">5.2.1.</span> <span class="toc-text">
+          String + Number</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Logicas"><span class="toc-number">5.3.</span> <span class="toc-text">
+          Lógicas</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tabla-de-Verdad"><span class="toc-number">5.3.1.</span> <span class="toc-text">
+          Tabla de Verdad</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Comparaciones"><span class="toc-number">5.4.</span> <span class="toc-text">
+          Comparaciones</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Condicionales"><span class="toc-number">6.</span> <span class="toc-text">
+          Condicionales</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ciclos"><span class="toc-number">7.</span> <span class="toc-text">
+          Ciclos</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#While-Loop"><span class="toc-number">7.1.</span> <span class="toc-text">
+          While Loop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Do-While-Loop"><span class="toc-number">7.2.</span> <span class="toc-text">
+          Do-While Loop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#For-Loop"><span class="toc-number">7.3.</span> <span class="toc-text">
+          For Loop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Break-Continue"><span class="toc-number">7.4.</span> <span class="toc-text">
+          Break &#x2F; Continue</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Funciones"><span class="toc-number">8.</span> <span class="toc-text">
+          Funciones</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Invocar-Funciones"><span class="toc-number">8.1.</span> <span class="toc-text">
+          Invocar Funciones</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Parametros-Argumentos"><span class="toc-number">8.2.</span> <span class="toc-text">
+          Parámetros &#x2F; Argumentos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Retornos"><span class="toc-number">8.3.</span> <span class="toc-text">
+          Retornos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Definir-Funciones"><span class="toc-number">8.4.</span> <span class="toc-text">
+          Definir Funciones</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

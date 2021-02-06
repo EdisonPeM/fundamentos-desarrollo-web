@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Algunas propiedades de css que se pueden utilizar para agregar estilos más avanzados son">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Estilos Avanzados">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Estilos-Avanzados/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Algunas propiedades de css que se pueden utilizar para agregar estilos más avanzados son">
+<meta property="og:locale" content="es_ES">
+<meta property="article:published_time" content="2020-09-08T21:22:57.166Z">
+<meta property="article:modified_time" content="2020-09-08T23:19:46.142Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary"><title>Estilos Avanzados | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Estilos-Avanzados/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Estilos Avanzados</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><p>Algunas propiedades de css que se pueden utilizar para agregar estilos más avanzados son</p>
+<a id="more"></a>
+
+
+        <h2 id="Contenedores-Elementos">
+          <a href="#Contenedores-Elementos" class="heading-link"><i class="fas fa-link"></i></a>Contenedores / Elementos</h2>
+      
+        <h3 id="Desbordamiento">
+          <a href="#Desbordamiento" class="heading-link"><i class="fas fa-link"></i></a>Desbordamiento</h3>
+      <p>Cuando un elemento tiene un tamaño fijo, y su contenido es más grande que dicho tamaño, se genera un desbordamiento y el contenido se muestra por fuera del contenedor.</p>
+<p>Si no es posible ajustar el tamaño del contenido para que se ajuste al contenedor, se puede usar la propiedad <code>overflow</code> y cambiar este comportamiento.</p>
+<ul>
+<li><code>hidden</code> con este valor, el contenido que se desborda no se muestra.</li>
+<li><code>scroll</code> con este valor, se agregan barras de desplazamiento en el contenedor, y el contenido desbordado se oculta.</li>
+<li><code>auto</code> con este valor se agregan barras de desplazamiento según sean necesarias.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/property/overflow/">overflow - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_overflow.asp">CSS Overflow</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Sombra">
+          <a href="#Sombra" class="heading-link"><i class="fas fa-link"></i></a>Sombra</h3>
+      <p>Se pueden agregar sombras a cualquier elemento utilizando la propiedad <code>box-shadow</code> con los siguientes valores:</p>
+<ul>
+<li>Posición de la sombra</li>
+<li>Desplazamiento a la Derecha</li>
+<li>Desplazamiento hacia abajo</li>
+<li>Radio de Difuminación</li>
+<li>Radio de Propagación</li>
+<li>Opacidad</li>
+<li>Color</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/property/box-shadow/">box-shadow - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>Para agregar sombras pueden usar generadores de sombras online.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://html-css-js.com/css/generator/box-shadow/">Box Shadow CSS Generator</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Opacity">
+          <a href="#Opacity" class="heading-link"><i class="fas fa-link"></i></a>Opacity</h3>
+      <p>La propiedad opacity nos permite convertir un elemento y <strong>TODO</strong> su contenido en un elemento con transparencia, de esta forma opaca un poco el elemento.<br>Su valor es un número ente 0 y 1, donde 0 lo convierte completamente transparente y 1 es completamente visible.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/property/opacity/">opacity - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/opacity">opacity</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><strong>visibility</strong></p>
+<p>La propiedad visibility permite convertir un elemento y su contenido completamente transparente con el valor <code>hidden</code>. Es similar a usar <code>opacity: 0;</code></p>
+
+        <h2 id="Fuentes-y-Texto">
+          <a href="#Fuentes-y-Texto" class="heading-link"><i class="fas fa-link"></i></a>Fuentes y Texto</h2>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/typography/">Typography - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Spacing">
+          <a href="#Spacing" class="heading-link"><i class="fas fa-link"></i></a>Spacing</h3>
+      <p>Se puede cambiar el espacio del texto en diferentes formas:</p>
+<ul>
+<li><code>letter-spacing</code>: Espacio entre letras.</li>
+<li><code>word-spacing</code>: Espacio entre palabras.</li>
+<li><code>text-indent</code>: Identación de textos.</li>
+<li><code>line-height</code>: Espacio entre lineas.</li>
+</ul>
+
+        <h3 id="Fuentes-Adicionales">
+          <a href="#Fuentes-Adicionales" class="heading-link"><i class="fas fa-link"></i></a>Fuentes Adicionales</h3>
+      <p>Se pueden añadir fuentes a una página web importando los archivos de fuentes (ttf, otf, woff) usando la regla <code>@font-face</code>.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://tympanus.net/codrops/css_reference/font-face/">@font-face | Codrops</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>O importando la fuente desde internet con la regla <code>@import(*url*)</code></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://fonts.google.com/">Google Fonts</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Columnas-de-Texto">
+          <a href="#Columnas-de-Texto" class="heading-link"><i class="fas fa-link"></i></a>Columnas de Texto</h3>
+      <p>Usando las propiedades <code>column-*</code> se pueden generar columnas de texto.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_multiple_columns.asp">CSS Multiple Columns</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://html-css-js.com/css/generator/column/">Online CSS Multi Column Generator</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Desbordamiento-de-Texto">
+          <a href="#Desbordamiento-de-Texto" class="heading-link"><i class="fas fa-link"></i></a>Desbordamiento de Texto</h3>
+      <p>En algunos casos el texto es muy grande para un contenedor, por lo que pues desbordarse, en ese tipo de situaciones se pueden adoptar diferentes estrategias:</p>
+<ul>
+<li><code>overflow-wrap: break-word</code>; Permite romper las palabras largas para evitar desbordamiento de texto.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap">overflow-wrap</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/css3_pr_word-wrap.asp">CSS word-wrap property</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/css3_pr_word-break.asp">CSS word-break property</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ul>
+<li><code>text-overflow: ellipsis;</code> Permite agregar puntos suspensivos y ocultar el texto que se está desbordando. En este caso se debe forzar a no admitir más lineas de texto de la siguiente forma:</li>
+</ul>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ver-mas</span> {</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">	<span class="attribute">white-space</span>: nowrap;</span><br><span class="line">	<span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/text-overflow">text-overflow</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><code>white-space</code>:</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/white-space"></a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Sombra-en-el-Texto">
+          <a href="#Sombra-en-el-Texto" class="heading-link"><i class="fas fa-link"></i></a>Sombra en el Texto</h3>
+      <p>Se pueden agregar sombras al texto utilizando la propiedad <code>text-shadow</code>, esta propiedad utiliza diferentes valores:</p>
+<ul>
+<li>Desplazamiento a la Derecha</li>
+<li>Desplazamiento hacia abajo</li>
+<li>Difuminación</li>
+<li>Opacidad</li>
+<li>Color</li>
+</ul>
+<p>Existen varias páginas en internet que nos permiten generar sombras fácilmente.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://html-css-js.com/css/generator/text-shadow/">Online Text Shadow CSS Generator</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Listas">
+          <a href="#Listas" class="heading-link"><i class="fas fa-link"></i></a>Listas</h2>
+      <p>Los estilos de una lista se pueden definir  con las propiedades <strong><code>list-style-*</code></strong></p>
+<ul>
+<li><strong>list-style-type</strong></li>
+<li><strong>list-style-image</strong></li>
+<li><strong>list-style-position.</strong></li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_list.asp">CSS Lists</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/property/list-style/">list-style - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Counters">
+          <a href="#Counters" class="heading-link"><i class="fas fa-link"></i></a>Counters</h3>
+      <p>Los counters con contadores que se pueden agregan a cualquier elemento con el pseudo-elemento ::before, con estos counter podemos agregar numeración a diferentes elementos, como secciones, titulos o para agregar una sub-numeración en listas anidadas.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ol</span><span class="selector-class">.nested-list</span>,</span><br><span class="line"><span class="selector-tag">ol</span><span class="selector-class">.nested-list</span> <span class="selector-tag">ol</span> {</span><br><span class="line">  <span class="attribute">counter-reset</span>: nivel;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span><span class="selector-class">.nested-list</span> <span class="selector-tag">li</span><span class="selector-pseudo">::before</span> {</span><br><span class="line">  <span class="attribute">counter-increment</span>: nivel;</span><br><span class="line">  <span class="attribute">content</span>: <span class="built_in">counters</span>(nivel,<span class="string">"."</span>) <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/custom-list-number-styling/">Custom List Number Styling | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/almanac/properties/c/counter-increment/">counter-increment | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_counters.asp">CSS Counters</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Striped-Style">
+          <a href="#Striped-Style" class="heading-link"><i class="fas fa-link"></i></a>Striped Style</h3>
+      <p>Se pueden usar las pseudoclases :nth-child(odd) y :nth-child(even) para agregar un estilo de interlineado en las listas.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.striped-list</span> <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(odd)</span>{</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#cffff2</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.striped-list</span> <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(even)</span>{</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#ffa3a3</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Tablas">
+          <a href="#Tablas" class="heading-link"><i class="fas fa-link"></i></a>Tablas</h2>
+      
+        <h3 id="Layout">
+          <a href="#Layout" class="heading-link"><i class="fas fa-link"></i></a>Layout</h3>
+      <p>Inicialmente las tablas ajustan su tamaño y el tamaño de sus columnas a su contenido, con la propiedad <code>table-layout: fixed;</code> todas las columnas ocupan el mismo ancho, para tal fin deben tener un ancho (<code>width</code>) específico.</p>
+
+        <h3 id="Filas-y-Columnas-Extendidas">
+          <a href="#Filas-y-Columnas-Extendidas" class="heading-link"><i class="fas fa-link"></i></a>Filas y Columnas Extendidas</h3>
+      <p>Se pueden extender las celdas de una tabla a lo largo de varias filas y/o varias columnas son atrbutos de html.</p>
+<p>Para extender una celda a lo largo de <em><code>n</code></em> filas usamos el atributo <code>rowspan</code>, indicando la cantidad de filas a extender.</p>
+<ul>
+<li>Dado que la celda se extiende, las siguientes filas deberán tener una celda menos.</li>
+</ul>
+<p>Podemos extender una celda a lo largo de <em><code>n</code></em> columnas con el atributo <code>colspan</code>, indicando la cantidad de columnas a extender.</p>
+<ul>
+<li>Dado que la celda se extiende, en la misma fila se deberán reducir las celdas.</li>
+</ul>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"borde-celdas"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Title 1<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Title 2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Title 3<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>title row<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span>&gt;</span>Lorem, ipsum dolor.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Deserunt, ut doloribus?<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Ullam, tempore dignissimos?<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>title row<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Magni, ratione error!<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Veniam, amet et.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>title row<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Maiores, quod nostrum.<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"2"</span>&gt;</span>Libero, fuga commodi?<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://www.usabilidad.tv/tutoriales_html/colspan_y_rowspan.asp">Tutorial HTML: Tablas con Colspan y Rowspan</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/tags/att_td_colspan.asp">HTML colspan Attribute</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/tags/att_td_rowspan.asp">HTML rowspan Attribute</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Bordes">
+          <a href="#Bordes" class="heading-link"><i class="fas fa-link"></i></a>Bordes</h3>
+      <p>Desde html:5 las tablas no tienen el atributo de borde, por lo que para agregar bordes a una tabla se debe hacer por medio de estilos. Para ésto existen diferentes propiedades que nos permiten modificar los estilos de las tablas</p>
+<ul>
+<li><code>Border-collapse</code>  separación entre los bordes de las celdas, por defecto estas están separadas, modificando esta propiedad podemos <strong>unir</strong> los bordes de cada celda.</li>
+<li><code>Border-spacing</code> Cuando nuestro borde está separado, podemos personalizar la distancia con la que se separan las celdas con la propiedad <code>border-spacing</code>, indicando el tamaño de esta distancia:</li>
+</ul>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.borde-contorno</span> {</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.borde-filas</span>,</span><br><span class="line"><span class="selector-class">.borde-filas</span> <span class="selector-tag">tr</span> {</span><br><span class="line">	<span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.borde-celdas</span>,</span><br><span class="line"><span class="selector-class">.borde-celdas</span> <span class="selector-tag">th</span>,</span><br><span class="line"><span class="selector-class">.borde-celdas</span> <span class="selector-tag">td</span> {</span><br><span class="line">	<span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/complete-guide-table-element/">A Complete Guide to the Table Element | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/html/html_tables.asp">HTML Tables</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Striped-Tables">
+          <a href="#Striped-Tables" class="heading-link"><i class="fas fa-link"></i></a>Striped Tables</h3>
+      <p>Se pueden usar las pseudoclases :nth-child(odd) y :nth-child(even) para agregar un estilo de interlineado en las tablas.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.striped-table</span> <span class="selector-tag">tr</span><span class="selector-pseudo">:nth-child(even)</span> {</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#f2f2f2</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Generador-de-Tablas">
+          <a href="#Generador-de-Tablas" class="heading-link"><i class="fas fa-link"></i></a>Generador de Tablas</h3>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://divtable.com/table-styler/">HTML Table Styler 📅 CSS Generator</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Hipervinculos">
+          <a href="#Hipervinculos" class="heading-link"><i class="fas fa-link"></i></a>Hipervinculos</h2>
+      <p>Para cambiar los estilos de los links, se pueden cambiar las propiedades <code>text-decoration</code> y <code>color</code>, en cada uno de sus estados.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.normal-link</span> {</span><br><span class="line">	<span class="attribute">text-decoration</span>: none;</span><br><span class="line">	<span class="attribute">color</span>: inherit;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.normal-link</span><span class="selector-pseudo">:link</span> {</span><br><span class="line">	<span class="attribute">text-decoration</span>: none;</span><br><span class="line">	<span class="attribute">color</span>: inherit;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.normal-link</span><span class="selector-pseudo">:visited</span> {</span><br><span class="line">	<span class="attribute">text-decoration</span>: none;</span><br><span class="line">	<span class="attribute">color</span>: inherit;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/cursor">cursor</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Hipervinculos-con-contenido">
+          <a href="#Hipervinculos-con-contenido" class="heading-link"><i class="fas fa-link"></i></a>Hipervinculos con contenido</h3>
+      <p>Los hipervinculos son utilizados en muchas partes de una página web, ya sea para hacer referencia a enlaces externos o recursos internos, se pueden configurar los hipervinculos para que cualquier elemento sea comporte como un hipervinculo, solamente se deben agregar dichos  elementos dentro de la etiqueta a. Adicionalmente se puede configurar los estilos de los links para cambiar su apariencia.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">title</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- Algún elemento --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> {</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Hipervinculos-Externos">
+          <a href="#Hipervinculos-Externos" class="heading-link"><i class="fas fa-link"></i></a>Hipervinculos Externos</h3>
+      <p>Cuando se agrega un hipervinculo que hace referencia a un recurso de la web, se suele configurar para que abra en una nueva pestaña, en este caso se deben agregar los atributos de html:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://google.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">rel</span>=<span class="string">"noopener noreferrer nofollow"</span>&gt;</span></span><br><span class="line">    go to google</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Go-to-top">
+          <a href="#Go-to-top" class="heading-link"><i class="fas fa-link"></i></a>Go-to-top</h3>
+      <p>Go to top es un recurso para agregar un botón que devuelve una página a la parte superior.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"go-top"</span>&gt;</span></span><br><span class="line">	Go to Top</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> {</span><br><span class="line">	<span class="comment">/* Permite que el desplazamiento de una página sea suave */</span></span><br><span class="line">	<span class="attribute">scroll-behavior</span>: smooth;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.go-top</span> {</span><br><span class="line">	<span class="comment">/* Styling as a go top button */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Cursor">
+          <a href="#Cursor" class="heading-link"><i class="fas fa-link"></i></a>Cursor</h3>
+      <p>Css permite cambiar el tipo de cursor (<em>figura del mouse</em>) que se muestra cuando el mouse está sobre un elemento usando la propiedad <code>cursor</code></p>
+<ul>
+<li><em><code>pointer</code></em>: Muestra el mouse con el simbolo de elemento clickeable (usualmente una mano)</li>
+<li><em><code>help</code></em>: Muestra el simbolo de ayuda</li>
+<li><em><code>progress</code></em>: Muestra el mouse con el simbolo de cargando.</li>
+<li><em><code>wait</code></em>: Muestra el simbolo de espera.</li>
+<li><em><code>none</code></em>: No muestra mouse.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/property/cursor/">cursor - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>La propiedad cursor se puede agregar a cualquier elemento.</p>
+
+        <h2 id="Imagenes">
+          <a href="#Imagenes" class="heading-link"><i class="fas fa-link"></i></a>Imagenes</h2>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_images.asp">CSS Styling Images</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.godaddy.com/garage/6-simple-css-tricks-for-images/">6 simple CSS tricks for images - GoDaddy Blog</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Tamanos">
+          <a href="#Tamanos" class="heading-link"><i class="fas fa-link"></i></a>Tamaños</h3>
+      <p>Las imagenes tienen por defecto el tamaño en pixeles de la imagen que se está cargando a la página, este tamaño lo podemos cambiar usando las propiedades <code>width</code> y <code>height</code>. </p>
+<p>Sin embargo, si no se mantiene la proporción de la magen, ésta se estira o se encoje según los nuevos valores, para evitar esta perdida de proporcion se sugiere:</p>
+<ul>
+<li>Definir un tamaño de alto (<em>height</em>) automático, en las páginas web generalmente se limita más el ancho de los elementos que el alto, pues el ancho de la pantalla es generalmente fijo mientras que el alto se puede alargar y realizar scroll vertical.</li>
+</ul>
+<p><em>Se considera mala practica generar scroll horizontal. a excepción de que se utilice para cambiar de recurso, como un carrusel de imagenes.</em></p>
+<ul>
+<li>Si el tamaño debe ser fijo según el diseño, se puede ajustar la proporcion de la imagen con la propiedad <code>object-fit</code>:<ul>
+<li><code>cover</code> con este valor la imagen se recortará lo necesario con la finalidad de ocupar el tamaño establecido y manteniendo la relación del aspecto de la imagen misma.</li>
+<li><code>contain</code> con este valor la imagen mantiene su relación de aspecto <strong>dentro</strong> del tamaño establecido, en este caso se agrega un espacio vacio donde sea necesario con el color de fondo del elemento.</li>
+</ul>
+</li>
+</ul>
+<p>En cualquier caso, se puede reacomodar la imagen dentro del tamaño especificado usando la propiedad <code>object-position</code></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_object-fit.asp">CSS object-fit Property</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/almanac/properties/o/object-fit/">object-fit | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_images.asp">CSS Styling Images</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><strong>Desbordamiento</strong></p>
+<p>En caso de que una imagen se desborde por su tamaño, se puede agregar un limite de ancho que permita a la imagen escalar según el tamaño de la pantalla.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> {</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Thumnails">
+          <a href="#Thumnails" class="heading-link"><i class="fas fa-link"></i></a>Thumnails</h3>
+      <p>Se pueden diseñar miniaturas de imagenes agregando paddings y un borde suave </p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> {</span><br><span class="line">	<span class="attribute">background-color</span>: white;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Imagenes-y-links">
+          <a href="#Imagenes-y-links" class="heading-link"><i class="fas fa-link"></i></a>Imagenes y links</h3>
+      <p>Se suelen usar imagenes como hipervinculos, ya sea usando iconos de redes sociales, logotipos de empresas, fotos de productos, etc, para ello basta con agregar la imagen como contenido del hipervinculo.</p>
+<p>Por otra parte, se puede configurar un hipervinculo con referencia a una imagen para visualizarla en el navegador.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"./images/myImage.jpg"</span> <span class="attr">title</span>=<span class="string">"my Image"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./image/myImage.jpg"</span> <span class="attr">alt</span>=<span class="string">"my Image"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Filtros">
+          <a href="#Filtros" class="heading-link"><i class="fas fa-link"></i></a>Filtros</h3>
+      <p>Usando css se pueden agregar filtros a imagenes para lograr diversos efectos visuales, estos se agregan usando la propiedad <code>filter:</code> y cada filtro corresponde a una función en particular donde su valor varía según el caso.</p>
+<ul>
+<li><code>blur(5px)</code>: Se utiliza para desenfocar una imagen, usualmente admite tamaños diferentes a porcentaje.</li>
+<li><code>grayscale(50%)</code>: Se utiliza para convertir una imagen a escala de grises, admite porcentajes, donde 100% es completamente en escala de grises.</li>
+<li><code>opacity(80%):</code> Aplica transparencia a las muestras, admite porcentajes donde 0% es completamente transparente. Este filtro es similar a aplicar la propiedad <strong>opacity</strong>, sin embargo algunos navegadores proporcionan aceleración de hardware para un mejor rendimiento.</li>
+</ul>
+<p>Esta propiedad admite diferentes filtros separados por espacio.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/almanac/properties/f/filter/">filter | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/filter">filter</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Texto-sorbre-imagenes">
+          <a href="#Texto-sorbre-imagenes" class="heading-link"><i class="fas fa-link"></i></a>Texto sorbre imagenes</h3>
+      <p>Se pueden utilizar las imagenes (<em>etiquetas img</em>) como fondo y escribir texto sobre la imagen, combinando las propiedades de position relative-absolute y flexbox.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"banner"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"imagen-banner"</span> <span class="attr">alt</span>=<span class="string">"fondo banner"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"texto-banner"</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- Contenido --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.banner</span> {</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="comment">/* height: 400px; */</span></span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">display</span>: flex;</span><br><span class="line">	<span class="attribute">justify-content</span>: center;</span><br><span class="line">	<span class="attribute">align-items</span>: center;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.imagen-banner</span> { </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">object-fit</span>: cover;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">opacity</span>(<span class="number">70%</span>) <span class="built_in">blur</span>(<span class="number">2px</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.texto-banner</span> {</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.8</span>);</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">1em</span> <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">40px</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Fondos">
+          <a href="#Fondos" class="heading-link"><i class="fas fa-link"></i></a>Fondos</h2>
+      
+        <h3 id="Parallax-Efect">
+          <a href="#Parallax-Efect" class="heading-link"><i class="fas fa-link"></i></a>Parallax Efect</h3>
+      <p>Usando css puro se puede generar un efecto parallax, usando las siguientes propiedades de background en el contenedor donde se desea aplicar este efecto.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parallax</span> {</span><br><span class="line">	<span class="comment">/* The image used */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(filepath);</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* Create the parallax scrolling effect */</span></span><br><span class="line">  <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">  <span class="attribute">background-position</span>: center;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">background-size</span>: cover;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Estos estilos se le pueden aplicar a cualquier elemento html, usualmente a un contenedor que ocupe todo el ancho de la pantalla (viewport)</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm"></a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Colores-Translucidos">
+          <a href="#Colores-Translucidos" class="heading-link"><i class="fas fa-link"></i></a>Colores Translucidos</h3>
+      <p>Todos los elementos de HTML tienen fondos transparentes, ésto les permite mostrar el fondo que tenga sus contenedores.</p>
+<p>Si se desea agregar colores translucidos usando el sistema rgba. Lo cual es una combinación del código <strong>rgb</strong> de colores y un *<strong>a</strong>lpha* de transparencia, el cuál es un porcentaje donde 100% o 1 es completamente visible y 0% o 0 es completamente transparente.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.fondo-translucido {</span><br><span class="line">	background-color: rgba(125, 240, 60, 0.4);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Gradiantes">
+          <a href="#Gradiantes" class="heading-link"><i class="fas fa-link"></i></a>Gradiantes</h3>
+      <p>Con las propiedades de background-image, es posible generar un fondo con distintos colores en forma de gradiante.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/linear-gradient">linear-gradient</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://html-css-js.com/css/generator/gradient/">Online Gradient CSS Generator</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Filtro-de-Fondo">
+          <a href="#Filtro-de-Fondo" class="heading-link"><i class="fas fa-link"></i></a>Filtro de Fondo</h3>
+      <p>Usualmente se puede usar los grandiantes junto con las imagnes para agregar una capa de colores sobre la imagen del fondo, para este caso en el gradiante se utilizan colores translucidos para no tapar por completo la imagen.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fondo-filtro</span> {</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">linear-gradiant</span>(rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>), <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>)), </span><br><span class="line">											<span class="built_in">url</span>(<span class="string">"filepath"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="img-vs-background-image">
+          <a href="#img-vs-background-image" class="heading-link"><i class="fas fa-link"></i></a>img vs background-image</h2>
+      <p>Para agregar una imagen de fondo se puede usar la propiedad <code>background-image</code> o usar la etiqueta <code>&lt;img&gt;</code> dentro de un contenedor y combinar las propiedades de position. Para determinar cuál opción usar, se puede tener en cuenta los siguientes criterios:</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img></h3><ul>
+<li>La imagen se podrá ver cuando un  usuario desee impirmir la página.</li>
+<li>Cuando la imagen tiene un importante significado semántico, tal como un icono de advertencia. (Usar <code>alt</code>)</li>
+<li>Cuando desea que la imagen sea accesible para los usuarios.</li>
+<li>Tiene más capacidad de filtros usando la propiedad <code>filter</code>, así mismo mejora el rendimiento al momento de crear animaciones sobre el fondo.</li>
+<li>Permite la implementacion de carga lenta (<em>laizy load</em>) para mejorar el rendimiento de la página cuando hay muchas imagenes.</li>
+</ul>
+
+        <h3 id="background-image">
+          <a href="#background-image" class="heading-link"><i class="fas fa-link"></i></a>background-image</h3>
+      <ul>
+<li>La imagen no se mostrará si el usuario impirme la página.</li>
+<li>Cuando la imagen es meramente decorativa y no tiene significado dentro de la página.</li>
+<li>Se desea agregar un efecto parallax dentro de la página.</li>
+<li>Permite crear efectos de fondo cambiante fácilmente usando animaciones, sin embargo no tienen un buen rendimiento al usar filtros.</li>
+<li>Si es necesario mejorar los tiempos de descarga. <strong>(1)</strong></li>
+</ul>
+<p>*<strong>(1)</strong> Los archivos* <em>las imagenes pueden pasar por un proceso de optimización (reducción y compresión) para mejorar el rendimiento de carga.</em></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://es.stackoverflow.com/questions/24511/cu%C3%A1ndo-se-deber%C3%ADa-usar-img-y-cuando-background-image">¿Cuándo se debería usar img y cuando background-image?</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Calculos-en-CSS">
+          <a href="#Calculos-en-CSS" class="heading-link"><i class="fas fa-link"></i></a>Calculos en CSS</h1>
+      <p>Css permite realizar calculos matemáticos entre diferentes unidades de medida para poder establecer un tamaño, estos calculos pueden ser resueltos usando la función <code>calc()</code>, cada tamaño que se vaya a operar debe ir acompañado de su unidad de medida.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.contenedor</span> {</span><br><span class="line">	<span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">40px</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://css-tricks.com/a-complete-guide-to-calc-in-css/">A Complete Guide to calc() in CSS | CSS-Tricks</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/calc">calc</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Variables">
+          <a href="#Variables" class="heading-link"><i class="fas fa-link"></i></a>Variables</h1>
+      <p>Css permite el uso de variables dentro de las hojas de estilos, estas variables pueden almacenar cualquier tipo de valor, sin embargo de debe tener cuidado de implementarlas en los lugares adecuados.</p>
+<p>El uso de variables de css permite crear un sistema de diseño dentro de css, con lo cual, si se toman desciciones de diseño como el sistema de colores o de tamaños, se podrán modificar los valores de estas variables, y automaticamente toda la página adoptará estos nuevos valores.</p>
+
+        <h2 id="Creacion-de-variables">
+          <a href="#Creacion-de-variables" class="heading-link"><i class="fas fa-link"></i></a>Creación de variables</h2>
+      <p>Las variables de css pueden utilizarse a nivel global de todo el documento, o a nivel local de algunos selectores con alcance a los descendientes de estos.</p>
+<p>Para crear una variable de css se deben definir dentro de la pseudoclase <code>:root</code> y se deben nombrar comenzando por <code>—nombre-variable</code></p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> {</span><br><span class="line">	<span class="attribute">--bg-color</span>: <span class="number">#e3e3e3</span>;</span><br><span class="line">	<span class="attribute">--color-primary</span>: <span class="number">#389fff</span>;</span><br><span class="line">	<span class="attribute">--color-secondary</span>: <span class="number">#8fb588</span>;</span><br><span class="line">	<span class="attribute">--font-size</span>: <span class="number">22px</span>;</span><br><span class="line">	<span class="attribute">--title-font</span>: Arial, Helvetica, sans-serif;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Implementacion-de-variables">
+          <a href="#Implementacion-de-variables" class="heading-link"><i class="fas fa-link"></i></a>Implementacion de variables</h2>
+      <p>Para usar las variables en alguna propiedad, se debe utilizar la función <code>var(--nombre-variable)</code></p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> {</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="built_in">var</span>(--bg-color);</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="built_in">var</span>(--font-size);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span> {</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="built_in">var</span>(--title-font);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties">Uso de propiedades personalizadas CSS (variables)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_variables.asp">CSS Variables</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Estilos-Avanzados/">https://edisonpem.github.io/fundamentos-desarrollo-web/Estilos-Avanzados/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Bootstrap/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Bootstrap</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Assets/"><span class="paginator-prev__text">Assets</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Contenedores-Elementos"><span class="toc-number">1.</span> <span class="toc-text">
+          Contenedores &#x2F; Elementos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Desbordamiento"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Desbordamiento</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sombra"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Sombra</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Opacity"><span class="toc-number">1.3.</span> <span class="toc-text">
+          Opacity</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fuentes-y-Texto"><span class="toc-number">2.</span> <span class="toc-text">
+          Fuentes y Texto</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spacing"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Spacing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fuentes-Adicionales"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Fuentes Adicionales</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Columnas-de-Texto"><span class="toc-number">2.3.</span> <span class="toc-text">
+          Columnas de Texto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Desbordamiento-de-Texto"><span class="toc-number">2.4.</span> <span class="toc-text">
+          Desbordamiento de Texto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sombra-en-el-Texto"><span class="toc-number">2.5.</span> <span class="toc-text">
+          Sombra en el Texto</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Listas"><span class="toc-number">3.</span> <span class="toc-text">
+          Listas</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Counters"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Counters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Striped-Style"><span class="toc-number">3.2.</span> <span class="toc-text">
+          Striped Style</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tablas"><span class="toc-number">4.</span> <span class="toc-text">
+          Tablas</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Layout"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Layout</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filas-y-Columnas-Extendidas"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Filas y Columnas Extendidas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bordes"><span class="toc-number">4.3.</span> <span class="toc-text">
+          Bordes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Striped-Tables"><span class="toc-number">4.4.</span> <span class="toc-text">
+          Striped Tables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generador-de-Tablas"><span class="toc-number">4.5.</span> <span class="toc-text">
+          Generador de Tablas</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hipervinculos"><span class="toc-number">5.</span> <span class="toc-text">
+          Hipervinculos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hipervinculos-con-contenido"><span class="toc-number">5.1.</span> <span class="toc-text">
+          Hipervinculos con contenido</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hipervinculos-Externos"><span class="toc-number">5.2.</span> <span class="toc-text">
+          Hipervinculos Externos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go-to-top"><span class="toc-number">5.3.</span> <span class="toc-text">
+          Go-to-top</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cursor"><span class="toc-number">5.4.</span> <span class="toc-text">
+          Cursor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Imagenes"><span class="toc-number">6.</span> <span class="toc-text">
+          Imagenes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tamanos"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Tamaños</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Thumnails"><span class="toc-number">6.2.</span> <span class="toc-text">
+          Thumnails</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Imagenes-y-links"><span class="toc-number">6.3.</span> <span class="toc-text">
+          Imagenes y links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtros"><span class="toc-number">6.4.</span> <span class="toc-text">
+          Filtros</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Texto-sorbre-imagenes"><span class="toc-number">6.5.</span> <span class="toc-text">
+          Texto sorbre imagenes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fondos"><span class="toc-number">7.</span> <span class="toc-text">
+          Fondos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Parallax-Efect"><span class="toc-number">7.1.</span> <span class="toc-text">
+          Parallax Efect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Colores-Translucidos"><span class="toc-number">7.2.</span> <span class="toc-text">
+          Colores Translucidos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gradiantes"><span class="toc-number">7.3.</span> <span class="toc-text">
+          Gradiantes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filtro-de-Fondo"><span class="toc-number">7.4.</span> <span class="toc-text">
+          Filtro de Fondo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#img-vs-background-image"><span class="toc-number">8.</span> <span class="toc-text">
+          img vs background-image</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">8.1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#background-image"><span class="toc-number">8.2.</span> <span class="toc-text">
+          background-image</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Calculos-en-CSS"><span class="toc-number"></span> <span class="toc-text">
+          Calculos en CSS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Variables"><span class="toc-number"></span> <span class="toc-text">
+          Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Creacion-de-variables"><span class="toc-number">1.</span> <span class="toc-text">
+          Creación de variables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementacion-de-variables"><span class="toc-number">2.</span> <span class="toc-text">
+          Implementacion de variables</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

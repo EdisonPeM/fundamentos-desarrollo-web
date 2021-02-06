@@ -1,0 +1,409 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="INTRODUCCIÓN       CSS significa Hojas de estilo en cascada (Cascading Style Sheets) y es un lenguaje de diseño que nos permite modificar los estilos de nuestra página de una forma flexible">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Básico">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/CSS-B%C3%A1sico/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="INTRODUCCIÓN       CSS significa Hojas de estilo en cascada (Cascading Style Sheets) y es un lenguaje de diseño que nos permite modificar los estilos de nuestra página de una forma flexible">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/CSS-B%C3%A1sico/unnamed.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/CSS-B%C3%A1sico/colors.jpg">
+<meta property="article:published_time" content="2020-09-08T21:22:57.170Z">
+<meta property="article:modified_time" content="2020-09-08T23:19:55.199Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/CSS-B%C3%A1sico/unnamed.png"><title>CSS Básico | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/CSS-B%C3%A1sico/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">CSS Básico</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><h1 id="INTRODUCCION">
+          <a href="#INTRODUCCION" class="heading-link"><i class="fas fa-link"></i></a>INTRODUCCIÓN</h1>
+      <p>CSS significa <strong>Hojas de estilo en cascada</strong> (Cascading Style Sheets) y es un lenguaje de diseño que nos permite modificar los <strong>estilos</strong> de nuestra página de una forma flexible y genérica.</p>
+<p>CSS se creó para cubrir la necesidad de definir un mecanismo que permitiera aplicar diferentes estilos a los documentos. Este lenguaje se impulsó con el crecimiento del lenguaje HTML. </p>
+<a id="more"></a>
+
+<p>El organismo W3C (<strong>World Wide Web Consortium</strong>), el cual es el encargado de crear los estándares relacionados con programación Web, se le propusieron varias propuestas de hojas de estilo. Las dos propuestas que se tuvieron en cuenta son: CHSS (Cascading HTML Style Sheets) y SSP (Stream-based Style Proposal).  Estas dos propuestas se unieron entre 1994 y 1995 por Håkon Wium Lie y Bert Bos y definieron un lenguaje con lo mejor de cada una este fue llamado CSS (Cascading Style Sheet). </p>
+<p>En 1995, W3C apostó por este lenguaje y lo estandarizó. </p>
+<p>En 1998 se publicó la segunda versión de este lenguaje que fue llamada CSS nivel 2. Es la versión que se utiliza actualmente en los navegadores. Y ese mismo año se empezó con el desarrollo de CSS nivel 3 que continua en desarrollo actualmente.</p>
+<p>Sin embargo, ya se han publicado especificaciones de CSS3 como Selectores, Colores, Fuentes, Entre otros.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS: Cascading Style Sheets</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://uniwebsidad.com/libros/css/capitulo-1/breve-historia-de-css">1.2. Breve historia de CSS (Introducción a CSS)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3.org/TR/CSS22/">Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3.org/Style/CSS/Overview.en.html">Cascading Style Sheets</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Reglas-Selectores-y-Propiedades">
+          <a href="#Reglas-Selectores-y-Propiedades" class="heading-link"><i class="fas fa-link"></i></a>Reglas: Selectores y Propiedades</h2>
+      <p>CSS se basa en el uso de <strong>reglas</strong> que permiten afectar los estilos de los elementos html, cada regla tiene 2 secciones:</p>
+<ul>
+<li><strong>Selectores</strong>: Encargados de especificar los elementos a modificar</li>
+<li><strong>Declaraciones</strong>: Establece las modificaciones de estilo correspondientes<ul>
+<li><strong>Propiedad</strong>: Define qué característica se desea modificar</li>
+<li><strong>Valor</strong>: Es el valor de la propiedad, cada propiedad acepta un tipo específico de valores según el caso.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/fundamentos-desarrollo-web/CSS-B%C3%A1sico/unnamed.png" alt="unnamed.png" loading="lazy"></p>
+<p>Estructura Básica de una regla CSS</p>
+<p>Todas las propiedades deben estar separadas de su valor por <strong>dos puntos ( : )</strong> y deben finalizar siempre con <strong>punto y coma ( ; ).</strong></p>
+
+        <h1 id="COMENTARIOS">
+          <a href="#COMENTARIOS" class="heading-link"><i class="fas fa-link"></i></a>* COMENTARIOS</h1>
+      <p>Los simbolos <code>/* */</code> definen comentarios en el código, es decir, lo que se encuentre dentro de estos simbolos no afectará en lo absoluto las reglas de estilo de nuestra página.</p>
+
+        <h1 id="Implementacion-de-CSS">
+          <a href="#Implementacion-de-CSS" class="heading-link"><i class="fas fa-link"></i></a>Implementación de CSS</h1>
+      
+        <h2 id="En-Linea">
+          <a href="#En-Linea" class="heading-link"><i class="fas fa-link"></i></a>En Línea</h2>
+      <p>Podemos agregar estilos particulares a cada elemento de nuestro html por medio del atributo <code>style</code>, por lo que todas las etiquetas soportan el uso de este atributo, en este caso, el valor de este atributo serán <strong>declaraciones CSS</strong>.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tagName</span> <span class="attr">style</span>=<span class="string">"property_1: value_1;...; property_n: value_n;"</span>&gt;</span></span><br><span class="line">    Content</span><br><span class="line"><span class="tag">&lt;/<span class="name">tagName</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Interno">
+          <a href="#Interno" class="heading-link"><i class="fas fa-link"></i></a>Interno</h2>
+      <p>Usando la etiqueta <code>&lt;style&gt;</code> dentro de la cabecera (<code>&lt;head&gt;</code>) del documento como se indica a continuación:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">       <span class="comment">/* Reglas CSS */</span></span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Externo">
+          <a href="#Externo" class="heading-link"><i class="fas fa-link"></i></a>Externo</h2>
+      <p>Usando un archivo con extensión <strong>.css</strong> en donde tengamos los estilos, este archivo se agrega a nuestro documento con la etiqueta <code>&lt;link&gt;</code> dentro de la cabecera del documento de la siguiente forma:</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"filePath"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p>Donde <code>rel="stylesheet"</code> se refiere a que vamos a agregar una hoja de estilos, y <code>href="filePath"</code> hace referencia al archivo .css</p>
+
+        <h3 id="FilePath">
+          <a href="#FilePath" class="heading-link"><i class="fas fa-link"></i></a>FilePath</h3>
+      <p>Se le conoce como <strong>FilePath</strong> a la ubicación de un archivo dentro de un equipo, y existen dos formas de ubicar un archivo, con una “<strong>ruta relativa</strong>” y una “<strong>ruta absoluta</strong>”.</p>
+<ul>
+<li><strong>Ruta Absoluta</strong>: Es la ubicación exacta de un archivo dentro de un pc<ul>
+<li>en Windows sería: <code>"C:\\users\Edison\Escritorio\miPaginaWeb\css\estilos.css"</code></li>
+<li>mientras que en Linux podría ser: <code>"/home/edison/Escritorio/miPaginaWeb/css/estilos.css"</code></li>
+</ul>
+</li>
+</ul>
+<p>También se le llama ruta absoluta a las rutas de internet (URL)</p>
+<ul>
+<li><strong>Ruta Relativa</strong>: Se refiere la ubicación de un archivo respecto a otro, para esto se deben seguir las siguientes reglas:<ul>
+<li><strong>Carpeta Actual</strong>: usando un punto (<code>.</code>) podemos referirnos a la carpeta actual, por ejemplo si deseamos agregar una imagen dentro de nuestro <code>index.html</code> podemos usar la ruta: <code>"./css/estilos.css"</code>.</li>
+<li><strong>Carpeta Superior</strong>: usando punto punto (<code>..</code>) Diferente de dos puntos (<code>:</code>), podemos referirnos a una carpeta superior y luego ubicar un archivo, por ejemplo si deseamos cargar una imagen desde un documento html que se encuentra en una subcarpeta, se podría usar la ruta <code>"../css/estilos.css"</code></li>
+</ul>
+</li>
+</ul>
+<p>El filepath es <strong>casesensitive,</strong> esto significa que hace distinción entre mayúsculas y minúsculas, siempre se deben indicar el nombre de las carpetas o archivos <strong>exactamente</strong> igual a como a parecen en el explorador de archivos.</p>
+
+        <h1 id="Selectores">
+          <a href="#Selectores" class="heading-link"><i class="fas fa-link"></i></a>Selectores</h1>
+      <p>Un selector es la forma en la que seleccionamos los elementos de nuestro html que deseamos modificar, estos selectores pueden hacer referencia a grupos de elementos o a elementos específicos y se puede escribir de diferentes maneras.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Selectores_CSS">Selectores CSS</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Selector-Universal">
+          <a href="#Selector-Universal" class="heading-link"><i class="fas fa-link"></i></a>Selector Universal</h2>
+      <p>Si deseamos que todos los elementos compartan estilos, pero no son heredables, se puede utilizar el selector universal ( * ).</p>
+<p>Cuando se usa solo:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* {</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><strong>TODOS</strong> los elementos html de nuestra página compartirán esos estilos.</p>
+
+        <h2 id="Nombre-de-la-Etiqueta">
+          <a href="#Nombre-de-la-Etiqueta" class="heading-link"><i class="fas fa-link"></i></a>Nombre de la Etiqueta</h2>
+      <p>Cuando queremos modificar los estilos de <strong><em>TODOS los elementos que compartan la misma etiqueta</em></strong> en nuestro documento.</p>
+<p>Con este selector solamente se escribe el nombre de la etiqueta, seguido del conjunto de reglas de estilo.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todos los parrafos */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todas las imagenes */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="ID-del-elemento">
+          <a href="#ID-del-elemento" class="heading-link"><i class="fas fa-link"></i></a>ID del elemento</h2>
+      <p>Este selector lo usamos cuando queremos aplicar estilos <strong><em>unicamente al elemento que tiene este id</em></strong>, dado que los identificadores son únicos, ningún otro elemento será afectado con estos estilos.</p>
+<p>Para este selector se debe iniciar siempre con numeral (#) seguido del identificador del elemento y el conjunto de reglas de estilo.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#p1</span> {</span><br><span class="line">    <span class="comment">/* Estilos para el elemento con id="p1" */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#p2</span> {</span><br><span class="line">    <span class="comment">/* Estilos para el elemento con id="p2" */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#p3</span> {</span><br><span class="line">    <span class="comment">/* Estilos para el elemento con id="p3" */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Clase-del-Elemento">
+          <a href="#Clase-del-Elemento" class="heading-link"><i class="fas fa-link"></i></a>Clase del Elemento</h2>
+      <p>Este selector lo usamos cuando queremos aplicar estilos <strong><em>solamente al conjunto de elemento que compartan la misma clase</em></strong>, de esta forma dejamos a un lado los elementos que no tengan dicha clase así compartan la misma etiqueta.</p>
+<p>Para este selector se debe iniciar siempre con punto (.) seguido del nombre de la clase y el conjunto de reglas de estilo.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.contenedor</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todos los elementos con class="contenedor" */</span></span><br><span class="line">}</span><br><span class="line"><span class="selector-class">.contenido</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todos los elementos con class="contenido" */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="Propiedades-Comunes">
+          <a href="#Propiedades-Comunes" class="heading-link"><i class="fas fa-link"></i></a>Propiedades Comunes</h1>
+      
+        <h2 id="Fuente">
+          <a href="#Fuente" class="heading-link"><i class="fas fa-link"></i></a>Fuente</h2>
+      <p>Con CSS también podemos modificar diferentes estilos del texto, el tipo de fuente, el tamaño de la letra, el estilo de letra e incluso la alineación.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/typography/">Typography - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_font.asp">CSS Fonts</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_text.asp">CSS Text</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Font-Family">
+          <a href="#Font-Family" class="heading-link"><i class="fas fa-link"></i></a>Font-Family</h3>
+      <p>Con la propiedad de <code>font-family</code> podemos cambiar el tipo de fuente para nuestro texto, entre las diferentes familias de fuentes posibles tenemos:</p>
+<ul>
+<li><em><code>Arial</code></em></li>
+<li><em><code>Helvetica</code></em></li>
+<li><em><code>Verdana</code></em></li>
+<li><em><code>Georgia</code></em></li>
+<li><em><code>Times New Roman</code></em></li>
+<li><em><code>Courier New</code></em></li>
+<li><em><code>Lucida console</code></em></li>
+</ul>
+<p>Estas familias por lo general pertenecen a una categoría más grande, la cual es la <em>generic-family</em>, por lo que se suele usar esta generic-family en dado caso que el navegador no soporte la fuente que hemos agregado, de esta forma intentará mostrar una fuente similar que pertenezca a esa familia general.</p>
+<p>Algunas familias generales son:</p>
+<ul>
+<li><em><code>serif</code></em></li>
+<li><em><code>sans-serif</code></em></li>
+<li><em><code>monospace</code></em></li>
+</ul>
+
+        <h3 id="Font-style">
+          <a href="#Font-style" class="heading-link"><i class="fas fa-link"></i></a>Font-style</h3>
+      <p>La propiedad de font-style de la fuente puede tener dos valores</p>
+<ul>
+<li><em><code>normal</code></em>: este es el valor por defecto</li>
+<li><em><code>italic</code></em>: <em>este valor nos muestra la letra cursiva</em></li>
+</ul>
+
+        <h3 id="Font-Weight">
+          <a href="#Font-Weight" class="heading-link"><i class="fas fa-link"></i></a>Font-Weight</h3>
+      <p>Esta propiedad nos permite cambiar el grosor de la letra, sus posibles varlores son:</p>
+<ul>
+<li><em><code>normal</code></em>: este es el valor por defecto</li>
+<li><em><code>bold</code></em>: <strong>este valor nos muestra la letra en negrita</strong></li>
+</ul>
+
+        <h3 id="Font-variant">
+          <a href="#Font-variant" class="heading-link"><i class="fas fa-link"></i></a>Font-variant</h3>
+      <p>Con esta propiedad nos permite mostrar la fuente en <em>“Pequeñas Mayúsculas”</em> usando el valor <code>small-caps</code>.</p>
+
+        <h3 id="Font-size">
+          <a href="#Font-size" class="heading-link"><i class="fas fa-link"></i></a>Font-size</h3>
+      <p>Esta propiedad nos permite cambar el tamaño de la letra, por defecto la letra viene con un tamaño de <em><code>16px</code></em>;</p>
+
+        <h2 id="Texto">
+          <a href="#Texto" class="heading-link"><i class="fas fa-link"></i></a>Texto</h2>
+      
+        <h3 id="Text-Transform">
+          <a href="#Text-Transform" class="heading-link"><i class="fas fa-link"></i></a>Text-Transform</h3>
+      <p>La propiedad <code>text-transform</code> nos permite transformar un texto, sus posibles valores son:</p>
+<ul>
+<li><em><code>uppercase</code></em>: Transforma el texto a mayusculas sostenidas.</li>
+<li><em><code>lowercase</code></em>: Transforma el texto a minusculas sostenidas.</li>
+<li><em><code>capitalize</code></em>: Transforma el texto a modo capitalize, el cual significa que la primera letra de cada palabra está en mayúsculas y el resto con minúsculas.</li>
+</ul>
+
+        <h3 id="Text-Align">
+          <a href="#Text-Align" class="heading-link"><i class="fas fa-link"></i></a>Text-Align</h3>
+      <p>Con la propiedad de text-align podemos cambiar la presentación el texto entre:</p>
+<ul>
+<li><em><code>left</code></em>: alineado a la izquierda (Valor por defecto)</li>
+<li><em><code>right</code></em>: alineado a la derecha</li>
+<li><em><code>center</code></em>: alineado en el centro</li>
+<li><em><code>justify</code></em>: justificado</li>
+</ul>
+
+        <h3 id="Text-decoration">
+          <a href="#Text-decoration" class="heading-link"><i class="fas fa-link"></i></a>Text-decoration</h3>
+      <p>La propiedad <code>text-decoration</code> nos permite agregar lineas a nuestro texto como subrayados o tachados, sus posibles valores son:</p>
+<ul>
+<li><em><code>none</code></em>: por defecto para el resto de elementos</li>
+<li><em><code>underline</code></em>: por defecto para hipervínculos</li>
+<li><em><code>overline</code></em>: Línea sobre el texto.</li>
+<li><em><code>line-through</code></em>: línea a través del texto.</li>
+</ul>
+<p>Estos últimos 3 se pueden combinar separándolos por espacio.</p>
+
+        <h3 id="Spacing">
+          <a href="#Spacing" class="heading-link"><i class="fas fa-link"></i></a>Spacing</h3>
+      <p>Podemos también cambiar el espaciado indicando un <strong>tamaño</strong> en pixeles para las siguientes propiedades.</p>
+<ul>
+<li><code>letter-spacing</code>: Espacio entre letras.</li>
+<li><code>word-spacing</code>: Espacio entre palabras.</li>
+<li><code>text-indent</code>: Identación de textos.</li>
+<li><code>line-height</code>: Espacio entre líneas.</li>
+</ul>
+
+        <h3 id="Color">
+          <a href="#Color" class="heading-link"><i class="fas fa-link"></i></a>Color</h3>
+      <p>La propiedad <code>color</code> nos permite cambiar el color de la letra, se debe especificar un color ya sea por el nombre, el código rgb o código hexadecimal.</p>
+
+        <h2 id="Colores">
+          <a href="#Colores" class="heading-link"><i class="fas fa-link"></i></a>Colores</h2>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_colors.asp">CSS Colors</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Nombre-del-color">
+          <a href="#Nombre-del-color" class="heading-link"><i class="fas fa-link"></i></a>Nombre del color</h3>
+      <p>CSS tiene un gran diccionario de colores comunes como rojo (red), azul (blue), amarillo (yellow), verde (green), negro (<strong>black</strong>), blanco (white), entre muchos otros.</p>
+
+        <h3 id="RGB">
+          <a href="#RGB" class="heading-link"><i class="fas fa-link"></i></a>RGB</h3>
+      <p>El código rgb de un color es una combinación entre rojo, verde y azul, cada uno con un valor mínimo de 0 y máximo de 255, se utiliza con la palabra rgb de la siguiente forma:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> { <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">238</span>, <span class="number">130</span>, <span class="number">238</span>); }</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Algunos editores como Visual Studio Code, posee una herramienta que nos permite seleccionar el color deseado y automáticamente genera el código rgb como el siguiente.</p>
+<p><img src="/fundamentos-desarrollo-web/CSS-B%C3%A1sico/colors.jpg" alt="colors.jpg" loading="lazy"></p>
+<p>Herramienta de selección de colores.</p>
+<p><strong>Código Hexadecimal</strong></p>
+<p>El código hexadecimal de un color es el mismo código rgb solo que en base 16, se utilizan los mismos colores base de rojo, verde y azul para generarlo. Para cada color se escribe su intensidad en base 16 y se escribe todo junto después del símbolo numeral ( # ).</p>
+<p>Algunos colores son:</p>
+<ul>
+<li>Color Negro: <code>#000000</code></li>
+<li>Color Rojo: <code>#FF0000</code></li>
+<li>Color Verde: <code>#00FF00</code></li>
+<li>Color Azul: <code>#0000FF</code></li>
+<li>Color Amarillo: <code>#FFFF00</code></li>
+<li>Color Blanco: <code>#FFFFFF</code></li>
+</ul>
+
+        <h3 id="Transparencia">
+          <a href="#Transparencia" class="heading-link"><i class="fas fa-link"></i></a>Transparencia</h3>
+      <p>Podemos agregar transparencia a un color agregando una cuarta base a nuestro código de color, esto solo funciona con rgb y hexadecimal.</p>
+<p>Esta cuarta base se le conoce como alpha, e indica de 0 a 1 cuán transparente es nuestro color, siendo 1 completamente visible y 0 completamente transparente.</p>
+<p>Para usarlo con <strong>rgb</strong> se debe cambiar la palabra a <strong>rgba</strong> de la siguiente forma:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> { <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">238</span>, <span class="number">130</span>, <span class="number">238</span>, <span class="number">0.75</span>); }</span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> { <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">238</span>, <span class="number">130</span>, <span class="number">238</span>, <span class="number">0.75</span>); }</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Fondo">
+          <a href="#Fondo" class="heading-link"><i class="fas fa-link"></i></a>Fondo</h2>
+      <p>La propiedad de fondo nos permite modificar el fondo de cualquier elemento de nuestro html, esta puede variar desde agregar un color de fondo hasta la forma de agregar imagenes de fondo.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/backgrounds/">Backgrounds - CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_background.asp">CSS Backgrounds</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/background">background</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Background-color">
+          <a href="#Background-color" class="heading-link"><i class="fas fa-link"></i></a>Background-color</h3>
+      <p>La propiedad de <code>background-color</code> nos permite cambiar el color de fondo de cualquier elemento.</p>
+
+        <h3 id="Background-Image">
+          <a href="#Background-Image" class="heading-link"><i class="fas fa-link"></i></a>Background-Image</h3>
+      <p>También podemos agregar una imagen al fondo con la propiedad <code>background-image</code>, dando como valor el filePath de ésta dentro de la palabra url() de la siguiente forma.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> { <span class="attribute">background-image</span>: <span class="built_in">url</span>(filePath); }</span><br></pre></td></tr></tbody></table></div></figure>
+<p>No solo el body puede tener una imagen de fondo, cualquier elemento html lo puede tener.</p>
+
+        <h3 id="Background-size">
+          <a href="#Background-size" class="heading-link"><i class="fas fa-link"></i></a>Background-size</h3>
+      <p>Si queremos cambiar el tamaño de la imagen del fondo, podemos usar la propiedad <code>background-size</code>, con ésta podemos tener:</p>
+<ul>
+<li><em><code>auto</code></em>: valor por defecto, la imagen se muestra a su tamaño original</li>
+<li><em><code>cover</code></em>: ajusta el tamaño de la imagen de fondo para cubrir todo el elemento manteniendo la proporción.</li>
+<li><em><code>contain</code></em>: ajusta el tamaño de la imagen al tamaño del elemento.</li>
+</ul>
+
+        <h3 id="Background-repeat">
+          <a href="#Background-repeat" class="heading-link"><i class="fas fa-link"></i></a>Background-repeat</h3>
+      <p>Con la propiedad de <code>background-repeat</code> podemos decidir como repetir la imagen de fondo, pues por defecto no llena todo el espacio de nuestro elemento.</p>
+<p>los posibles valores son:</p>
+<ul>
+<li>_<code>Repeat</code>: __Valor por defecto.</li>
+<li><em><code>No-repeat</code></em>: No repetir.</li>
+<li><em><code>Repeat-x</code></em>: repetir solamente horizontalmente.</li>
+<li><em><code>Repeat-y</code></em>: repetir solamente verticalmente.</li>
+</ul>
+
+        <h3 id="Background-position">
+          <a href="#Background-position" class="heading-link"><i class="fas fa-link"></i></a>Background-position</h3>
+      <p>Con esta propiedad ajustamos la posición donde se ubicará la imagen de fondo con respecto a nuestro contenedor, sus valores son:</p>
+<ul>
+<li><em><code>left top</code></em>: Esquina Superior Izquierda</li>
+<li><em><code>center top</code></em>: Lado Superior Centrado</li>
+<li><em><code>right top</code></em>: Esquina Superior Derecha</li>
+<li><em><code>left center</code></em>: Lado Izquierdo Centrado</li>
+<li><em><code>center</code></em>: Centro</li>
+<li><em><code>right center</code></em>: Lado Derecho Centrado</li>
+<li><em><code>left bottom</code></em>: Esquina Inferior Izquierda</li>
+<li><em><code>center bottom</code></em>: Lado Inferior Centrado</li>
+<li><em><code>right bottom</code></em>: Esquina Inferior Derecha</li>
+</ul>
+
+        <h3 id="Background-attachment">
+          <a href="#Background-attachment" class="heading-link"><i class="fas fa-link"></i></a>Background-attachment</h3>
+      <p>Con la propiedad <code>background-attachment</code> podemos cambiar la forma en la que nuestra imagen es fijada al fondo de nuestro elemento:</p>
+<ul>
+<li><em><code>scroll</code></em>: <em>valor por defecto</em>, la imagen se mueve junto con la página, por lo que si sube, la imagen sube, y si baja baja.</li>
+<li><em><code>fixed</code></em>: la imagen siempre se verá al fondo de nuestra pantalla sin importar si esta sube o baja.</li>
+</ul>
+
+        <h1 id="Referencia-Completa-de-Propiedades-CSS">
+          <a href="#Referencia-Completa-de-Propiedades-CSS" class="heading-link"><i class="fas fa-link"></i></a>Referencia Completa de Propiedades CSS</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://cssreference.io/">CSS Reference</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://tympanus.net/codrops/css_reference/">CSS Reference - Codrops</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Referencia_CSS">Referencia CSS</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/CSS-B%C3%A1sico/">https://edisonpem.github.io/fundamentos-desarrollo-web/CSS-B%C3%A1sico/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Animaciones Automáticas</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Layout/"><span class="paginator-prev__text">Layout</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#INTRODUCCION"><span class="toc-number">1.</span> <span class="toc-text">
+          INTRODUCCIÓN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reglas-Selectores-y-Propiedades"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Reglas: Selectores y Propiedades</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#COMENTARIOS"><span class="toc-number">2.</span> <span class="toc-text">
+          * COMENTARIOS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Implementacion-de-CSS"><span class="toc-number">3.</span> <span class="toc-text">
+          Implementación de CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#En-Linea"><span class="toc-number">3.1.</span> <span class="toc-text">
+          En Línea</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interno"><span class="toc-number">3.2.</span> <span class="toc-text">
+          Interno</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Externo"><span class="toc-number">3.3.</span> <span class="toc-text">
+          Externo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FilePath"><span class="toc-number">3.3.1.</span> <span class="toc-text">
+          FilePath</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Selectores"><span class="toc-number">4.</span> <span class="toc-text">
+          Selectores</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Selector-Universal"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Selector Universal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nombre-de-la-Etiqueta"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Nombre de la Etiqueta</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ID-del-elemento"><span class="toc-number">4.3.</span> <span class="toc-text">
+          ID del elemento</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Clase-del-Elemento"><span class="toc-number">4.4.</span> <span class="toc-text">
+          Clase del Elemento</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Propiedades-Comunes"><span class="toc-number">5.</span> <span class="toc-text">
+          Propiedades Comunes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fuente"><span class="toc-number">5.1.</span> <span class="toc-text">
+          Fuente</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Font-Family"><span class="toc-number">5.1.1.</span> <span class="toc-text">
+          Font-Family</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Font-style"><span class="toc-number">5.1.2.</span> <span class="toc-text">
+          Font-style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Font-Weight"><span class="toc-number">5.1.3.</span> <span class="toc-text">
+          Font-Weight</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Font-variant"><span class="toc-number">5.1.4.</span> <span class="toc-text">
+          Font-variant</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Font-size"><span class="toc-number">5.1.5.</span> <span class="toc-text">
+          Font-size</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Texto"><span class="toc-number">5.2.</span> <span class="toc-text">
+          Texto</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-Transform"><span class="toc-number">5.2.1.</span> <span class="toc-text">
+          Text-Transform</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-Align"><span class="toc-number">5.2.2.</span> <span class="toc-text">
+          Text-Align</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-decoration"><span class="toc-number">5.2.3.</span> <span class="toc-text">
+          Text-decoration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spacing"><span class="toc-number">5.2.4.</span> <span class="toc-text">
+          Spacing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Color"><span class="toc-number">5.2.5.</span> <span class="toc-text">
+          Color</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Colores"><span class="toc-number">5.3.</span> <span class="toc-text">
+          Colores</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nombre-del-color"><span class="toc-number">5.3.1.</span> <span class="toc-text">
+          Nombre del color</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RGB"><span class="toc-number">5.3.2.</span> <span class="toc-text">
+          RGB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transparencia"><span class="toc-number">5.3.3.</span> <span class="toc-text">
+          Transparencia</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fondo"><span class="toc-number">5.4.</span> <span class="toc-text">
+          Fondo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Background-color"><span class="toc-number">5.4.1.</span> <span class="toc-text">
+          Background-color</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Background-Image"><span class="toc-number">5.4.2.</span> <span class="toc-text">
+          Background-Image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Background-size"><span class="toc-number">5.4.3.</span> <span class="toc-text">
+          Background-size</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Background-repeat"><span class="toc-number">5.4.4.</span> <span class="toc-text">
+          Background-repeat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Background-position"><span class="toc-number">5.4.5.</span> <span class="toc-text">
+          Background-position</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Background-attachment"><span class="toc-number">5.4.6.</span> <span class="toc-text">
+          Background-attachment</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Referencia-Completa-de-Propiedades-CSS"><span class="toc-number">6.</span> <span class="toc-text">
+          Referencia Completa de Propiedades CSS</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

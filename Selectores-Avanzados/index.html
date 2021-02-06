@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Básicos       un selector es la forma en la que seleccionamos los elementos de nuestro html que deseamos modificar, estos selectores pueden hacer referencia a grupos de elementos o a elemen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Selectores Avanzados">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Selectores-Avanzados/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Básicos       un selector es la forma en la que seleccionamos los elementos de nuestro html que deseamos modificar, estos selectores pueden hacer referencia a grupos de elementos o a elemen">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Selectores-Avanzados/Untitled.png">
+<meta property="article:published_time" content="2020-09-08T21:22:57.156Z">
+<meta property="article:modified_time" content="2020-09-08T23:19:46.142Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Selectores-Avanzados/Untitled.png"><title>Selectores Avanzados | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Selectores-Avanzados/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Selectores Avanzados</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-09-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-09-08</span></span></div></header><div class="post-body"><h1 id="Basicos">
+          <a href="#Basicos" class="heading-link"><i class="fas fa-link"></i></a>Básicos</h1>
+      <p>un selector es la forma en la que <strong>seleccionamos</strong> los elementos de nuestro html que deseamos modificar, estos selectores pueden hacer referencia a grupos de elementos o a elementos específicos y se puede escribir de diferentes maneras.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Selectores_CSS">Selectores CSS</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+
+        <h2 id="Selector-Universal">
+          <a href="#Selector-Universal" class="heading-link"><i class="fas fa-link"></i></a>Selector Universal</h2>
+      <p>Si deseamos que todos los elementos compartan estilos, pero no son heredables, se puede utilizar el selector universal ( * ).</p>
+<p>Cuando se usa solo:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* {</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><strong>TODOS</strong> los elementos html de nuestra página compartirán esos estilos.</p>
+
+        <h2 id="Nombre-de-la-Etiqueta">
+          <a href="#Nombre-de-la-Etiqueta" class="heading-link"><i class="fas fa-link"></i></a>Nombre de la Etiqueta</h2>
+      <p>Cuando queremos modificar los estilos de <strong><em>TODOS los elementos que compartan la misma etiqueta</em></strong> en nuestro documento.</p>
+<p>Con este selector solamente se escribe el nombre de la etiqueta, seguido del conjunto de reglas de estilo.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todos los parrafos */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todas las imagenes */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="ID-del-elemento">
+          <a href="#ID-del-elemento" class="heading-link"><i class="fas fa-link"></i></a>ID del elemento</h2>
+      <p>Este selector lo usamos cuando queremos aplicar estilos <strong><em>unicamente al elemento que tiene este id</em></strong>, dado que los identificadores son únicos, ningún otro elemento será afectado con estos estilos.</p>
+<p>Para este selector se debe iniciar siempre con numera (#) seguido del identificador del elemento y el conjunto de reglas de estilo.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#p1</span> {</span><br><span class="line">    <span class="comment">/* Estilos para el elemento con id="p1" */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#p2</span> {</span><br><span class="line">    <span class="comment">/* Estilos para el elemento con id="p2" */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#p3</span> {</span><br><span class="line">    <span class="comment">/* Estilos para el elemento con id="p3" */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Clase-del-Elemento">
+          <a href="#Clase-del-Elemento" class="heading-link"><i class="fas fa-link"></i></a>Clase del Elemento</h2>
+      <p>Este selector lo usamos cuando queremos aplicar estilos <strong><em>solamente al conjunto de elemento que compartan la misma clase</em></strong>, de esta forma dejamos a un lado los elementos que no tengan dicha clase así compartan la misma etiqueta.</p>
+<p>Para este selector se debe iniciar siempre con punto (.) seguido del nombre de la clase y el conjunto de reglas de estilo.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.contenedor</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todos los elementos con class="contenedor" */</span></span><br><span class="line">}</span><br><span class="line"><span class="selector-class">.contenido</span> {</span><br><span class="line">    <span class="comment">/* Estilos para todos los elementos con class="contenido" */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="Pseudo-Clases">
+          <a href="#Pseudo-Clases" class="heading-link"><i class="fas fa-link"></i></a>Pseudo Clases</h1>
+      <p>Las&nbsp;pseudoclases&nbsp;permiten la selección de elementos, basada&nbsp;en información de estado que no está contenida en el árbol de documentos.</p>
+<p>Las pseudoclases se asocian a los elementos usando dos puntos (<code>:</code>) justo después del selector.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_pseudo_classes.asp">CSS Pseudo-classes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Interaccion-con-Mouse">
+          <a href="#Interaccion-con-Mouse" class="heading-link"><i class="fas fa-link"></i></a>Interacción con Mouse</h2>
+      <p>Permite agregar estilos a elementos basados en la interacción del usuario con el elemento.</p>
+<ul>
+<li><code>:hover</code> Permite agregar estilos cuando el usuario pasa el mouse por encima de un elemento</li>
+<li><code>:active</code> Permite agregar estilos mientras el usuario hace click sobre un elemento</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/:hover">:hover</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/:active">:active</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Estado-de-Links">
+          <a href="#Estado-de-Links" class="heading-link"><i class="fas fa-link"></i></a>Estado de Links</h2>
+      <p>Algunas pseudoclases permiten cambiar los estilos de los links según:</p>
+<ul>
+<li><code>:link</code> cuando un hipervinculo <strong>NO</strong> ha sido visitado.</li>
+<li><code>:visited</code> cuando un hipervinculo YA ha sido visitado.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/:link">:link</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/:visited">:visited</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Estado-de-Inputs">
+          <a href="#Estado-de-Inputs" class="heading-link"><i class="fas fa-link"></i></a>Estado de Inputs</h2>
+      <p>Las pseudoclases permiten agregar estilos a inputs, selects y textarea según las entradas del usuario.</p>
+<ul>
+<li><code>:focus</code> sí el usuario está escribiendo sobre el elemento.</li>
+<li><code>:required</code> / <code>:optional</code> según si un campo es obligatorio u opcional.</li>
+<li><code>:disabled</code> / <code>:enable</code> según si un campo está deshabilitado o no</li>
+<li><code>:valid</code> / <code>:invalid</code> según si el campo es valido según las validaciones de html o no.</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://programaenlinea.net/pseudo-clases-utiles-formularios/">Pseudo-clases útiles para formularios)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Relacion-de-Hijos">
+          <a href="#Relacion-de-Hijos" class="heading-link"><i class="fas fa-link"></i></a>Relación de Hijos</h2>
+      <p>También se pueden usar pseudoclases para recorrer elementos como listas o filas de tablas.</p>
+<ul>
+<li><code>:first-child</code> / <code>:last-child</code> Permite seleccionar el primer elemento (o ultimo) dentro de un contenedor.</li>
+<li><code>:nth-child(n)</code> / <code>:nth-last-child(n)</code> Permite seleccionar el elemento numero <strong><em>n</em></strong> dentro de un contenedor.<ul>
+<li>Se puede escribir simplemente <strong><code>n</code></strong> para seleccionar TODOS los elementos del contenedor.</li>
+<li>Se pueden escribir las palabras clave <code>even</code> y  <code>odd</code> haciendo referencia a los elementos <strong>pares</strong> e <strong>impares</strong> respectivamente.</li>
+<li>Se puede describir un patron usando la letra n<br>Por ejemplo: 4n, 3n+1, 7n+5</li>
+</ul>
+</li>
+</ul>
+<p><img src="/fundamentos-desarrollo-web/Selectores-Avanzados/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/:first-child">:first-child</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/:nth-child">:nth-child</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/sel_nth-child.asp">CSS :nth-child() Selector</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_nth-child_odd_even">Tryit Editor v3.6</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="not-selector">
+          <a href="#not-selector" class="heading-link"><i class="fas fa-link"></i></a>:not(selector)</h2>
+      <p>La pseudoclase not nos permite seleccionar un elemento que NO coinciden con el selector dentro del parentesis.</p>
+
+        <h1 id="Pseudo-Elementos">
+          <a href="#Pseudo-Elementos" class="heading-link"><i class="fas fa-link"></i></a>Pseudo Elementos</h1>
+      <p>Los pseudo-elemento, son formas en las que css añade estilos a una parte concreta de los elementos.</p>
+<p>Los pseudo-elementos se asocian a un elemento usando doble dos puntos (<code>::</code>) justo después de un selector.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_pseudo_elements.asp">CSS Pseudo-elements</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudoelementos">Pseudoelementos</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Texto">
+          <a href="#Texto" class="heading-link"><i class="fas fa-link"></i></a>Texto</h2>
+      <p>Con los pseudo-elementos se puede modificar texto concreto dentro de un elemento:</p>
+<ul>
+<li><code>::first-letter</code> permite cambiar el estilo de la primera letra de un texto.</li>
+<li><code>::first-line</code> permite cambiar el estilo de la primera linea de texto.</li>
+<li><code>::selection</code> Permite cambiar el estilo de algún texto seleccionado por el usuario.</li>
+</ul>
+
+        <h2 id="Decoraciones">
+          <a href="#Decoraciones" class="heading-link"><i class="fas fa-link"></i></a>Decoraciones</h2>
+      <p>Los pseudo-elementos <code>::before</code> y <code>::after</code> permiten agregar decoraciones a un elemento antes o después respectivamente.</p>
+<p>Para describir el contenido de la decoración se usa la propiedad <code>content</code></p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">q</span><span class="selector-pseudo">::before</span> { </span><br><span class="line">  <span class="attribute">content</span>: <span class="string">"«"</span>;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">q</span><span class="selector-pseudo">::after</span> { </span><br><span class="line">  <span class="attribute">content</span>: <span class="string">"»"</span>;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">::before (:before)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after">::after (:after)</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Selector-de-atributo">
+          <a href="#Selector-de-atributo" class="heading-link"><i class="fas fa-link"></i></a>Selector de atributo</h1>
+      <p>El selector de atributos CSS coincide con elementos basados ​​en la presencia o el valor de un atributo dado.</p>
+<p>Los atributos se asocian a los elementos usando llaves cuadradas <code>[atributte]</code>.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_attribute_selectors.asp">CSS Attribute Selector</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Composicion-de-Selectores">
+          <a href="#Composicion-de-Selectores" class="heading-link"><i class="fas fa-link"></i></a>Composición de Selectores</h1>
+      
+        <h2 id="Union-de-Selectores">
+          <a href="#Union-de-Selectores" class="heading-link"><i class="fas fa-link"></i></a>Union de Selectores</h2>
+      <p>Un selector puede hacer referencia a un elemento, pero se puede agregar más selectores para que una regla sea más específica, los diferentes tipos de selectores se pueden unir respetando el siguiente orden:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tagName</span><span class="selector-id">#id</span><span class="selector-class">.clase-1</span><span class="selector-class">.clase-2</span><span class="selector-attr">[attribute]</span><span class="selector-pseudo">:pseudo-clase</span><span class="selector-pseudo">::pseudo-elemento</span> {</span><br><span class="line">	<span class="comment">/* Estilos */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Ejemplo:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.efecto-mouse</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">70%</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Aunque la regla de css aumenta su especifidad, NO se recomienda anidar muchos selectores en la misma regla.</p>
+
+        <h2 id="Agrupacion-de-Selectores">
+          <a href="#Agrupacion-de-Selectores" class="heading-link"><i class="fas fa-link"></i></a>Agrupación de Selectores</h2>
+      <p>Se pueden agrupar diferentes selectores en una misma regla de css para compartir estilos sin tener que repetir código. Para ésto, los diferentes selectores deben ir separados por coma (<code>,</code>)</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>, </span><br><span class="line"><span class="selector-tag">h2</span>,</span><br><span class="line"><span class="selector-class">.texto-rojo</span> {</span><br><span class="line">	<span class="attribute">color</span>: red;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Combinaciones">
+          <a href="#Combinaciones" class="heading-link"><i class="fas fa-link"></i></a>Combinaciones</h2>
+      <p>La combinación se selectores se utiliza para establecer reglas de estilos basadas en la relación jerarquica entre elementos.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css_combinators.asp">CSS Combinators</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Contenedor-Contenido">
+          <a href="#Contenedor-Contenido" class="heading-link"><i class="fas fa-link"></i></a>Contenedor / Contenido</h3>
+      <p>El combinador <code>&gt;</code> selecciona los elementos que son hijos directos del primer elemento.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> {</span><br><span class="line">	<span class="attribute">backgroud-color</span>: cyan;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Child_combinator">Selectores de hijo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>El combinador  `` (espacio) selecciona cualquier elemento que sea descendientes del primer elemento.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.menu</span> <span class="selector-tag">a</span> {</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">padding</span>: .<span class="number">5em</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Descendant_combinator">Los selectores descendientes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Adyacencia">
+          <a href="#Adyacencia" class="heading-link"><i class="fas fa-link"></i></a>Adyacencia</h3>
+      <p>El combinador <code>+</code> selecciona hermanos adyacentes. Esto quiere decir que el segundo elemento sigue directamente al primero y ambos comparten el mismo elemento padre.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> + <span class="selector-tag">span</span><span class="selector-class">.caption</span> {</span><br><span class="line">  <span class="attribute">font-style</span>: italic;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">0.8em</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Selectores_hermanos_adyacentes">Selectores de hermanos adyacentes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>El combinador <code>~</code> selecciona cualquier hermano subsecuente. Esto quiere decir que el segundo elemento sigue al primero (no necesariamente de forma inmediata) y ambos comparten el mismo elemento padre.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h2</span> ~ <span class="selector-tag">p</span> {</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">1.2em</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Web/CSS/Selectores_hermanos_generales">Selectores de hermanos generales</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Selectores-Avanzados/">https://edisonpem.github.io/fundamentos-desarrollo-web/Selectores-Avanzados/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/Metodolog%C3%ADas-CSS/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Metodologías CSS</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Storage/"><span class="paginator-prev__text">Storage</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basicos"><span class="toc-number">1.</span> <span class="toc-text">
+          Básicos</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Selector-Universal"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Selector Universal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nombre-de-la-Etiqueta"><span class="toc-number">1.2.</span> <span class="toc-text">
+          Nombre de la Etiqueta</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ID-del-elemento"><span class="toc-number">1.3.</span> <span class="toc-text">
+          ID del elemento</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Clase-del-Elemento"><span class="toc-number">1.4.</span> <span class="toc-text">
+          Clase del Elemento</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pseudo-Clases"><span class="toc-number">2.</span> <span class="toc-text">
+          Pseudo Clases</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Interaccion-con-Mouse"><span class="toc-number">2.1.</span> <span class="toc-text">
+          Interacción con Mouse</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Estado-de-Links"><span class="toc-number">2.2.</span> <span class="toc-text">
+          Estado de Links</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Estado-de-Inputs"><span class="toc-number">2.3.</span> <span class="toc-text">
+          Estado de Inputs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Relacion-de-Hijos"><span class="toc-number">2.4.</span> <span class="toc-text">
+          Relación de Hijos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#not-selector"><span class="toc-number">2.5.</span> <span class="toc-text">
+          :not(selector)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pseudo-Elementos"><span class="toc-number">3.</span> <span class="toc-text">
+          Pseudo Elementos</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Texto"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Texto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Decoraciones"><span class="toc-number">3.2.</span> <span class="toc-text">
+          Decoraciones</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Selector-de-atributo"><span class="toc-number">4.</span> <span class="toc-text">
+          Selector de atributo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Composicion-de-Selectores"><span class="toc-number">5.</span> <span class="toc-text">
+          Composición de Selectores</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Union-de-Selectores"><span class="toc-number">5.1.</span> <span class="toc-text">
+          Union de Selectores</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Agrupacion-de-Selectores"><span class="toc-number">5.2.</span> <span class="toc-text">
+          Agrupación de Selectores</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Combinaciones"><span class="toc-number">5.3.</span> <span class="toc-text">
+          Combinaciones</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Contenedor-Contenido"><span class="toc-number">5.3.1.</span> <span class="toc-text">
+          Contenedor &#x2F; Contenido</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Adyacencia"><span class="toc-number">5.3.2.</span> <span class="toc-text">
+          Adyacencia</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-16x16.png?v=2.1.1" type="image/png" sizes="16x16"><link rel="icon" href="/fundamentos-desarrollo-web/images/icons/favicon-32x32.png?v=2.1.1" type="image/png" sizes="32x32"><meta name="description" content="Responsive Design       Se le conoce como Diseño Web Responsivo o Adaptativo (responsive web design - RWD) a un conjunto de prácticas que permiten a las páginas web alterar su diseño y apar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Diseño Responsive">
+<meta property="og:url" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/index.html">
+<meta property="og:site_name" content="Fundamentos Desarrollo Web">
+<meta property="og:description" content="Responsive Design       Se le conoce como Diseño Web Responsivo o Adaptativo (responsive web design - RWD) a un conjunto de prácticas que permiten a las páginas web alterar su diseño y apar">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled1.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled2.png">
+<meta property="og:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled3.png">
+<meta property="article:published_time" content="2021-02-05T22:30:26.214Z">
+<meta property="article:modified_time" content="2021-02-05T22:30:26.214Z">
+<meta property="article:author" content="Edison Peñuela">
+<meta property="article:tag" content="desarrollo web">
+<meta property="article:tag" content="web development">
+<meta property="article:tag" content="curso">
+<meta property="article:tag" content="tutorial">
+<meta property="article:tag" content="referencia">
+<meta property="article:tag" content="HTML y CSS">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled.png"><title>Diseño Responsive | Fundamentos Desarrollo Web</title><link ref="canonical" href="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/fundamentos-desarrollo-web/css/index.css?v=2.1.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/fundamentos-desarrollo-web/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/fundamentos-desarrollo-web/atom.xml" title="Fundamentos Desarrollo Web" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/fundamentos-desarrollo-web/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Fundamentos Desarrollo Web</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Diseño Responsive</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2021-02-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-02-05</span></span></div></header><div class="post-body"><h1 id="Responsive-Design">
+          <a href="#Responsive-Design" class="heading-link"><i class="fas fa-link"></i></a>Responsive Design</h1>
+      <p>Se le conoce como Diseño Web Responsivo o Adaptativo (responsive web design - RWD) a un conjunto de prácticas que permiten a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones o dispositivos, desde ordenadores de escritorio a tablets y móviles.</p>
+<blockquote>
+<p>“<em>una web para todos</em>“</p>
+</blockquote>
+<p><img src="/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled.png" alt="Untitled.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.froont.com/9-basic-principles-of-responsive-web-design/">9 basic principles of responsive web design</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://medium.com/@mikejavier/dise%C3%B1o-responsivo-entienda-como-funciona-5f0729132b11">Diseño responsivo entienda como funciona</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://www.responsinator.com/">Responsinator</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+
+        <h1 id="Viewport">
+          <a href="#Viewport" class="heading-link"><i class="fas fa-link"></i></a>Viewport</h1>
+      <p>El viewport de un dispositivo (Navegador) es el área visible de la ventana gráfica de una página web. Generalmente <strong>no es del mismo tamaño que la página renderizada</strong>, en donde se brindan barras de desplazamiento para que el usuario pueda acceder a todo el contenido.</p>
+<p>Antes de las tabletas y los teléfonos móviles, las páginas web estaban diseñadas solo para pantallas de escritorio, y era común que las páginas web tuvieran un diseño estático y un tamaño fijo (<strong>980px</strong>).</p>
+<p>Con la llegada de la navegación con tabletas y teléfonos móviles, las páginas web de tamaño fijo eran demasiado grandes para la ventana gráfica.&nbsp;Para solucionar esto, los navegadores en esos dispositivos redujeron la página web para que se ajustara a la pantalla.</p>
+<p>Para mitigar este problema, Apple introdujo el meta tag “viewport” en Safari para iOS que permite a los desarrolladores controlar su tamaño y escala. Muchos navegadores hoy lo soportan, aunque no es parte de ningún standard.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag">Usando la etiqueta meta viewport para controlar la composición en los navegadores móviles</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="A-Pixel-is-not-a-Pixel">
+          <a href="#A-Pixel-is-not-a-Pixel" class="heading-link"><i class="fas fa-link"></i></a>A Pixel is not a Pixel</h3>
+      <p>Los dispositivos móviles cada día tienen una resolución de pantalla mayor a las pantallas de escritorio, sin embargo estas resoluciones no son las mismas que se utilizan en el desarrollo de páginas web con diseño responsive.</p>
+<p>Apple fue pionero en esto con su pantalla Retina, donde se dividió el concepto de píxeles en <strong>píxeles de hardware</strong> y de <strong>software</strong>. Un pixel de hardware es un punto de luz individual en la pantalla. Un pixel de software, también llamado <strong>pixel CSS</strong> en el mundo web, es una unidad de medida.</p>
+<p>El fabricante del dispositivo determina cuántos píxeles de hardware equivalen a un pixel de software, un concepto conocido como la <strong>densidad de píxeles</strong> del dispositivo. Si un solo pixel CSS contiene cuatro píxeles de hardware (2 píxeles de ancho y 2 píxeles de alto) la densidad de píxeles es 2. Otros dispositivos tienen una densidad de píxeles del dispositivo de 3, lo que significa que cada pixel CSS contiene 9 píxeles de hardware.</p>
+<p>Un pixel CSS, por otro lado, está diseñado para ser aproximadamente equivalente en todos los dispositivos. Si carga el mismo sitio web en dispositivos uno al lado del otro con dimensiones físicas similares, pero diferentes proporciones de píxeles, el sitio web tendrá aproximadamente el mismo tamaño visual.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://juiceboxinteractive.com/blog/a-pixel-is-not-a-pixel-designing-for-a-new-generation-of-mobile-devices/">Designing for a new generation of mobile devices: a pixel is not a pixel</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.mydevice.io/">mydevice.io : web devices capabilities</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Units-vw-y-vh">
+          <a href="#Units-vw-y-vh" class="heading-link"><i class="fas fa-link"></i></a>Units vw y vh</h3>
+      <p>Las unidades de medida <code>vh</code> y <code>vw</code> son similares a las unidades <code>em</code> o <code>rem</code>, en donde se especifica una proporción a la altura del viewport (vh) y al ancho del viewport (vw).</p>
+<p>1vh = 1% de la altura del viewport</p>
+<p>100vh = altura del viewport</p>
+<p>1vw = 1% del ancho del viewport</p>
+<p>100vw = ancho del viewport</p>
+<p>También existen las unidades vmin y vmax, donde <strong>vmin</strong> hace referencia al tamaño más pequeño de una ventana (alto o ancho según la orientación) y <strong>vmax</strong> se referencia con el tamaño más grande del viewport.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.yunbitsoftware.com/blog/2017/06/22/viewport-units-css-que-es/">Viewport units CSS. Qué es y cómo utilizar vw, vh, vmin y vmax</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.programandoamedianoche.com/2018/01/como-funcionan-las-unidades-de-medida-vh-vw-vmin-y-vmax/">Cómo funcionan las unidades de medida vh, vw, vmin y vmax - Programando a medianoche</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Responsive-vs-Adaptative">
+          <a href="#Responsive-vs-Adaptative" class="heading-link"><i class="fas fa-link"></i></a>Responsive vs Adaptative</h1>
+      <p>El diseño adaptativo es una estrategia para diseñar una web que se adaptara a cada uno de los dispositivos que se necesite, es decir, que para cada dispositivo se tiene un conjunto de estilos diferentes. Este enfoque requería JavaScript para detectar la resolución de la pantalla y cargar el CSS correcto.</p>
+<p>Por el contrario el diseño responsive se basa en adaptar los estilos ya existentes a los diferentes tamaños de viewport con varias técnicas y principios.</p>
+
+        <h1 id="Mobile-First-vs-Desktop-First">
+          <a href="#Mobile-First-vs-Desktop-First" class="heading-link"><i class="fas fa-link"></i></a>Mobile First vs Desktop First</h1>
+      <p>Dado que el diseño responsive busca adaptar los estilos existentes, es necesario tener una base sobre la cuál partir, y luego definir los diferentes cambios que se aplicarán a una página según las resoluciones.</p>
+<p>El término <strong>Desktop</strong> <strong>First</strong> se refiere a comenzar a diseñar un sitio web desde la resolución más grande e ir disminuyendo y adaptando el contenido hacia el diseño de la resolución más pequeña.</p>
+<p>El término <strong>Mobile First</strong> por el contrario, se refiere a comenzar con el diseño de un sitio web desde la resolución más pequeña y luego ir creciendo y adaptando el contenido hacia la resolución más grande.</p>
+<p><img src="/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled1.png" alt="Untitled1.png" loading="lazy"></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://aukera.es/blog/diseno-responsive/">Diseño responsive: ¿cómo configurarlo correctamente? - Aukera</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Content-First">
+          <a href="#Content-First" class="heading-link"><i class="fas fa-link"></i></a>Content First</h2>
+      <p>El diseño del contenido primero es un nuevo enfoque en donde el diseño parte desde los contenidos que debe tener una página web, las imágenes reales, textos reales, y así identificar los objetivos de contenidos, el volumen, la audiencia, el tono y las características de los mismos.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.ttandem.com/blog/content-first-que-es-primero-el-diseno-o-los-contenidos/">Content-First: ¿qué es primero, el diseño o los contenidos?</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="Flow-Content">
+          <a href="#Flow-Content" class="heading-link"><i class="fas fa-link"></i></a>Flow Content</h1>
+      <p>Uno de los principios del diseño responsive es el contenido fluido, este se refiere a que todo nuestro contenido debe fluir con la página, sobretodo con el ancho de la pantalla, pues a medida que el viewport varía el contenido tenderá a ocupar todo el espacio horizontal y estirarse o recogerse en el eje vertical.</p>
+
+        <h2 id="Relative-Size">
+          <a href="#Relative-Size" class="heading-link"><i class="fas fa-link"></i></a>Relative Size</h2>
+      <p>En el eje vertical los elementos pueden variar su altura, pues es común el uso del <strong>scroll</strong> para visualizar todo el contenido de la página, por eso mismo es necesario que no se tengan alturas fijas (<strong>height</strong>) y que los elementos que se ubican debajo se permitan desplazar en caso que un elemento crezca.</p>
+<p>En el eje horizontal, es necesario trabajar con unidades relativas <code>%</code> o <code>vh/vw</code>, de ésta forma cuando varíe el ancho del viewport se conservarán las proporciones predefinidas.</p>
+
+        <h2 id="Limit-Sizing">
+          <a href="#Limit-Sizing" class="heading-link"><i class="fas fa-link"></i></a>Limit Sizing</h2>
+      <p>Dado que los tamaños de las pantallas de los dispositivos son diferentes, la experiencia del usuario varía en cada una, en pantallas pequeñas se recomienda que los elementos ocupen todo el espacio posible, sin embargo en pantallas grandes es recomendado dejar espacios vacíos para no saturar de información al usuario, por ello se limitan los tamaños para que no crezcan más de un punto máximo, permitiendo dejar espacios deseados.</p>
+
+        <h1 id="Responsive-Images">
+          <a href="#Responsive-Images" class="heading-link"><i class="fas fa-link"></i></a>Responsive Images</h1>
+      <p>Las imágenes responsive son imágenes que se ajustan automáticamente para adaptarse al tamaño de la pantalla. El enfoque más simple para las imágenes responsivas es tomar una imagen que tenga el tamaño más grande que puedas necesitar, y reducirla.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> {</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: auto;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Si desea que una imagen se reduzca si es necesario, pero nunca se amplíe para que sea más grande que su tamaño original, use max-width: 100%:</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/howto/howto_css_image_responsive.asp">How To Create Responsive Images</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Changing-Images">
+          <a href="#Changing-Images" class="heading-link"><i class="fas fa-link"></i></a>Changing Images</h2>
+      <p>Una estrategia más avanzada es cambiar las imágenes según el tamaño de la pantalla, pues aunque imágenes muy grandes se puedan reducir, pueden generar una carga más lenta a la hora de abrir la página desde un dispositivo móvil, por lo que también se tienen en cuenta los tamaños de las fotos, la resolución y el peso de cada una para los diferentes casos.</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Imágenes adaptables</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">Responsive HTML images demo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Vectors">
+          <a href="#Vectors" class="heading-link"><i class="fas fa-link"></i></a>Vectors</h2>
+      <p>Cuando se trabaja con íconos, ilustraciones o imágenes creadas por computador, es preferible trabajar de forma vectorizado, es decir, archivos <strong>.svg</strong>, ya que este tipo de imágenes no pierden la resolución independientemente de su tamaño.</p>
+
+        <h1 id="Media-Queries">
+          <a href="#Media-Queries" class="heading-link"><i class="fas fa-link"></i></a>Media Queries</h1>
+      <p>Una <strong>media query</strong> es una consulta que se realiza en css para aplicar estilos particulares al documento si se cumple una determinada condición.</p>
+<p>Se puede aplicar una media query de dos formas, usando la <strong>regla-at</strong> <code>@media</code> en css, o usando el atributo <code>media</code> de html a la hora de cargar un archivo css.</p>
+<figure class="highlight html"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- CSS media query on a link element --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">media</span>=<span class="string">"(max-width: 800px)"</span> <span class="attr">href</span>=<span class="string">"example.css"</span> &gt;</span></span><br></pre></td></tr></tbody></table></div></figure>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CSS media query within a stylesheet */</span></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width:</span> <span class="number">800px</span>) {</span><br><span class="line">	<span class="comment">/* CSS Code here */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://developer.mozilla.org/es/docs/CSS/Media_queries">CSS media queries</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_mediaqueries.asp">CSS Media Queries</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="Media-Types">
+          <a href="#Media-Types" class="heading-link"><i class="fas fa-link"></i></a>Media Types</h2>
+      <p>Existen diferentes tipos de medios que se pueden consultar con una <strong>media query,</strong> entre ellos están:</p>
+<ul>
+<li><code>all</code>: ****Apto para todos los dispositivos.</li>
+<li><code>print</code>: ****Destinado a material impreso y visualización de documentos en una pantalla en el modo de vista previa de impresión.</li>
+<li><code>screen</code>: ****Destinado principalmente a las pantallas.</li>
+<li><code>speech</code>: Destinado a sintetizadores de voz.</li>
+</ul>
+
+        <h2 id="Operators">
+          <a href="#Operators" class="heading-link"><i class="fas fa-link"></i></a>Operators</h2>
+      <p>Dado que son condiciones lógicas, también se pueden utilizar operadores lógicas</p>
+<ul>
+<li><code>and</code>: Se utiliza cuando se desea que se cumplan dos o más condiciones al tiempo.</li>
+<li><code>,</code>(<em>or</em>): Se utiliza cuando se desea que se cumpla al menos una condicion.</li>
+<li><code>not</code>: Se utiliza cuando se desean aplicar los estilos en caso contrario a la condición dada, el operador <strong>not</strong> aplica a todo el query.</li>
+<li><code>only</code>: El operador only previene que navegadores antiguos que no soportan queries con funciones apliquen los estilos asignados:</li>
+</ul>
+<p>Ejemplo:</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">500px</span>), <span class="keyword">not</span> speech <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">980px</span>) {</span><br><span class="line">	<span class="comment">/*--- Css Code Here ---*/</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Size-Conditions">
+          <a href="#Size-Conditions" class="heading-link"><i class="fas fa-link"></i></a>Size Conditions</h2>
+      <p>Usando media queries se pueden comparar diferentes propiedades relacionadas con el tamaño de la pantalla como:</p>
+<ul>
+<li><strong>width</strong>: anchura de la ventana del navegador (viewport).</li>
+<li><strong>height</strong>: altura de la ventana del navegador (viewport).</li>
+<li><strong>device-width</strong>: anchura de la resolución de pantalla.</li>
+<li><strong>device-height</strong>: altura de la resolución de pantalla.</li>
+<li><strong>resolution</strong>: densidad de píxeles (dpi).</li>
+</ul>
+<p>Para cada propiedad existen los valores <strong>max</strong> y <strong>min:</strong></p>
+<ul>
+<li><strong>min-width:</strong> Mayor al ancho de la ventana del navegador (viewport).</li>
+<li><strong>max-width:</strong> Menor al ancho de la ventana del navegador (viewport).</li>
+</ul>
+<p>A la hora de contruir un sitio usando la estrategia <strong>Mobile First</strong> se usan las condiciones <code>min-width</code>, ordenadas de menor a mayor.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">480px</span>){}</span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">980px</span>){}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>Cuando se contruye un sitio usando la estrategia <strong>Desktop First</strong> se usan las condiciones <code>max-width</code>, ordenadas de mayor a menor.</p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">980px</span>){}</span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">480px</span>){}</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="Breakpoints">
+          <a href="#Breakpoints" class="heading-link"><i class="fas fa-link"></i></a>Breakpoints</h3>
+      <p>Los breakpoints o puntos de quiebre, son medidas genéricas de anchura en donde se realizan “<em>saltos”</em> para el diseño responsive y se aplican estilos CSS concretos para determinadas media queries.</p>
+<p><img src="/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled2.png" alt="Untitled2.png" loading="lazy"></p>
+<p>Existen diferentes sistemas de medidas para los breakpoints.</p>
+<ul>
+<li>320px, 480px, 768px, 1024px</li>
+<li>480px, 768px, 960px, 1200px.</li>
+<li>576px, 768px, 992px, 1200px. (Bootstrap)</li>
+<li>640px, 1024px, 1200px, 1440px. (Foundation)</li>
+<li>600px, 960px, 1280px, 1920px. (Material UI)</li>
+</ul>
+
+        <h2 id="Orientation-Conditions">
+          <a href="#Orientation-Conditions" class="heading-link"><i class="fas fa-link"></i></a>Orientation Conditions</h2>
+      <p>Se pueden usar media queries teniendo en cuenta la orientación del dispositivo, para ello se utiliza la propiedad <strong>orientation,</strong> y sus posibles valores son:</p>
+<ul>
+<li><strong>portrait:</strong> Cuando la altura es mayor al ancho.</li>
+<li><strong>landscape:</strong> Cuando el ancho es mayor a la altura.</li>
+</ul>
+<p><img src="/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/Untitled3.png" alt="Untitled3.png" loading="lazy"></p>
+<figure class="highlight css"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">orientation:</span> landscape) {</span><br><span class="line">	<span class="comment">/*--- css code here ---*/</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://EdisonPeM.github.io/fundamentos-desarrollo-web">Edison Peñuela</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/">https://edisonpem.github.io/fundamentos-desarrollo-web/Dise%C3%B1o-Responsive/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/fundamentos-desarrollo-web/HTML-B%C3%A1sico/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">HTML Básico</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/fundamentos-desarrollo-web/Animaciones-Autom%C3%A1ticas/"><span class="paginator-prev__text">Animaciones Automáticas</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Responsive-Design"><span class="toc-number">1.</span> <span class="toc-text">
+          Responsive Design</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Viewport"><span class="toc-number">2.</span> <span class="toc-text">
+          Viewport</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-Pixel-is-not-a-Pixel"><span class="toc-number">2.0.1.</span> <span class="toc-text">
+          A Pixel is not a Pixel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Units-vw-y-vh"><span class="toc-number">2.0.2.</span> <span class="toc-text">
+          Units vw y vh</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Responsive-vs-Adaptative"><span class="toc-number">3.</span> <span class="toc-text">
+          Responsive vs Adaptative</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mobile-First-vs-Desktop-First"><span class="toc-number">4.</span> <span class="toc-text">
+          Mobile First vs Desktop First</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Content-First"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Content First</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Flow-Content"><span class="toc-number">5.</span> <span class="toc-text">
+          Flow Content</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Relative-Size"><span class="toc-number">5.1.</span> <span class="toc-text">
+          Relative Size</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Limit-Sizing"><span class="toc-number">5.2.</span> <span class="toc-text">
+          Limit Sizing</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Responsive-Images"><span class="toc-number">6.</span> <span class="toc-text">
+          Responsive Images</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Changing-Images"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Changing Images</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vectors"><span class="toc-number">6.2.</span> <span class="toc-text">
+          Vectors</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Media-Queries"><span class="toc-number">7.</span> <span class="toc-text">
+          Media Queries</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Media-Types"><span class="toc-number">7.1.</span> <span class="toc-text">
+          Media Types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operators"><span class="toc-number">7.2.</span> <span class="toc-text">
+          Operators</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Size-Conditions"><span class="toc-number">7.3.</span> <span class="toc-text">
+          Size Conditions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Breakpoints"><span class="toc-number">7.3.1.</span> <span class="toc-text">
+          Breakpoints</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Orientation-Conditions"><span class="toc-number">7.4.</span> <span class="toc-text">
+          Orientation Conditions</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://avatars.githubusercontent.com/u/22184483" alt="avatar"></div><p class="sidebar-ov-author__text">Edison Peñuela</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/fundamentos-desarrollo-web/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/fundamentos-desarrollo-web/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/fundamentos-desarrollo-web/tags/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/fundamentos-desarrollo-web/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span> lines</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Edison Peñuela</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.1.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/fundamentos-desarrollo-web/js/utils.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/stun-boot.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/scroll.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/header.js?v=2.1.1"></script><script src="/fundamentos-desarrollo-web/js/sidebar.js?v=2.1.1"></script></body></html>
